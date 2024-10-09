@@ -76,15 +76,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modulos\Empleados\" />
-    <Folder Include="Modulos\Hoja_Requisicion\" />
-    <Folder Include="Modulos\Home\" />
-    <Folder Include="Modulos\Inventario\" />
-    <Folder Include="Modulos\Login\" />
-    <Folder Include="Modulos\Productos\" />
-    <Folder Include="Modulos\Reportes\" />
-    <Folder Include="Modulos\Users\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
