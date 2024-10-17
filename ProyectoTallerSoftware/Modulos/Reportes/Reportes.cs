@@ -16,5 +16,10 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
         {
             InitializeComponent();
         }
+
+        private void lbjose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
