@@ -16,5 +16,15 @@ namespace ProyectoTallerSoftware.Modulos.Inventario
         {
             InitializeComponent();
         }
+
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbjose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
