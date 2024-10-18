@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTallerSoftware.Modulos.Hoja_Requisicion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace ProyectoTallerSoftware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Hoja_Requisicion());
         }
     }
 }

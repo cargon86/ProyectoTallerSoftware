@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+
 namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
 {
     public partial class Hoja_Requisicion : Form
@@ -16,5 +19,11 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
         {
             InitializeComponent();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }
