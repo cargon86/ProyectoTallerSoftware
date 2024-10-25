@@ -16,5 +16,10 @@ namespace ProyectoTallerSoftware.Modulos.Usuarios
         {
             InitializeComponent();
         }
+
+        private void Usuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
