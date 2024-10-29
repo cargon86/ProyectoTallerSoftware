@@ -73,9 +73,9 @@ namespace ProyectoTallerSoftware.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap empleados1 {
+        internal static System.Drawing.Bitmap empleados2 {
             get {
-                object obj = ResourceManager.GetObject("empleados1", resourceCulture);
+                object obj = ResourceManager.GetObject("empleados2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace ProyectoTallerSoftware.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap inventario {
+        internal static System.Drawing.Bitmap inventario2 {
             get {
-                object obj = ResourceManager.GetObject("inventario", resourceCulture);
+                object obj = ResourceManager.GetObject("inventario2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace ProyectoTallerSoftware.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap productos {
+        internal static System.Drawing.Bitmap productos2 {
             get {
-                object obj = ResourceManager.GetObject("productos", resourceCulture);
+                object obj = ResourceManager.GetObject("productos2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace ProyectoTallerSoftware.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap reportes {
+        internal static System.Drawing.Bitmap reportes2 {
             get {
-                object obj = ResourceManager.GetObject("reportes", resourceCulture);
+                object obj = ResourceManager.GetObject("reportes2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace ProyectoTallerSoftware.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap requisicion {
+        internal static System.Drawing.Bitmap requisicion2 {
             get {
-                object obj = ResourceManager.GetObject("requisicion", resourceCulture);
+                object obj = ResourceManager.GetObject("requisicion2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace ProyectoTallerSoftware.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap usuarios {
+        internal static System.Drawing.Bitmap usuarios2 {
             get {
-                object obj = ResourceManager.GetObject("usuarios", resourceCulture);
+                object obj = ResourceManager.GetObject("usuarios2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

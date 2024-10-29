@@ -113,7 +113,7 @@
             // pbInvent
             // 
             this.pbInvent.ErrorImage = null;
-            this.pbInvent.Image = global::ProyectoTallerSoftware.Properties.Resources.inventario;
+            this.pbInvent.Image = global::ProyectoTallerSoftware.Properties.Resources.inventario2;
             this.pbInvent.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pbInvent.InitialImage = null;
             this.pbInvent.Location = new System.Drawing.Point(11, 325);
@@ -126,7 +126,7 @@
             // 
             // pbEmplead
             // 
-            this.pbEmplead.Image = global::ProyectoTallerSoftware.Properties.Resources.empleados1;
+            this.pbEmplead.Image = global::ProyectoTallerSoftware.Properties.Resources.empleados2;
             this.pbEmplead.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pbEmplead.Location = new System.Drawing.Point(11, 265);
             this.pbEmplead.Margin = new System.Windows.Forms.Padding(2);
@@ -138,7 +138,7 @@
             // 
             // pbRepor
             // 
-            this.pbRepor.Image = global::ProyectoTallerSoftware.Properties.Resources.reportes;
+            this.pbRepor.Image = global::ProyectoTallerSoftware.Properties.Resources.reportes2;
             this.pbRepor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pbRepor.Location = new System.Drawing.Point(11, 207);
             this.pbRepor.Margin = new System.Windows.Forms.Padding(2);
@@ -150,7 +150,7 @@
             // 
             // pbProdu
             // 
-            this.pbProdu.Image = global::ProyectoTallerSoftware.Properties.Resources.productos;
+            this.pbProdu.Image = global::ProyectoTallerSoftware.Properties.Resources.productos2;
             this.pbProdu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pbProdu.Location = new System.Drawing.Point(11, 150);
             this.pbProdu.Margin = new System.Windows.Forms.Padding(2);
@@ -162,7 +162,7 @@
             // 
             // pbRequ
             // 
-            this.pbRequ.Image = global::ProyectoTallerSoftware.Properties.Resources.requisicion;
+            this.pbRequ.Image = global::ProyectoTallerSoftware.Properties.Resources.requisicion2;
             this.pbRequ.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pbRequ.Location = new System.Drawing.Point(11, 98);
             this.pbRequ.Margin = new System.Windows.Forms.Padding(2);
@@ -174,7 +174,7 @@
             // 
             // pbUsu
             // 
-            this.pbUsu.Image = global::ProyectoTallerSoftware.Properties.Resources.usuarios;
+            this.pbUsu.Image = global::ProyectoTallerSoftware.Properties.Resources.usuarios2;
             this.pbUsu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pbUsu.Location = new System.Drawing.Point(11, 41);
             this.pbUsu.Margin = new System.Windows.Forms.Padding(2);
