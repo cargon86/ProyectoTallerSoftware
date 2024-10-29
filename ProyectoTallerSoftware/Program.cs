@@ -12,6 +12,7 @@ namespace ProyectoTallerSoftware
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        /// <hola>
         [STAThread]
         static void Main()
         {
