@@ -10,7 +10,7 @@ namespace ProyectoTallerSoftware.Modulos.Clases
     public class Conexion
     {
         // Cadena de conexión a la base de datos
-        private string connectionString = @"Server=WIN11-81W6\SQLEXPRESS;Database=Sis_Inventario;Trusted_Connection=True;";
+        private string connectionString = @"Server=\SQLEXPRESS;Database=Sis_Inventario;Trusted_Connection=True;";
 
         // Método para obtener la conexión
         public SqlConnection GetConnection()
