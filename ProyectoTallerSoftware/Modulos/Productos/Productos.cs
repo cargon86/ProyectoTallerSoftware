@@ -213,49 +213,63 @@ namespace ProyectoTallerSoftware.Modulos.Productos
             cmbMedida.SelectedIndex = -1; // Desmarca el ComboBox
         }
 
-        private void btnUsuarios_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Login LoginForm = new Login();
+            LoginForm.Show();
+            this.Hide();
+        }
+
+        private void btnUsuarios_Click_1(object sender, EventArgs e)
         {
             Usuarios.Usuarios UsuariosForm = new Usuarios.Usuarios();
             UsuariosForm.Show();
             this.Hide();
         }
 
-        private void btnRequisiciones_Click(object sender, EventArgs e)
+        private void btnRequisiciones_Click_1(object sender, EventArgs e)
         {
             Hoja_Requisicion.Hoja_Requisicion requisicionform = new Hoja_Requisicion.Hoja_Requisicion();
             requisicionform.Show();
             this.Hide();
         }
 
-        private void btnProductos_Click(object sender, EventArgs e)
+        private void btnProductos_Click_1(object sender, EventArgs e)
         {
             Productos productoform = new Productos();
             productoform.Show();
             this.Hide();
         }
 
-        private void btnReportes_Click(object sender, EventArgs e)
+        private void btnReportes_Click_1(object sender, EventArgs e)
         {
             Reportes.Reportes ReportesForm = new Reportes.Reportes();
             ReportesForm.Show();
             this.Hide();
         }
 
-        private void btnEmpleados_Click(object sender, EventArgs e)
+        private void btnAdquisicion_Click(object sender, EventArgs e)
+        {
+            Adquisicion.Adquisicion AdquisicionForm = new Adquisicion.Adquisicion();
+            AdquisicionForm.Show();
+            this.Hide();
+        }
+
+        private void btnEmpleados_Click_1(object sender, EventArgs e)
         {
             Empleados.Empleados EmpleadosForm = new Empleados.Empleados();
             EmpleadosForm.Show();
             this.Hide();
         }
 
-        private void btnInventario_Click(object sender, EventArgs e)
+        private void btnInventario_Click_1(object sender, EventArgs e)
         {
             Inventario.Inventario InventarioForm = new Inventario.Inventario();
             InventarioForm.Show();
             this.Hide();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             Login LoginForm = new Login();
             LoginForm.Show();

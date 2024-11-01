@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Adquisicion\Adquisicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Adquisicion\Adquisicion.Designer.cs">
+      <DependentUpon>Adquisicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Bitacora\Bitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Bitacora\Bitacora.Designer.cs">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Clases\Conexion.cs" />
     <Compile Include="Modulos\Empleados\Empleados.cs">
       <SubType>Form</SubType>
@@ -105,6 +117,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Adquisicion\Adquisicion.resx">
+      <DependentUpon>Adquisicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Bitacora\Bitacora.resx">
+      <DependentUpon>Bitacora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Productos\Productos.aa.resx">
       <DependentUpon>Productos.cs</DependentUpon>
@@ -171,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adquisicionn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace ProyectoTallerSoftware.Modulos.Reportes
+﻿namespace ProyectoTallerSoftware.Modulos.Bitacora
 {
-    partial class Reportes
+    partial class Bitacora
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reportes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bitacora));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdquisicion = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -39,6 +38,12 @@
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnRequisiciones = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbBitacora = new System.Windows.Forms.Label();
+            this.lbUnicah = new System.Windows.Forms.Label();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.lbCambios = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.pbInvent = new System.Windows.Forms.PictureBox();
             this.pbEmplead = new System.Windows.Forms.PictureBox();
@@ -46,17 +51,9 @@
             this.pbProdu = new System.Windows.Forms.PictureBox();
             this.pbRequ = new System.Windows.Forms.PictureBox();
             this.pbUsu = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbReportes = new System.Windows.Forms.Label();
-            this.lbUnicah = new System.Windows.Forms.Label();
-            this.btnSemanales = new System.Windows.Forms.Button();
-            this.btnMensuales = new System.Windows.Forms.Button();
-            this.btnTrimestrales = new System.Windows.Forms.Button();
-            this.btnJardineria = new System.Windows.Forms.Button();
-            this.btnAseo = new System.Windows.Forms.Button();
-            this.btnPapeleria = new System.Windows.Forms.Button();
-            this.btnMantenimiento = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).BeginInit();
@@ -65,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -89,21 +85,10 @@
             this.panel2.Controls.Add(this.pbProdu);
             this.panel2.Controls.Add(this.pbRequ);
             this.panel2.Controls.Add(this.pbUsu);
-            this.panel2.Location = new System.Drawing.Point(0, 141);
+            this.panel2.Location = new System.Drawing.Point(1, 141);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 812);
-            this.panel2.TabIndex = 18;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoTallerSoftware.Properties.Resources.adquisicionn;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 340);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
+            this.panel2.TabIndex = 27;
             // 
             // btnAdquisicion
             // 
@@ -137,7 +122,7 @@
             this.btnInventario.TabIndex = 44;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.UseVisualStyleBackColor = false;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click_1);
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // btnCerrar
             // 
@@ -154,7 +139,7 @@
             this.btnCerrar.TabIndex = 45;
             this.btnCerrar.Text = "Cerrar Sesion";
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEmpleados
             // 
@@ -171,7 +156,7 @@
             this.btnEmpleados.TabIndex = 43;
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = false;
-            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click_1);
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnReportes
             // 
@@ -188,7 +173,7 @@
             this.btnReportes.TabIndex = 42;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click_1);
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnProductos
             // 
@@ -205,7 +190,7 @@
             this.btnProductos.TabIndex = 41;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click_1);
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnRequisiciones
             // 
@@ -222,7 +207,7 @@
             this.btnRequisiciones.TabIndex = 40;
             this.btnRequisiciones.Text = "Requisiciones";
             this.btnRequisiciones.UseVisualStyleBackColor = false;
-            this.btnRequisiciones.Click += new System.EventHandler(this.btnRequisiciones_Click_1);
+            this.btnRequisiciones.Click += new System.EventHandler(this.btnRequisiciones_Click);
             // 
             // btnUsuarios
             // 
@@ -238,7 +223,79 @@
             this.btnUsuarios.TabIndex = 33;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.panel1.Controls.Add(this.lbBitacora);
+            this.panel1.Controls.Add(this.lbUnicah);
+            this.panel1.Location = new System.Drawing.Point(1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1781, 144);
+            this.panel1.TabIndex = 26;
+            // 
+            // lbBitacora
+            // 
+            this.lbBitacora.AutoSize = true;
+            this.lbBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbBitacora.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.lbBitacora.ForeColor = System.Drawing.Color.White;
+            this.lbBitacora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbBitacora.Location = new System.Drawing.Point(355, 68);
+            this.lbBitacora.Name = "lbBitacora";
+            this.lbBitacora.Size = new System.Drawing.Size(135, 35);
+            this.lbBitacora.TabIndex = 6;
+            this.lbBitacora.Text = "Bitacora";
+            // 
+            // lbUnicah
+            // 
+            this.lbUnicah.AutoSize = true;
+            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbUnicah.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold);
+            this.lbUnicah.ForeColor = System.Drawing.Color.White;
+            this.lbUnicah.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbUnicah.Location = new System.Drawing.Point(9, 34);
+            this.lbUnicah.Name = "lbUnicah";
+            this.lbUnicah.Size = new System.Drawing.Size(289, 78);
+            this.lbUnicah.TabIndex = 5;
+            this.lbUnicah.Text = "UNICAH";
+            // 
+            // dgvProductos
+            // 
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(450, 266);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 24;
+            this.dgvProductos.Size = new System.Drawing.Size(888, 359);
+            this.dgvProductos.TabIndex = 28;
+            // 
+            // lbCambios
+            // 
+            this.lbCambios.AutoSize = true;
+            this.lbCambios.BackColor = System.Drawing.Color.Transparent;
+            this.lbCambios.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.lbCambios.ForeColor = System.Drawing.Color.Black;
+            this.lbCambios.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbCambios.Location = new System.Drawing.Point(444, 197);
+            this.lbCambios.Name = "lbCambios";
+            this.lbCambios.Size = new System.Drawing.Size(340, 35);
+            this.lbCambios.TabIndex = 29;
+            this.lbCambios.Text = "Cambios en el Sistema";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoTallerSoftware.Properties.Resources.adquisicionn;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 340);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
             // 
             // pbCerrar
             // 
@@ -317,156 +374,24 @@
             this.pbUsu.TabIndex = 32;
             this.pbUsu.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.panel1.Controls.Add(this.lbReportes);
-            this.panel1.Controls.Add(this.lbUnicah);
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1781, 144);
-            this.panel1.TabIndex = 17;
-            // 
-            // lbReportes
-            // 
-            this.lbReportes.AutoSize = true;
-            this.lbReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbReportes.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.lbReportes.ForeColor = System.Drawing.Color.White;
-            this.lbReportes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbReportes.Location = new System.Drawing.Point(355, 68);
-            this.lbReportes.Name = "lbReportes";
-            this.lbReportes.Size = new System.Drawing.Size(146, 35);
-            this.lbReportes.TabIndex = 6;
-            this.lbReportes.Text = "Reportes";
-            this.lbReportes.Click += new System.EventHandler(this.lbjose_Click);
-            // 
-            // lbUnicah
-            // 
-            this.lbUnicah.AutoSize = true;
-            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbUnicah.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold);
-            this.lbUnicah.ForeColor = System.Drawing.Color.White;
-            this.lbUnicah.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbUnicah.Location = new System.Drawing.Point(9, 34);
-            this.lbUnicah.Name = "lbUnicah";
-            this.lbUnicah.Size = new System.Drawing.Size(289, 78);
-            this.lbUnicah.TabIndex = 5;
-            this.lbUnicah.Text = "UNICAH";
-            // 
-            // btnSemanales
-            // 
-            this.btnSemanales.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSemanales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.btnSemanales.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.btnSemanales.ForeColor = System.Drawing.Color.White;
-            this.btnSemanales.Location = new System.Drawing.Point(633, 245);
-            this.btnSemanales.Name = "btnSemanales";
-            this.btnSemanales.Size = new System.Drawing.Size(259, 84);
-            this.btnSemanales.TabIndex = 19;
-            this.btnSemanales.Text = "Semanales";
-            this.btnSemanales.UseVisualStyleBackColor = false;
-            // 
-            // btnMensuales
-            // 
-            this.btnMensuales.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnMensuales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.btnMensuales.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.btnMensuales.ForeColor = System.Drawing.Color.White;
-            this.btnMensuales.Location = new System.Drawing.Point(939, 245);
-            this.btnMensuales.Name = "btnMensuales";
-            this.btnMensuales.Size = new System.Drawing.Size(259, 84);
-            this.btnMensuales.TabIndex = 20;
-            this.btnMensuales.Text = "Mensuales";
-            this.btnMensuales.UseVisualStyleBackColor = false;
-            // 
-            // btnTrimestrales
-            // 
-            this.btnTrimestrales.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnTrimestrales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.btnTrimestrales.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.btnTrimestrales.ForeColor = System.Drawing.Color.White;
-            this.btnTrimestrales.Location = new System.Drawing.Point(1245, 245);
-            this.btnTrimestrales.Name = "btnTrimestrales";
-            this.btnTrimestrales.Size = new System.Drawing.Size(259, 84);
-            this.btnTrimestrales.TabIndex = 21;
-            this.btnTrimestrales.Text = "Trimestrales";
-            this.btnTrimestrales.UseVisualStyleBackColor = false;
-            // 
-            // btnJardineria
-            // 
-            this.btnJardineria.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnJardineria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.btnJardineria.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.btnJardineria.ForeColor = System.Drawing.Color.White;
-            this.btnJardineria.Location = new System.Drawing.Point(633, 382);
-            this.btnJardineria.Name = "btnJardineria";
-            this.btnJardineria.Size = new System.Drawing.Size(259, 84);
-            this.btnJardineria.TabIndex = 22;
-            this.btnJardineria.Text = "Jardineria";
-            this.btnJardineria.UseVisualStyleBackColor = false;
-            // 
-            // btnAseo
-            // 
-            this.btnAseo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAseo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.btnAseo.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.btnAseo.ForeColor = System.Drawing.Color.White;
-            this.btnAseo.Location = new System.Drawing.Point(939, 382);
-            this.btnAseo.Name = "btnAseo";
-            this.btnAseo.Size = new System.Drawing.Size(259, 84);
-            this.btnAseo.TabIndex = 23;
-            this.btnAseo.Text = "Aseo";
-            this.btnAseo.UseVisualStyleBackColor = false;
-            // 
-            // btnPapeleria
-            // 
-            this.btnPapeleria.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnPapeleria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.btnPapeleria.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.btnPapeleria.ForeColor = System.Drawing.Color.White;
-            this.btnPapeleria.Location = new System.Drawing.Point(1245, 382);
-            this.btnPapeleria.Name = "btnPapeleria";
-            this.btnPapeleria.Size = new System.Drawing.Size(259, 84);
-            this.btnPapeleria.TabIndex = 24;
-            this.btnPapeleria.Text = "Papeleria";
-            this.btnPapeleria.UseVisualStyleBackColor = false;
-            // 
-            // btnMantenimiento
-            // 
-            this.btnMantenimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.btnMantenimiento.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimiento.Location = new System.Drawing.Point(939, 522);
-            this.btnMantenimiento.Name = "btnMantenimiento";
-            this.btnMantenimiento.Size = new System.Drawing.Size(259, 84);
-            this.btnMantenimiento.TabIndex = 25;
-            this.btnMantenimiento.Text = "Mantenimiento";
-            this.btnMantenimiento.UseVisualStyleBackColor = false;
-            // 
-            // Reportes
+            // Bitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1782, 953);
-            this.Controls.Add(this.btnMantenimiento);
-            this.Controls.Add(this.btnPapeleria);
-            this.Controls.Add(this.btnAseo);
-            this.Controls.Add(this.btnJardineria);
-            this.Controls.Add(this.btnTrimestrales);
-            this.Controls.Add(this.btnMensuales);
-            this.Controls.Add(this.btnSemanales);
+            this.Controls.Add(this.lbCambios);
+            this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Reportes";
-            this.Text = "Reportes";
+            this.Name = "Bitacora";
+            this.Text = "Bitacora";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).EndInit();
@@ -475,24 +400,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbReportes;
-        private System.Windows.Forms.Label lbUnicah;
-        private System.Windows.Forms.Button btnSemanales;
-        private System.Windows.Forms.Button btnMensuales;
-        private System.Windows.Forms.Button btnTrimestrales;
-        private System.Windows.Forms.Button btnJardineria;
-        private System.Windows.Forms.Button btnAseo;
-        private System.Windows.Forms.Button btnPapeleria;
-        private System.Windows.Forms.Button btnMantenimiento;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAdquisicion;
         private System.Windows.Forms.Button btnInventario;
@@ -509,5 +424,10 @@
         private System.Windows.Forms.PictureBox pbProdu;
         private System.Windows.Forms.PictureBox pbRequ;
         private System.Windows.Forms.PictureBox pbUsu;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbBitacora;
+        private System.Windows.Forms.Label lbUnicah;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.Label lbCambios;
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace ProyectoTallerSoftware.Modulos.Productos
+﻿namespace ProyectoTallerSoftware.Modulos.Adquisicion
 {
-    partial class Productos
+    partial class Adquisicion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
-            this.pnAzul = new System.Windows.Forms.Panel();
-            this.lbjose = new System.Windows.Forms.Label();
-            this.lbUnicah = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adquisicion));
+            this.cmbMedida = new System.Windows.Forms.ComboBox();
+            this.dgvAdquisicion = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.lbDescripP = new System.Windows.Forms.Label();
+            this.lbProducto = new System.Windows.Forms.Label();
+            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.lbProveedor = new System.Windows.Forms.Label();
             this.pnGris = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdquisicion = new System.Windows.Forms.Button();
@@ -49,17 +56,14 @@
             this.pbProdu = new System.Windows.Forms.PictureBox();
             this.pbRequ = new System.Windows.Forms.PictureBox();
             this.pbUsu = new System.Windows.Forms.PictureBox();
-            this.lbProductoP = new System.Windows.Forms.Label();
-            this.txtProducto = new System.Windows.Forms.TextBox();
-            this.lbMedidaP = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.lbDescripP = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.cmbMedida = new System.Windows.Forms.ComboBox();
-            this.pnAzul.SuspendLayout();
+            this.pnAzul = new System.Windows.Forms.Panel();
+            this.lbjose = new System.Windows.Forms.Label();
+            this.lbUnicah = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbFechaAdq = new System.Windows.Forms.Label();
+            this.lbCantidad = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdquisicion)).BeginInit();
             this.pnGris.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
@@ -69,30 +73,75 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            this.pnAzul.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnAzul
+            // cmbMedida
             // 
-            resources.ApplyResources(this.pnAzul, "pnAzul");
-            this.pnAzul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.pnAzul.Controls.Add(this.lbjose);
-            this.pnAzul.Controls.Add(this.lbUnicah);
-            this.pnAzul.Name = "pnAzul";
+            this.cmbMedida.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbMedida, "cmbMedida");
+            this.cmbMedida.Name = "cmbMedida";
             // 
-            // lbjose
+            // dgvAdquisicion
             // 
-            resources.ApplyResources(this.lbjose, "lbjose");
-            this.lbjose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbjose.ForeColor = System.Drawing.Color.White;
-            this.lbjose.Name = "lbjose";
+            this.dgvAdquisicion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvAdquisicion, "dgvAdquisicion");
+            this.dgvAdquisicion.Name = "dgvAdquisicion";
+            this.dgvAdquisicion.RowTemplate.Height = 24;
             // 
-            // lbUnicah
+            // btnEliminar
             // 
-            resources.ApplyResources(this.lbUnicah, "lbUnicah");
-            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbUnicah.ForeColor = System.Drawing.Color.White;
-            this.lbUnicah.Name = "lbUnicah";
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(102)))), ((int)(((byte)(79)))));
+            resources.ApplyResources(this.btnEliminar, "btnEliminar");
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            resources.ApplyResources(this.btnActualizar, "btnActualizar");
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
+            resources.ApplyResources(this.btnGuardar, "btnGuardar");
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
+            this.txtDescripcion.Name = "txtDescripcion";
+            // 
+            // lbDescripP
+            // 
+            resources.ApplyResources(this.lbDescripP, "lbDescripP");
+            this.lbDescripP.BackColor = System.Drawing.Color.White;
+            this.lbDescripP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbDescripP.Name = "lbDescripP";
+            // 
+            // lbProducto
+            // 
+            resources.ApplyResources(this.lbProducto, "lbProducto");
+            this.lbProducto.BackColor = System.Drawing.Color.White;
+            this.lbProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbProducto.Name = "lbProducto";
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.txtProducto, "txtProducto");
+            this.txtProducto.Name = "txtProducto";
+            // 
+            // lbProveedor
+            // 
+            resources.ApplyResources(this.lbProveedor, "lbProveedor");
+            this.lbProveedor.BackColor = System.Drawing.Color.White;
+            this.lbProveedor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbProveedor.Name = "lbProveedor";
             // 
             // pnGris
             // 
@@ -143,7 +192,7 @@
             this.btnInventario.ForeColor = System.Drawing.Color.White;
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.UseVisualStyleBackColor = false;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click_1);
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // btnCerrar
             // 
@@ -154,7 +203,7 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEmpleados
             // 
@@ -165,7 +214,7 @@
             this.btnEmpleados.ForeColor = System.Drawing.Color.White;
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.UseVisualStyleBackColor = false;
-            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click_1);
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnReportes
             // 
@@ -176,7 +225,7 @@
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.UseVisualStyleBackColor = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click_1);
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnProductos
             // 
@@ -187,7 +236,7 @@
             this.btnProductos.ForeColor = System.Drawing.Color.White;
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.UseVisualStyleBackColor = false;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click_1);
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnRequisiciones
             // 
@@ -198,7 +247,7 @@
             this.btnRequisiciones.ForeColor = System.Drawing.Color.White;
             this.btnRequisiciones.Name = "btnRequisiciones";
             this.btnRequisiciones.UseVisualStyleBackColor = false;
-            this.btnRequisiciones.Click += new System.EventHandler(this.btnRequisiciones_Click_1);
+            this.btnRequisiciones.Click += new System.EventHandler(this.btnRequisiciones_Click);
             // 
             // btnUsuarios
             // 
@@ -208,7 +257,7 @@
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // pbCerrar
             // 
@@ -258,101 +307,78 @@
             this.pbUsu.Name = "pbUsu";
             this.pbUsu.TabStop = false;
             // 
-            // lbProductoP
+            // pnAzul
             // 
-            resources.ApplyResources(this.lbProductoP, "lbProductoP");
-            this.lbProductoP.BackColor = System.Drawing.Color.White;
-            this.lbProductoP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbProductoP.Name = "lbProductoP";
+            resources.ApplyResources(this.pnAzul, "pnAzul");
+            this.pnAzul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.pnAzul.Controls.Add(this.lbjose);
+            this.pnAzul.Controls.Add(this.lbUnicah);
+            this.pnAzul.Name = "pnAzul";
             // 
-            // txtProducto
+            // lbjose
             // 
-            this.txtProducto.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.txtProducto, "txtProducto");
-            this.txtProducto.Name = "txtProducto";
+            resources.ApplyResources(this.lbjose, "lbjose");
+            this.lbjose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbjose.ForeColor = System.Drawing.Color.White;
+            this.lbjose.Name = "lbjose";
             // 
-            // lbMedidaP
+            // lbUnicah
             // 
-            resources.ApplyResources(this.lbMedidaP, "lbMedidaP");
-            this.lbMedidaP.BackColor = System.Drawing.Color.White;
-            this.lbMedidaP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbMedidaP.Name = "lbMedidaP";
+            resources.ApplyResources(this.lbUnicah, "lbUnicah");
+            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbUnicah.ForeColor = System.Drawing.Color.White;
+            this.lbUnicah.Name = "lbUnicah";
             // 
-            // txtDescripcion
+            // dateTimePicker1
             // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
-            this.txtDescripcion.Name = "txtDescripcion";
+            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
+            this.dateTimePicker1.Name = "dateTimePicker1";
             // 
-            // lbDescripP
+            // lbFechaAdq
             // 
-            resources.ApplyResources(this.lbDescripP, "lbDescripP");
-            this.lbDescripP.BackColor = System.Drawing.Color.White;
-            this.lbDescripP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbDescripP.Name = "lbDescripP";
+            resources.ApplyResources(this.lbFechaAdq, "lbFechaAdq");
+            this.lbFechaAdq.BackColor = System.Drawing.Color.White;
+            this.lbFechaAdq.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbFechaAdq.Name = "lbFechaAdq";
             // 
-            // btnGuardar
+            // lbCantidad
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
-            resources.ApplyResources(this.btnGuardar, "btnGuardar");
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            resources.ApplyResources(this.lbCantidad, "lbCantidad");
+            this.lbCantidad.BackColor = System.Drawing.Color.White;
+            this.lbCantidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbCantidad.Name = "lbCantidad";
             // 
-            // btnActualizar
+            // txtCantidad
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            resources.ApplyResources(this.btnActualizar, "btnActualizar");
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.txtCantidad, "txtCantidad");
+            this.txtCantidad.Name = "txtCantidad";
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(102)))), ((int)(((byte)(79)))));
-            resources.ApplyResources(this.btnEliminar, "btnEliminar");
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // dgvProductos
-            // 
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgvProductos, "dgvProductos");
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
-            // 
-            // cmbMedida
-            // 
-            this.cmbMedida.FormattingEnabled = true;
-            resources.ApplyResources(this.cmbMedida, "cmbMedida");
-            this.cmbMedida.Name = "cmbMedida";
-            // 
-            // Productos
+            // Adquisicion
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.lbCantidad);
+            this.Controls.Add(this.lbFechaAdq);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cmbMedida);
-            this.Controls.Add(this.dgvProductos);
+            this.Controls.Add(this.dgvAdquisicion);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lbDescripP);
-            this.Controls.Add(this.lbMedidaP);
+            this.Controls.Add(this.lbProducto);
             this.Controls.Add(this.txtProducto);
-            this.Controls.Add(this.lbProductoP);
+            this.Controls.Add(this.lbProveedor);
             this.Controls.Add(this.pnGris);
             this.Controls.Add(this.pnAzul);
-            this.ForeColor = System.Drawing.Color.Black;
             this.KeyPreview = true;
-            this.Name = "Productos";
+            this.Name = "Adquisicion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Productos_Load);
-            this.pnAzul.ResumeLayout(false);
-            this.pnAzul.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdquisicion)).EndInit();
             this.pnGris.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
@@ -362,7 +388,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            this.pnAzul.ResumeLayout(false);
+            this.pnAzul.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,24 +397,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnAzul;
-        private System.Windows.Forms.Panel pnGris;
-        private System.Windows.Forms.Label lbUnicah;
-        private System.Windows.Forms.Label lbjose;
-        private System.Windows.Forms.Label lbProductoP;
-        private System.Windows.Forms.TextBox txtProducto;
-        private System.Windows.Forms.Label lbMedidaP;
+        private System.Windows.Forms.ComboBox cmbMedida;
+        private System.Windows.Forms.DataGridView dgvAdquisicion;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lbDescripP;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.ComboBox cmbMedida;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnAdquisicion;
-        private System.Windows.Forms.Button btnInventario;
+        private System.Windows.Forms.Label lbProducto;
+        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.Label lbProveedor;
+        private System.Windows.Forms.Panel pnGris;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnProductos;
@@ -400,5 +422,14 @@
         private System.Windows.Forms.PictureBox pbProdu;
         private System.Windows.Forms.PictureBox pbRequ;
         private System.Windows.Forms.PictureBox pbUsu;
+        private System.Windows.Forms.Panel pnAzul;
+        private System.Windows.Forms.Label lbjose;
+        private System.Windows.Forms.Label lbUnicah;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAdquisicion;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbFechaAdq;
+        private System.Windows.Forms.Label lbCantidad;
+        private System.Windows.Forms.TextBox txtCantidad;
     }
 }

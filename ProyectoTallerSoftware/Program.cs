@@ -1,11 +1,12 @@
 ﻿using ProyectoTallerSoftware.Modulos.Clases;
-using ProyectoTallerSoftware.Modulos.Productos;
+using ProyectoTallerSoftware.Modulos.Bitacora;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoTallerSoftware.Modulos.Productos;
 
 namespace ProyectoTallerSoftware
 {
