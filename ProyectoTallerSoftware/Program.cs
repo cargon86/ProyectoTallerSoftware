@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoTallerSoftware.Modulos.Productos;
+using ProyectoTallerSoftware.Modulos.Usuarios;
 
 namespace ProyectoTallerSoftware
 {
@@ -20,7 +21,7 @@ namespace ProyectoTallerSoftware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Productos());
+            Application.Run(new Usuarios());
 
             // Crear una instancia de la clase Conexion
             Conexion conexion = new Conexion();

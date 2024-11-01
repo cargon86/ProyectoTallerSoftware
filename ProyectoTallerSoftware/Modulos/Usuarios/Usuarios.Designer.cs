@@ -33,20 +33,6 @@
             this.lbusuario_form = new System.Windows.Forms.Label();
             this.lbUnicah = new System.Windows.Forms.Label();
             this.pnGris = new System.Windows.Forms.Panel();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnInventario = new System.Windows.Forms.Button();
-            this.btnEmpleados = new System.Windows.Forms.Button();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnRequisiciones = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
-            this.pbCerrar = new System.Windows.Forms.PictureBox();
-            this.pbInvent = new System.Windows.Forms.PictureBox();
-            this.pbEmplead = new System.Windows.Forms.PictureBox();
-            this.pbRepor = new System.Windows.Forms.PictureBox();
-            this.pbProdu = new System.Windows.Forms.PictureBox();
-            this.pbRequ = new System.Windows.Forms.PictureBox();
-            this.pbUsu = new System.Windows.Forms.PictureBox();
             this.lb_pass_usu = new System.Windows.Forms.Label();
             this.lb_passc_usu = new System.Windows.Forms.Label();
             this.lb_rol_usu = new System.Windows.Forms.Label();
@@ -61,8 +47,26 @@
             this.dgv_usuarios = new System.Windows.Forms.DataGridView();
             this.txtb_nom_usu = new System.Windows.Forms.TextBox();
             this.lb_nom_usu = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAdquisicion = new System.Windows.Forms.Button();
+            this.btnInventario = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnEmpleados = new System.Windows.Forms.Button();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnRequisiciones = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.pbCerrar = new System.Windows.Forms.PictureBox();
+            this.pbInvent = new System.Windows.Forms.PictureBox();
+            this.pbEmplead = new System.Windows.Forms.PictureBox();
+            this.pbRepor = new System.Windows.Forms.PictureBox();
+            this.pbProdu = new System.Windows.Forms.PictureBox();
+            this.pbRequ = new System.Windows.Forms.PictureBox();
+            this.pbUsu = new System.Windows.Forms.PictureBox();
             this.pnAzul.SuspendLayout();
             this.pnGris.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmplead)).BeginInit();
@@ -70,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pnAzul
@@ -99,8 +102,10 @@
             // 
             resources.ApplyResources(this.pnGris, "pnGris");
             this.pnGris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.pnGris.Controls.Add(this.btnCerrar);
+            this.pnGris.Controls.Add(this.pictureBox1);
+            this.pnGris.Controls.Add(this.btnAdquisicion);
             this.pnGris.Controls.Add(this.btnInventario);
+            this.pnGris.Controls.Add(this.btnCerrar);
             this.pnGris.Controls.Add(this.btnEmpleados);
             this.pnGris.Controls.Add(this.btnReportes);
             this.pnGris.Controls.Add(this.btnProductos);
@@ -114,130 +119,6 @@
             this.pnGris.Controls.Add(this.pbRequ);
             this.pnGris.Controls.Add(this.pbUsu);
             this.pnGris.Name = "pnGris";
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnCerrar, "btnCerrar");
-            this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.btnInventario.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnInventario.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnInventario, "btnInventario");
-            this.btnInventario.ForeColor = System.Drawing.Color.White;
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.UseVisualStyleBackColor = false;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click_1);
-            // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.btnEmpleados.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnEmpleados.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnEmpleados, "btnEmpleados");
-            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.UseVisualStyleBackColor = false;
-            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click_1);
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.btnReportes.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnReportes, "btnReportes");
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.UseVisualStyleBackColor = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click_1);
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.btnProductos.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnProductos, "btnProductos");
-            this.btnProductos.ForeColor = System.Drawing.Color.White;
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.UseVisualStyleBackColor = false;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click_1);
-            // 
-            // btnRequisiciones
-            // 
-            this.btnRequisiciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.btnRequisiciones.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnRequisiciones.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnRequisiciones, "btnRequisiciones");
-            this.btnRequisiciones.ForeColor = System.Drawing.Color.White;
-            this.btnRequisiciones.Name = "btnRequisiciones";
-            this.btnRequisiciones.UseVisualStyleBackColor = false;
-            this.btnRequisiciones.Click += new System.EventHandler(this.btnRequisiciones_Click_1);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnUsuarios, "btnUsuarios");
-            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
-            // 
-            // pbCerrar
-            // 
-            resources.ApplyResources(this.pbCerrar, "pbCerrar");
-            this.pbCerrar.Name = "pbCerrar";
-            this.pbCerrar.TabStop = false;
-            // 
-            // pbInvent
-            // 
-            this.pbInvent.Image = global::ProyectoTallerSoftware.Properties.Resources.inventario;
-            resources.ApplyResources(this.pbInvent, "pbInvent");
-            this.pbInvent.Name = "pbInvent";
-            this.pbInvent.TabStop = false;
-            // 
-            // pbEmplead
-            // 
-            this.pbEmplead.Image = global::ProyectoTallerSoftware.Properties.Resources.empleados;
-            resources.ApplyResources(this.pbEmplead, "pbEmplead");
-            this.pbEmplead.Name = "pbEmplead";
-            this.pbEmplead.TabStop = false;
-            // 
-            // pbRepor
-            // 
-            this.pbRepor.Image = global::ProyectoTallerSoftware.Properties.Resources.reportes;
-            resources.ApplyResources(this.pbRepor, "pbRepor");
-            this.pbRepor.Name = "pbRepor";
-            this.pbRepor.TabStop = false;
-            // 
-            // pbProdu
-            // 
-            this.pbProdu.Image = global::ProyectoTallerSoftware.Properties.Resources.productos;
-            resources.ApplyResources(this.pbProdu, "pbProdu");
-            this.pbProdu.Name = "pbProdu";
-            this.pbProdu.TabStop = false;
-            // 
-            // pbRequ
-            // 
-            this.pbRequ.Image = global::ProyectoTallerSoftware.Properties.Resources.requisicion;
-            resources.ApplyResources(this.pbRequ, "pbRequ");
-            this.pbRequ.Name = "pbRequ";
-            this.pbRequ.TabStop = false;
-            // 
-            // pbUsu
-            // 
-            this.pbUsu.Image = global::ProyectoTallerSoftware.Properties.Resources.usuarios;
-            resources.ApplyResources(this.pbUsu, "pbUsu");
-            this.pbUsu.Name = "pbUsu";
-            this.pbUsu.TabStop = false;
             // 
             // lb_pass_usu
             // 
@@ -338,6 +219,148 @@
             this.lb_nom_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lb_nom_usu.Name = "lb_nom_usu";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoTallerSoftware.Properties.Resources.adquisicionn;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAdquisicion
+            // 
+            this.btnAdquisicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.btnAdquisicion.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAdquisicion.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnAdquisicion, "btnAdquisicion");
+            this.btnAdquisicion.ForeColor = System.Drawing.Color.White;
+            this.btnAdquisicion.Name = "btnAdquisicion";
+            this.btnAdquisicion.UseVisualStyleBackColor = false;
+            this.btnAdquisicion.Click += new System.EventHandler(this.btnAdquisicion_Click);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.btnInventario.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnInventario, "btnInventario");
+            this.btnInventario.ForeColor = System.Drawing.Color.White;
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.UseVisualStyleBackColor = false;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnCerrar, "btnCerrar");
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.btnEmpleados.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnEmpleados.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnEmpleados, "btnEmpleados");
+            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.UseVisualStyleBackColor = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.btnReportes.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnReportes, "btnReportes");
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.btnProductos.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnProductos, "btnProductos");
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            // 
+            // btnRequisiciones
+            // 
+            this.btnRequisiciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.btnRequisiciones.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnRequisiciones.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnRequisiciones, "btnRequisiciones");
+            this.btnRequisiciones.ForeColor = System.Drawing.Color.White;
+            this.btnRequisiciones.Name = "btnRequisiciones";
+            this.btnRequisiciones.UseVisualStyleBackColor = false;
+            this.btnRequisiciones.Click += new System.EventHandler(this.btnRequisiciones_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnUsuarios, "btnUsuarios");
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // pbCerrar
+            // 
+            resources.ApplyResources(this.pbCerrar, "pbCerrar");
+            this.pbCerrar.Name = "pbCerrar";
+            this.pbCerrar.TabStop = false;
+            // 
+            // pbInvent
+            // 
+            this.pbInvent.Image = global::ProyectoTallerSoftware.Properties.Resources.inventario;
+            resources.ApplyResources(this.pbInvent, "pbInvent");
+            this.pbInvent.Name = "pbInvent";
+            this.pbInvent.TabStop = false;
+            // 
+            // pbEmplead
+            // 
+            this.pbEmplead.Image = global::ProyectoTallerSoftware.Properties.Resources.empleados;
+            resources.ApplyResources(this.pbEmplead, "pbEmplead");
+            this.pbEmplead.Name = "pbEmplead";
+            this.pbEmplead.TabStop = false;
+            // 
+            // pbRepor
+            // 
+            this.pbRepor.Image = global::ProyectoTallerSoftware.Properties.Resources.reportes;
+            resources.ApplyResources(this.pbRepor, "pbRepor");
+            this.pbRepor.Name = "pbRepor";
+            this.pbRepor.TabStop = false;
+            // 
+            // pbProdu
+            // 
+            this.pbProdu.Image = global::ProyectoTallerSoftware.Properties.Resources.productos;
+            resources.ApplyResources(this.pbProdu, "pbProdu");
+            this.pbProdu.Name = "pbProdu";
+            this.pbProdu.TabStop = false;
+            // 
+            // pbRequ
+            // 
+            this.pbRequ.Image = global::ProyectoTallerSoftware.Properties.Resources.requisicion;
+            resources.ApplyResources(this.pbRequ, "pbRequ");
+            this.pbRequ.Name = "pbRequ";
+            this.pbRequ.TabStop = false;
+            // 
+            // pbUsu
+            // 
+            this.pbUsu.Image = global::ProyectoTallerSoftware.Properties.Resources.usuarios;
+            resources.ApplyResources(this.pbUsu, "pbUsu");
+            this.pbUsu.Name = "pbUsu";
+            this.pbUsu.TabStop = false;
+            // 
             // Usuarios
             // 
             resources.ApplyResources(this, "$this");
@@ -366,6 +389,8 @@
             this.pnAzul.ResumeLayout(false);
             this.pnAzul.PerformLayout();
             this.pnGris.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmplead)).EndInit();
@@ -373,7 +398,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,20 +409,6 @@
         private System.Windows.Forms.Label lbusuario_form;
         private System.Windows.Forms.Label lbUnicah;
         private System.Windows.Forms.Panel pnGris;
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnInventario;
-        private System.Windows.Forms.Button btnEmpleados;
-        private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnRequisiciones;
-        private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.PictureBox pbCerrar;
-        private System.Windows.Forms.PictureBox pbInvent;
-        private System.Windows.Forms.PictureBox pbEmplead;
-        private System.Windows.Forms.PictureBox pbRepor;
-        private System.Windows.Forms.PictureBox pbProdu;
-        private System.Windows.Forms.PictureBox pbRequ;
-        private System.Windows.Forms.PictureBox pbUsu;
         private System.Windows.Forms.Label lb_pass_usu;
         private System.Windows.Forms.Label lb_passc_usu;
         private System.Windows.Forms.Label lb_rol_usu;
@@ -413,5 +423,21 @@
         private System.Windows.Forms.DataGridView dgv_usuarios;
         private System.Windows.Forms.TextBox txtb_nom_usu;
         private System.Windows.Forms.Label lb_nom_usu;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAdquisicion;
+        private System.Windows.Forms.Button btnInventario;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnEmpleados;
+        private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnRequisiciones;
+        private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.PictureBox pbCerrar;
+        private System.Windows.Forms.PictureBox pbInvent;
+        private System.Windows.Forms.PictureBox pbEmplead;
+        private System.Windows.Forms.PictureBox pbRepor;
+        private System.Windows.Forms.PictureBox pbProdu;
+        private System.Windows.Forms.PictureBox pbRequ;
+        private System.Windows.Forms.PictureBox pbUsu;
     }
 }
