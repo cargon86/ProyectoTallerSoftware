@@ -124,6 +124,9 @@
     <EmbeddedResource Include="Modulos\Bitacora\Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Inventario\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Productos\Productos.aa.resx">
       <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>

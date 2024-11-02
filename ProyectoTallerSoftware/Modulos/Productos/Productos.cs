@@ -213,13 +213,6 @@ namespace ProyectoTallerSoftware.Modulos.Productos
             cmbMedida.SelectedIndex = -1; // Desmarca el ComboBox
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Login LoginForm = new Login();
-            LoginForm.Show();
-            this.Hide();
-        }
-
         private void btnUsuarios_Click_1(object sender, EventArgs e)
         {
             Usuarios.Usuarios UsuariosForm = new Usuarios.Usuarios();
