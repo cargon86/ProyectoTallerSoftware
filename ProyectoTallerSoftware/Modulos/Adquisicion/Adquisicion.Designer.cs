@@ -78,42 +78,42 @@
             // 
             // cmbMedida
             // 
-            this.cmbMedida.FormattingEnabled = true;
             resources.ApplyResources(this.cmbMedida, "cmbMedida");
+            this.cmbMedida.FormattingEnabled = true;
             this.cmbMedida.Name = "cmbMedida";
             // 
             // dgvAdquisicion
             // 
-            this.dgvAdquisicion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dgvAdquisicion, "dgvAdquisicion");
+            this.dgvAdquisicion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdquisicion.Name = "dgvAdquisicion";
             this.dgvAdquisicion.RowTemplate.Height = 24;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(102)))), ((int)(((byte)(79)))));
             resources.ApplyResources(this.btnEliminar, "btnEliminar");
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(102)))), ((int)(((byte)(79)))));
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             resources.ApplyResources(this.btnActualizar, "btnActualizar");
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
             resources.ApplyResources(this.btnGuardar, "btnGuardar");
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
+            this.txtDescripcion.BackColor = System.Drawing.Color.White;
             this.txtDescripcion.Name = "txtDescripcion";
             // 
             // lbDescripP
@@ -132,8 +132,8 @@
             // 
             // txtProducto
             // 
-            this.txtProducto.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.txtProducto, "txtProducto");
+            this.txtProducto.BackColor = System.Drawing.Color.White;
             this.txtProducto.Name = "txtProducto";
             // 
             // lbProveedor
@@ -350,8 +350,8 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.txtCantidad, "txtCantidad");
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
             this.txtCantidad.Name = "txtCantidad";
             // 
             // Adquisicion

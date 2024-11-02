@@ -33,20 +33,6 @@
             this.lbusuario_form = new System.Windows.Forms.Label();
             this.lbUnicah = new System.Windows.Forms.Label();
             this.pnGris = new System.Windows.Forms.Panel();
-            this.lb_pass_usu = new System.Windows.Forms.Label();
-            this.lb_passc_usu = new System.Windows.Forms.Label();
-            this.lb_rol_usu = new System.Windows.Forms.Label();
-            this.lb_sta_usu = new System.Windows.Forms.Label();
-            this.cmb_sta_usu = new System.Windows.Forms.ComboBox();
-            this.txtb_pass_usu = new System.Windows.Forms.TextBox();
-            this.btn_sav = new System.Windows.Forms.Button();
-            this.btn_upd = new System.Windows.Forms.Button();
-            this.btn_del = new System.Windows.Forms.Button();
-            this.txtb_passc_usu = new System.Windows.Forms.TextBox();
-            this.cmb_rol_usu = new System.Windows.Forms.ComboBox();
-            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
-            this.txtb_nom_usu = new System.Windows.Forms.TextBox();
-            this.lb_nom_usu = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdquisicion = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
@@ -63,9 +49,22 @@
             this.pbProdu = new System.Windows.Forms.PictureBox();
             this.pbRequ = new System.Windows.Forms.PictureBox();
             this.pbUsu = new System.Windows.Forms.PictureBox();
+            this.lb_pass_usu = new System.Windows.Forms.Label();
+            this.lb_passc_usu = new System.Windows.Forms.Label();
+            this.lb_rol_usu = new System.Windows.Forms.Label();
+            this.lb_sta_usu = new System.Windows.Forms.Label();
+            this.cmb_sta_usu = new System.Windows.Forms.ComboBox();
+            this.txtb_pass_usu = new System.Windows.Forms.TextBox();
+            this.btn_sav = new System.Windows.Forms.Button();
+            this.btn_upd = new System.Windows.Forms.Button();
+            this.btn_del = new System.Windows.Forms.Button();
+            this.txtb_passc_usu = new System.Windows.Forms.TextBox();
+            this.cmb_rol_usu = new System.Windows.Forms.ComboBox();
+            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
+            this.txtb_nom_usu = new System.Windows.Forms.TextBox();
+            this.lb_nom_usu = new System.Windows.Forms.Label();
             this.pnAzul.SuspendLayout();
             this.pnGris.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).BeginInit();
@@ -74,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pnAzul
@@ -119,105 +119,6 @@
             this.pnGris.Controls.Add(this.pbRequ);
             this.pnGris.Controls.Add(this.pbUsu);
             this.pnGris.Name = "pnGris";
-            // 
-            // lb_pass_usu
-            // 
-            resources.ApplyResources(this.lb_pass_usu, "lb_pass_usu");
-            this.lb_pass_usu.BackColor = System.Drawing.Color.White;
-            this.lb_pass_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_pass_usu.Name = "lb_pass_usu";
-            // 
-            // lb_passc_usu
-            // 
-            resources.ApplyResources(this.lb_passc_usu, "lb_passc_usu");
-            this.lb_passc_usu.BackColor = System.Drawing.Color.White;
-            this.lb_passc_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_passc_usu.Name = "lb_passc_usu";
-            // 
-            // lb_rol_usu
-            // 
-            resources.ApplyResources(this.lb_rol_usu, "lb_rol_usu");
-            this.lb_rol_usu.BackColor = System.Drawing.Color.White;
-            this.lb_rol_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_rol_usu.Name = "lb_rol_usu";
-            // 
-            // lb_sta_usu
-            // 
-            resources.ApplyResources(this.lb_sta_usu, "lb_sta_usu");
-            this.lb_sta_usu.BackColor = System.Drawing.Color.White;
-            this.lb_sta_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_sta_usu.Name = "lb_sta_usu";
-            // 
-            // cmb_sta_usu
-            // 
-            this.cmb_sta_usu.FormattingEnabled = true;
-            resources.ApplyResources(this.cmb_sta_usu, "cmb_sta_usu");
-            this.cmb_sta_usu.Name = "cmb_sta_usu";
-            // 
-            // txtb_pass_usu
-            // 
-            this.txtb_pass_usu.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.txtb_pass_usu, "txtb_pass_usu");
-            this.txtb_pass_usu.Name = "txtb_pass_usu";
-            // 
-            // btn_sav
-            // 
-            this.btn_sav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
-            resources.ApplyResources(this.btn_sav, "btn_sav");
-            this.btn_sav.Name = "btn_sav";
-            this.btn_sav.UseVisualStyleBackColor = false;
-            this.btn_sav.Click += new System.EventHandler(this.btn_guardar_Click);
-            // 
-            // btn_upd
-            // 
-            this.btn_upd.BackColor = System.Drawing.Color.Peru;
-            resources.ApplyResources(this.btn_upd, "btn_upd");
-            this.btn_upd.Name = "btn_upd";
-            this.btn_upd.UseVisualStyleBackColor = false;
-            this.btn_upd.Click += new System.EventHandler(this.btn_actualizar_Click);
-            // 
-            // btn_del
-            // 
-            this.btn_del.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(102)))), ((int)(((byte)(79)))));
-            resources.ApplyResources(this.btn_del, "btn_del");
-            this.btn_del.Name = "btn_del";
-            this.btn_del.UseVisualStyleBackColor = false;
-            this.btn_del.Click += new System.EventHandler(this.btn_eliminar_Click);
-            // 
-            // txtb_passc_usu
-            // 
-            this.txtb_passc_usu.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.txtb_passc_usu, "txtb_passc_usu");
-            this.txtb_passc_usu.Name = "txtb_passc_usu";
-            // 
-            // cmb_rol_usu
-            // 
-            this.cmb_rol_usu.FormattingEnabled = true;
-            resources.ApplyResources(this.cmb_rol_usu, "cmb_rol_usu");
-            this.cmb_rol_usu.Name = "cmb_rol_usu";
-            // 
-            // dgv_usuarios
-            // 
-            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgv_usuarios, "dgv_usuarios");
-            this.dgv_usuarios.MultiSelect = false;
-            this.dgv_usuarios.Name = "dgv_usuarios";
-            this.dgv_usuarios.ReadOnly = true;
-            this.dgv_usuarios.RowTemplate.Height = 24;
-            this.dgv_usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellContentClick);
-            // 
-            // txtb_nom_usu
-            // 
-            this.txtb_nom_usu.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.txtb_nom_usu, "txtb_nom_usu");
-            this.txtb_nom_usu.Name = "txtb_nom_usu";
-            // 
-            // lb_nom_usu
-            // 
-            resources.ApplyResources(this.lb_nom_usu, "lb_nom_usu");
-            this.lb_nom_usu.BackColor = System.Drawing.Color.White;
-            this.lb_nom_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_nom_usu.Name = "lb_nom_usu";
             // 
             // pictureBox1
             // 
@@ -361,6 +262,105 @@
             this.pbUsu.Name = "pbUsu";
             this.pbUsu.TabStop = false;
             // 
+            // lb_pass_usu
+            // 
+            resources.ApplyResources(this.lb_pass_usu, "lb_pass_usu");
+            this.lb_pass_usu.BackColor = System.Drawing.Color.White;
+            this.lb_pass_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_pass_usu.Name = "lb_pass_usu";
+            // 
+            // lb_passc_usu
+            // 
+            resources.ApplyResources(this.lb_passc_usu, "lb_passc_usu");
+            this.lb_passc_usu.BackColor = System.Drawing.Color.White;
+            this.lb_passc_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_passc_usu.Name = "lb_passc_usu";
+            // 
+            // lb_rol_usu
+            // 
+            resources.ApplyResources(this.lb_rol_usu, "lb_rol_usu");
+            this.lb_rol_usu.BackColor = System.Drawing.Color.White;
+            this.lb_rol_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_rol_usu.Name = "lb_rol_usu";
+            // 
+            // lb_sta_usu
+            // 
+            resources.ApplyResources(this.lb_sta_usu, "lb_sta_usu");
+            this.lb_sta_usu.BackColor = System.Drawing.Color.White;
+            this.lb_sta_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_sta_usu.Name = "lb_sta_usu";
+            // 
+            // cmb_sta_usu
+            // 
+            resources.ApplyResources(this.cmb_sta_usu, "cmb_sta_usu");
+            this.cmb_sta_usu.FormattingEnabled = true;
+            this.cmb_sta_usu.Name = "cmb_sta_usu";
+            // 
+            // txtb_pass_usu
+            // 
+            resources.ApplyResources(this.txtb_pass_usu, "txtb_pass_usu");
+            this.txtb_pass_usu.BackColor = System.Drawing.Color.White;
+            this.txtb_pass_usu.Name = "txtb_pass_usu";
+            // 
+            // btn_sav
+            // 
+            resources.ApplyResources(this.btn_sav, "btn_sav");
+            this.btn_sav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
+            this.btn_sav.Name = "btn_sav";
+            this.btn_sav.UseVisualStyleBackColor = false;
+            this.btn_sav.Click += new System.EventHandler(this.btn_guardar_Click);
+            // 
+            // btn_upd
+            // 
+            resources.ApplyResources(this.btn_upd, "btn_upd");
+            this.btn_upd.BackColor = System.Drawing.Color.Peru;
+            this.btn_upd.Name = "btn_upd";
+            this.btn_upd.UseVisualStyleBackColor = false;
+            this.btn_upd.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // btn_del
+            // 
+            resources.ApplyResources(this.btn_del, "btn_del");
+            this.btn_del.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(102)))), ((int)(((byte)(79)))));
+            this.btn_del.Name = "btn_del";
+            this.btn_del.UseVisualStyleBackColor = false;
+            this.btn_del.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
+            // txtb_passc_usu
+            // 
+            resources.ApplyResources(this.txtb_passc_usu, "txtb_passc_usu");
+            this.txtb_passc_usu.BackColor = System.Drawing.Color.White;
+            this.txtb_passc_usu.Name = "txtb_passc_usu";
+            // 
+            // cmb_rol_usu
+            // 
+            resources.ApplyResources(this.cmb_rol_usu, "cmb_rol_usu");
+            this.cmb_rol_usu.FormattingEnabled = true;
+            this.cmb_rol_usu.Name = "cmb_rol_usu";
+            // 
+            // dgv_usuarios
+            // 
+            resources.ApplyResources(this.dgv_usuarios, "dgv_usuarios");
+            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_usuarios.MultiSelect = false;
+            this.dgv_usuarios.Name = "dgv_usuarios";
+            this.dgv_usuarios.ReadOnly = true;
+            this.dgv_usuarios.RowTemplate.Height = 24;
+            this.dgv_usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellContentClick);
+            // 
+            // txtb_nom_usu
+            // 
+            resources.ApplyResources(this.txtb_nom_usu, "txtb_nom_usu");
+            this.txtb_nom_usu.BackColor = System.Drawing.Color.White;
+            this.txtb_nom_usu.Name = "txtb_nom_usu";
+            // 
+            // lb_nom_usu
+            // 
+            resources.ApplyResources(this.lb_nom_usu, "lb_nom_usu");
+            this.lb_nom_usu.BackColor = System.Drawing.Color.White;
+            this.lb_nom_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lb_nom_usu.Name = "lb_nom_usu";
+            // 
             // Usuarios
             // 
             resources.ApplyResources(this, "$this");
@@ -389,7 +389,6 @@
             this.pnAzul.ResumeLayout(false);
             this.pnAzul.PerformLayout();
             this.pnGris.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).EndInit();
@@ -398,6 +397,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

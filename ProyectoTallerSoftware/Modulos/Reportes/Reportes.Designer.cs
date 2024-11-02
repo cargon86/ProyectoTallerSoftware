@@ -358,7 +358,7 @@
             // 
             // btnSemanales
             // 
-            this.btnSemanales.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSemanales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSemanales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnSemanales.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnSemanales.ForeColor = System.Drawing.Color.White;
@@ -371,7 +371,7 @@
             // 
             // btnMensuales
             // 
-            this.btnMensuales.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnMensuales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMensuales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnMensuales.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnMensuales.ForeColor = System.Drawing.Color.White;
@@ -384,7 +384,7 @@
             // 
             // btnTrimestrales
             // 
-            this.btnTrimestrales.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnTrimestrales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTrimestrales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnTrimestrales.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnTrimestrales.ForeColor = System.Drawing.Color.White;
@@ -397,7 +397,7 @@
             // 
             // btnJardineria
             // 
-            this.btnJardineria.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnJardineria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnJardineria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnJardineria.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnJardineria.ForeColor = System.Drawing.Color.White;
@@ -410,7 +410,7 @@
             // 
             // btnAseo
             // 
-            this.btnAseo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAseo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAseo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnAseo.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnAseo.ForeColor = System.Drawing.Color.White;
@@ -423,7 +423,7 @@
             // 
             // btnPapeleria
             // 
-            this.btnPapeleria.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPapeleria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPapeleria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnPapeleria.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnPapeleria.ForeColor = System.Drawing.Color.White;
@@ -436,7 +436,7 @@
             // 
             // btnMantenimiento
             // 
-            this.btnMantenimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnMantenimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnMantenimiento.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;

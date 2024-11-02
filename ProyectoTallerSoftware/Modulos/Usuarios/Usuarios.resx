@@ -941,7 +941,7 @@
     <value>14</value>
   </data>
   <data name="lb_pass_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>None</value>
   </data>
   <data name="lb_pass_usu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -953,7 +953,7 @@
     <value>NoControl</value>
   </data>
   <data name="lb_pass_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 213</value>
+    <value>542, 264</value>
   </data>
   <data name="lb_pass_usu.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 27</value>
@@ -977,7 +977,7 @@
     <value>13</value>
   </data>
   <data name="lb_passc_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>None</value>
   </data>
   <data name="lb_passc_usu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -989,7 +989,7 @@
     <value>NoControl</value>
   </data>
   <data name="lb_passc_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 260</value>
+    <value>542, 311</value>
   </data>
   <data name="lb_passc_usu.Size" type="System.Drawing.Size, System.Drawing">
     <value>265, 27</value>
@@ -1013,7 +1013,7 @@
     <value>12</value>
   </data>
   <data name="lb_rol_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>None</value>
   </data>
   <data name="lb_rol_usu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1025,7 +1025,7 @@
     <value>NoControl</value>
   </data>
   <data name="lb_rol_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 306</value>
+    <value>542, 357</value>
   </data>
   <data name="lb_rol_usu.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 27</value>
@@ -1049,7 +1049,7 @@
     <value>11</value>
   </data>
   <data name="lb_sta_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>None</value>
   </data>
   <data name="lb_sta_usu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1061,7 +1061,7 @@
     <value>NoControl</value>
   </data>
   <data name="lb_sta_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 353</value>
+    <value>542, 404</value>
   </data>
   <data name="lb_sta_usu.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 27</value>
@@ -1084,8 +1084,11 @@
   <data name="&gt;&gt;lb_sta_usu.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="cmb_sta_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="cmb_sta_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 354</value>
+    <value>858, 405</value>
   </data>
   <data name="cmb_sta_usu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1108,8 +1111,11 @@
   <data name="&gt;&gt;cmb_sta_usu.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="txtb_pass_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="txtb_pass_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 215</value>
+    <value>858, 266</value>
   </data>
   <data name="txtb_pass_usu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1132,6 +1138,9 @@
   <data name="&gt;&gt;txtb_pass_usu.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="btn_sav.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btn_sav.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 13.2000008pt, style=Bold</value>
   </data>
@@ -1139,7 +1148,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_sav.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1177, 166</value>
+    <value>1463, 220</value>
   </data>
   <data name="btn_sav.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1165,6 +1174,9 @@
   <data name="&gt;&gt;btn_sav.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="btn_upd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btn_upd.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 13.2000008pt, style=Bold</value>
   </data>
@@ -1172,7 +1184,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_upd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1177, 225</value>
+    <value>1463, 279</value>
   </data>
   <data name="btn_upd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1198,6 +1210,9 @@
   <data name="&gt;&gt;btn_upd.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="btn_del.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="btn_del.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 13.2000008pt, style=Bold</value>
   </data>
@@ -1205,7 +1220,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_del.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1177, 284</value>
+    <value>1463, 338</value>
   </data>
   <data name="btn_del.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1231,8 +1246,11 @@
   <data name="&gt;&gt;btn_del.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="txtb_passc_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="txtb_passc_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 262</value>
+    <value>858, 313</value>
   </data>
   <data name="txtb_passc_usu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1255,8 +1273,11 @@
   <data name="&gt;&gt;txtb_passc_usu.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="cmb_rol_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="cmb_rol_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 308</value>
+    <value>858, 359</value>
   </data>
   <data name="cmb_rol_usu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1279,8 +1300,11 @@
   <data name="&gt;&gt;cmb_rol_usu.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="dgv_usuarios.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="dgv_usuarios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>393, 411</value>
+    <value>547, 464</value>
   </data>
   <data name="dgv_usuarios.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1289,7 +1313,7 @@
     <value>51</value>
   </data>
   <data name="dgv_usuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>927, 283</value>
+    <value>1059, 341</value>
   </data>
   <data name="dgv_usuarios.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -1306,8 +1330,11 @@
   <data name="&gt;&gt;dgv_usuarios.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="txtb_nom_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="txtb_nom_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 169</value>
+    <value>858, 220</value>
   </data>
   <data name="txtb_nom_usu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1331,7 +1358,7 @@
     <value>1</value>
   </data>
   <data name="lb_nom_usu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>None</value>
   </data>
   <data name="lb_nom_usu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1343,7 +1370,7 @@
     <value>NoControl</value>
   </data>
   <data name="lb_nom_usu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 166</value>
+    <value>542, 217</value>
   </data>
   <data name="lb_nom_usu.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 27</value>

@@ -63,6 +63,16 @@ namespace ProyectoTallerSoftware.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _25362 {
+            get {
+                object obj = ResourceManager.GetObject("_25362", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap actualizar {
             get {
                 object obj = ResourceManager.GetObject("actualizar", resourceCulture);
@@ -156,6 +166,16 @@ namespace ProyectoTallerSoftware.Properties {
         internal static System.Drawing.Bitmap requisicion {
             get {
                 object obj = ResourceManager.GetObject("requisicion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unica {
+            get {
+                object obj = ResourceManager.GetObject("unica", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bitacora));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdquisicion = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -38,12 +39,6 @@
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnRequisiciones = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbBitacora = new System.Windows.Forms.Label();
-            this.lbUnicah = new System.Windows.Forms.Label();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.lbCambios = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.pbInvent = new System.Windows.Forms.PictureBox();
             this.pbEmplead = new System.Windows.Forms.PictureBox();
@@ -51,9 +46,12 @@
             this.pbProdu = new System.Windows.Forms.PictureBox();
             this.pbRequ = new System.Windows.Forms.PictureBox();
             this.pbUsu = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbBitacora = new System.Windows.Forms.Label();
+            this.lbUnicah = new System.Windows.Forms.Label();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.lbCambios = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).BeginInit();
@@ -62,6 +60,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -89,6 +89,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 812);
             this.panel2.TabIndex = 27;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoTallerSoftware.Properties.Resources.adquisicionn;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 340);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
             // 
             // btnAdquisicion
             // 
@@ -225,78 +236,6 @@
             this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.panel1.Controls.Add(this.lbBitacora);
-            this.panel1.Controls.Add(this.lbUnicah);
-            this.panel1.Location = new System.Drawing.Point(1, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1781, 144);
-            this.panel1.TabIndex = 26;
-            // 
-            // lbBitacora
-            // 
-            this.lbBitacora.AutoSize = true;
-            this.lbBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbBitacora.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.lbBitacora.ForeColor = System.Drawing.Color.White;
-            this.lbBitacora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbBitacora.Location = new System.Drawing.Point(355, 68);
-            this.lbBitacora.Name = "lbBitacora";
-            this.lbBitacora.Size = new System.Drawing.Size(135, 35);
-            this.lbBitacora.TabIndex = 6;
-            this.lbBitacora.Text = "Bitacora";
-            // 
-            // lbUnicah
-            // 
-            this.lbUnicah.AutoSize = true;
-            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbUnicah.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold);
-            this.lbUnicah.ForeColor = System.Drawing.Color.White;
-            this.lbUnicah.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbUnicah.Location = new System.Drawing.Point(9, 34);
-            this.lbUnicah.Name = "lbUnicah";
-            this.lbUnicah.Size = new System.Drawing.Size(289, 78);
-            this.lbUnicah.TabIndex = 5;
-            this.lbUnicah.Text = "UNICAH";
-            // 
-            // dgvProductos
-            // 
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(450, 266);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.RowHeadersWidth = 51;
-            this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(888, 359);
-            this.dgvProductos.TabIndex = 28;
-            // 
-            // lbCambios
-            // 
-            this.lbCambios.AutoSize = true;
-            this.lbCambios.BackColor = System.Drawing.Color.Transparent;
-            this.lbCambios.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.lbCambios.ForeColor = System.Drawing.Color.Black;
-            this.lbCambios.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbCambios.Location = new System.Drawing.Point(444, 197);
-            this.lbCambios.Name = "lbCambios";
-            this.lbCambios.Size = new System.Drawing.Size(340, 35);
-            this.lbCambios.TabIndex = 29;
-            this.lbCambios.Text = "Cambios en el Sistema";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoTallerSoftware.Properties.Resources.adquisicionn;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 340);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
-            // 
             // pbCerrar
             // 
             this.pbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbCerrar.Image")));
@@ -374,6 +313,69 @@
             this.pbUsu.TabIndex = 32;
             this.pbUsu.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.panel1.Controls.Add(this.lbBitacora);
+            this.panel1.Controls.Add(this.lbUnicah);
+            this.panel1.Location = new System.Drawing.Point(1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1781, 144);
+            this.panel1.TabIndex = 26;
+            // 
+            // lbBitacora
+            // 
+            this.lbBitacora.AutoSize = true;
+            this.lbBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbBitacora.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.lbBitacora.ForeColor = System.Drawing.Color.White;
+            this.lbBitacora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbBitacora.Location = new System.Drawing.Point(355, 68);
+            this.lbBitacora.Name = "lbBitacora";
+            this.lbBitacora.Size = new System.Drawing.Size(135, 35);
+            this.lbBitacora.TabIndex = 6;
+            this.lbBitacora.Text = "Bitacora";
+            // 
+            // lbUnicah
+            // 
+            this.lbUnicah.AutoSize = true;
+            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbUnicah.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold);
+            this.lbUnicah.ForeColor = System.Drawing.Color.White;
+            this.lbUnicah.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbUnicah.Location = new System.Drawing.Point(9, 34);
+            this.lbUnicah.Name = "lbUnicah";
+            this.lbUnicah.Size = new System.Drawing.Size(289, 78);
+            this.lbUnicah.TabIndex = 5;
+            this.lbUnicah.Text = "UNICAH";
+            // 
+            // dgvProductos
+            // 
+            this.dgvProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(450, 305);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 24;
+            this.dgvProductos.Size = new System.Drawing.Size(1044, 420);
+            this.dgvProductos.TabIndex = 28;
+            // 
+            // lbCambios
+            // 
+            this.lbCambios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbCambios.AutoSize = true;
+            this.lbCambios.BackColor = System.Drawing.Color.Transparent;
+            this.lbCambios.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.lbCambios.ForeColor = System.Drawing.Color.Black;
+            this.lbCambios.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbCambios.Location = new System.Drawing.Point(483, 220);
+            this.lbCambios.Name = "lbCambios";
+            this.lbCambios.Size = new System.Drawing.Size(340, 35);
+            this.lbCambios.TabIndex = 29;
+            this.lbCambios.Text = "Cambios en el Sistema";
+            // 
             // Bitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -389,9 +391,6 @@
             this.Text = "Bitacora";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).EndInit();
@@ -400,6 +399,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

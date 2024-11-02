@@ -33,9 +33,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbjose = new System.Windows.Forms.Label();
-            this.lbUnicah = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdquisicion = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
@@ -52,9 +49,11 @@
             this.pbProdu = new System.Windows.Forms.PictureBox();
             this.pbRequ = new System.Windows.Forms.PictureBox();
             this.pbUsu = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbjose = new System.Windows.Forms.Label();
+            this.lbUnicah = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).BeginInit();
@@ -63,18 +62,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(429, 210);
+            this.label1.Location = new System.Drawing.Point(451, 210);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 27);
             this.label1.TabIndex = 35;
@@ -82,10 +81,9 @@
             // 
             // textBox3
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(546, 213);
+            this.textBox3.Location = new System.Drawing.Point(568, 213);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(740, 22);
@@ -93,10 +91,9 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(434, 279);
+            this.dataGridView1.Location = new System.Drawing.Point(456, 279);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -130,45 +127,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 812);
             this.panel2.TabIndex = 32;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.panel1.Controls.Add(this.lbjose);
-            this.panel1.Controls.Add(this.lbUnicah);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1782, 144);
-            this.panel1.TabIndex = 31;
-            // 
-            // lbjose
-            // 
-            this.lbjose.AutoSize = true;
-            this.lbjose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbjose.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.lbjose.ForeColor = System.Drawing.Color.White;
-            this.lbjose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbjose.Location = new System.Drawing.Point(355, 68);
-            this.lbjose.Name = "lbjose";
-            this.lbjose.Size = new System.Drawing.Size(158, 35);
-            this.lbjose.TabIndex = 6;
-            this.lbjose.Text = "Inventario";
-            // 
-            // lbUnicah
-            // 
-            this.lbUnicah.AutoSize = true;
-            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbUnicah.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold);
-            this.lbUnicah.ForeColor = System.Drawing.Color.White;
-            this.lbUnicah.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbUnicah.Location = new System.Drawing.Point(9, 34);
-            this.lbUnicah.Name = "lbUnicah";
-            this.lbUnicah.Size = new System.Drawing.Size(289, 78);
-            this.lbUnicah.TabIndex = 5;
-            this.lbUnicah.Text = "UNICAH";
             // 
             // pictureBox1
             // 
@@ -393,6 +351,45 @@
             this.pbUsu.TabIndex = 48;
             this.pbUsu.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.panel1.Controls.Add(this.lbjose);
+            this.panel1.Controls.Add(this.lbUnicah);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1782, 144);
+            this.panel1.TabIndex = 31;
+            // 
+            // lbjose
+            // 
+            this.lbjose.AutoSize = true;
+            this.lbjose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbjose.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.lbjose.ForeColor = System.Drawing.Color.White;
+            this.lbjose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbjose.Location = new System.Drawing.Point(355, 68);
+            this.lbjose.Name = "lbjose";
+            this.lbjose.Size = new System.Drawing.Size(158, 35);
+            this.lbjose.TabIndex = 6;
+            this.lbjose.Text = "Inventario";
+            // 
+            // lbUnicah
+            // 
+            this.lbUnicah.AutoSize = true;
+            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbUnicah.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold);
+            this.lbUnicah.ForeColor = System.Drawing.Color.White;
+            this.lbUnicah.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbUnicah.Location = new System.Drawing.Point(9, 34);
+            this.lbUnicah.Name = "lbUnicah";
+            this.lbUnicah.Size = new System.Drawing.Size(289, 78);
+            this.lbUnicah.TabIndex = 5;
+            this.lbUnicah.Text = "UNICAH";
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -410,8 +407,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).EndInit();
@@ -420,6 +415,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
