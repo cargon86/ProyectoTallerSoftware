@@ -46,63 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Inventario\Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulos\Empleados\Empleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Empleados\Empleados.Designer.cs">
-      <DependentUpon>Empleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulos\Hoja_Requisicion\Hoja_Requisicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Hoja_Requisicion\Hoja_Requisicion.Designer.cs">
-      <DependentUpon>Hoja_Requisicion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulos\Home\Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Home\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulos\Inventario\Inventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Inventario\Inventario.Designer.cs">
+    <Compile Include="Inventario\Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\Login\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Login\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulos\Productos\Productos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Productos\Productos.Designer.cs">
-      <DependentUpon>Productos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulos\Reportes\Reportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Reportes\Reportes.Designer.cs">
-      <DependentUpon>Reportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulos\Usuarios\Usuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Usuarios\Usuarios.Designer.cs">
-      <DependentUpon>Usuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Modulos\Inventario\Inventario.resx">
+    <EmbeddedResource Include="Inventario\Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
