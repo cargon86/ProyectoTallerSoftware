@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adquisicion));
-            this.cmbMedida = new System.Windows.Forms.ComboBox();
+            this.cmbProducto = new System.Windows.Forms.ComboBox();
             this.dgvAdquisicion = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.lbDescripP = new System.Windows.Forms.Label();
             this.lbProducto = new System.Windows.Forms.Label();
-            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.lbProveedor = new System.Windows.Forms.Label();
             this.pnGris = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -59,7 +59,7 @@
             this.pnAzul = new System.Windows.Forms.Panel();
             this.lbjose = new System.Windows.Forms.Label();
             this.lbUnicah = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.lbFechaAdq = new System.Windows.Forms.Label();
             this.lbCantidad = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -76,11 +76,11 @@
             this.pnAzul.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cmbMedida
+            // cmbProducto
             // 
-            resources.ApplyResources(this.cmbMedida, "cmbMedida");
-            this.cmbMedida.FormattingEnabled = true;
-            this.cmbMedida.Name = "cmbMedida";
+            resources.ApplyResources(this.cmbProducto, "cmbProducto");
+            this.cmbProducto.FormattingEnabled = true;
+            this.cmbProducto.Name = "cmbProducto";
             // 
             // dgvAdquisicion
             // 
@@ -110,11 +110,11 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // txtDescripcion
+            // txtObservacion
             // 
-            resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
-            this.txtDescripcion.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion.Name = "txtDescripcion";
+            resources.ApplyResources(this.txtObservacion, "txtObservacion");
+            this.txtObservacion.BackColor = System.Drawing.Color.White;
+            this.txtObservacion.Name = "txtObservacion";
             // 
             // lbDescripP
             // 
@@ -130,11 +130,11 @@
             this.lbProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbProducto.Name = "lbProducto";
             // 
-            // txtProducto
+            // txtProveedor
             // 
-            resources.ApplyResources(this.txtProducto, "txtProducto");
-            this.txtProducto.BackColor = System.Drawing.Color.White;
-            this.txtProducto.Name = "txtProducto";
+            resources.ApplyResources(this.txtProveedor, "txtProveedor");
+            this.txtProveedor.BackColor = System.Drawing.Color.White;
+            this.txtProveedor.Name = "txtProveedor";
             // 
             // lbProveedor
             // 
@@ -329,10 +329,10 @@
             this.lbUnicah.ForeColor = System.Drawing.Color.White;
             this.lbUnicah.Name = "lbUnicah";
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
-            this.dateTimePicker1.Name = "dateTimePicker1";
+            resources.ApplyResources(this.dtpFecha, "dtpFecha");
+            this.dtpFecha.Name = "dtpFecha";
             // 
             // lbFechaAdq
             // 
@@ -362,22 +362,23 @@
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lbCantidad);
             this.Controls.Add(this.lbFechaAdq);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.cmbMedida);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.cmbProducto);
             this.Controls.Add(this.dgvAdquisicion);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtObservacion);
             this.Controls.Add(this.lbDescripP);
             this.Controls.Add(this.lbProducto);
-            this.Controls.Add(this.txtProducto);
+            this.Controls.Add(this.txtProveedor);
             this.Controls.Add(this.lbProveedor);
             this.Controls.Add(this.pnGris);
             this.Controls.Add(this.pnAzul);
             this.KeyPreview = true;
             this.Name = "Adquisicion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Adquisicion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdquisicion)).EndInit();
             this.pnGris.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -397,15 +398,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbMedida;
+        private System.Windows.Forms.ComboBox cmbProducto;
         private System.Windows.Forms.DataGridView dgvAdquisicion;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.Label lbDescripP;
         private System.Windows.Forms.Label lbProducto;
-        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.TextBox txtProveedor;
         private System.Windows.Forms.Label lbProveedor;
         private System.Windows.Forms.Panel pnGris;
         private System.Windows.Forms.Button btnCerrar;
@@ -427,7 +428,7 @@
         private System.Windows.Forms.Label lbUnicah;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAdquisicion;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lbFechaAdq;
         private System.Windows.Forms.Label lbCantidad;
         private System.Windows.Forms.TextBox txtCantidad;

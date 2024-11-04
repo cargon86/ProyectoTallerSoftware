@@ -118,30 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cmbMedida.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="cmbProducto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cmbMedida.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="cmbProducto.Location" type="System.Drawing.Point, System.Drawing">
     <value>680, 300</value>
   </data>
-  <data name="cmbMedida.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="cmbProducto.Size" type="System.Drawing.Size, System.Drawing">
     <value>315, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cmbMedida.TabIndex" type="System.Int32, mscorlib">
+  <data name="cmbProducto.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="&gt;&gt;cmbMedida.Name" xml:space="preserve">
-    <value>cmbMedida</value>
+  <data name="&gt;&gt;cmbProducto.Name" xml:space="preserve">
+    <value>cmbProducto</value>
   </data>
-  <data name="&gt;&gt;cmbMedida.Type" xml:space="preserve">
+  <data name="&gt;&gt;cmbProducto.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cmbMedida.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmbProducto.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;cmbMedida.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cmbProducto.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="dgvAdquisicion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -270,28 +270,28 @@
   <data name="&gt;&gt;btnGuardar.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="txtDescripcion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="txtObservacion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="txtDescripcion.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtObservacion.Location" type="System.Drawing.Point, System.Drawing">
     <value>1288, 231</value>
   </data>
-  <data name="txtDescripcion.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtObservacion.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 22</value>
   </data>
-  <data name="txtDescripcion.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtObservacion.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="&gt;&gt;txtDescripcion.Name" xml:space="preserve">
-    <value>txtDescripcion</value>
+  <data name="&gt;&gt;txtObservacion.Name" xml:space="preserve">
+    <value>txtObservacion</value>
   </data>
-  <data name="&gt;&gt;txtDescripcion.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtObservacion.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtDescripcion.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtObservacion.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtDescripcion.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtObservacion.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="lbDescripP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -366,28 +366,28 @@
   <data name="&gt;&gt;lbProducto.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="txtProducto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="txtProveedor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="txtProducto.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtProveedor.Location" type="System.Drawing.Point, System.Drawing">
     <value>680, 231</value>
   </data>
-  <data name="txtProducto.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtProveedor.Size" type="System.Drawing.Size, System.Drawing">
     <value>315, 22</value>
   </data>
-  <data name="txtProducto.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtProveedor.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="&gt;&gt;txtProducto.Name" xml:space="preserve">
-    <value>txtProducto</value>
+  <data name="&gt;&gt;txtProveedor.Name" xml:space="preserve">
+    <value>txtProveedor</value>
   </data>
-  <data name="&gt;&gt;txtProducto.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtProveedor.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtProducto.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtProveedor.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtProducto.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtProveedor.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="lbProveedor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -428,219 +428,6 @@
   </data>
   <data name="pnGris.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnAdquisicion.Name" xml:space="preserve">
-    <value>btnAdquisicion</value>
-  </data>
-  <data name="&gt;&gt;btnAdquisicion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAdquisicion.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;btnAdquisicion.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnInventario.Name" xml:space="preserve">
-    <value>btnInventario</value>
-  </data>
-  <data name="&gt;&gt;btnInventario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnInventario.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;btnInventario.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.Name" xml:space="preserve">
-    <value>btnCerrar</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;btnCerrar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnEmpleados.Name" xml:space="preserve">
-    <value>btnEmpleados</value>
-  </data>
-  <data name="&gt;&gt;btnEmpleados.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnEmpleados.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;btnEmpleados.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnReportes.Name" xml:space="preserve">
-    <value>btnReportes</value>
-  </data>
-  <data name="&gt;&gt;btnReportes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnReportes.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;btnReportes.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnProductos.Name" xml:space="preserve">
-    <value>btnProductos</value>
-  </data>
-  <data name="&gt;&gt;btnProductos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnProductos.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;btnProductos.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btnRequisiciones.Name" xml:space="preserve">
-    <value>btnRequisiciones</value>
-  </data>
-  <data name="&gt;&gt;btnRequisiciones.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRequisiciones.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;btnRequisiciones.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnUsuarios.Name" xml:space="preserve">
-    <value>btnUsuarios</value>
-  </data>
-  <data name="&gt;&gt;btnUsuarios.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnUsuarios.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;btnUsuarios.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;pbCerrar.Name" xml:space="preserve">
-    <value>pbCerrar</value>
-  </data>
-  <data name="&gt;&gt;pbCerrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbCerrar.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;pbCerrar.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;pbInvent.Name" xml:space="preserve">
-    <value>pbInvent</value>
-  </data>
-  <data name="&gt;&gt;pbInvent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbInvent.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;pbInvent.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;pbEmplead.Name" xml:space="preserve">
-    <value>pbEmplead</value>
-  </data>
-  <data name="&gt;&gt;pbEmplead.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbEmplead.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;pbEmplead.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;pbRepor.Name" xml:space="preserve">
-    <value>pbRepor</value>
-  </data>
-  <data name="&gt;&gt;pbRepor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbRepor.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;pbRepor.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;pbProdu.Name" xml:space="preserve">
-    <value>pbProdu</value>
-  </data>
-  <data name="&gt;&gt;pbProdu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbProdu.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;pbProdu.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;pbRequ.Name" xml:space="preserve">
-    <value>pbRequ</value>
-  </data>
-  <data name="&gt;&gt;pbRequ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbRequ.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;pbRequ.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;pbUsu.Name" xml:space="preserve">
-    <value>pbUsu</value>
-  </data>
-  <data name="&gt;&gt;pbUsu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbUsu.Parent" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;pbUsu.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="pnGris.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 141</value>
-  </data>
-  <data name="pnGris.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 812</value>
-  </data>
-  <data name="pnGris.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;pnGris.Name" xml:space="preserve">
-    <value>pnGris</value>
-  </data>
-  <data name="&gt;&gt;pnGris.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnGris.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnGris.ZOrder" xml:space="preserve">
-    <value>14</value>
   </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1336,53 +1123,29 @@
   <data name="&gt;&gt;pbUsu.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="pnAzul.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="pnGris.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 141</value>
   </data>
-  <data name="&gt;&gt;lbjose.Name" xml:space="preserve">
-    <value>lbjose</value>
+  <data name="pnGris.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 812</value>
   </data>
-  <data name="&gt;&gt;lbjose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pnGris.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
-  <data name="&gt;&gt;lbjose.Parent" xml:space="preserve">
-    <value>pnAzul</value>
+  <data name="&gt;&gt;pnGris.Name" xml:space="preserve">
+    <value>pnGris</value>
   </data>
-  <data name="&gt;&gt;lbjose.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbUnicah.Name" xml:space="preserve">
-    <value>lbUnicah</value>
-  </data>
-  <data name="&gt;&gt;lbUnicah.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbUnicah.Parent" xml:space="preserve">
-    <value>pnAzul</value>
-  </data>
-  <data name="&gt;&gt;lbUnicah.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnAzul.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, -1</value>
-  </data>
-  <data name="pnAzul.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1781, 144</value>
-  </data>
-  <data name="pnAzul.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;pnAzul.Name" xml:space="preserve">
-    <value>pnAzul</value>
-  </data>
-  <data name="&gt;&gt;pnAzul.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnGris.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnAzul.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnGris.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pnAzul.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;pnGris.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="pnAzul.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="lbjose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1456,28 +1219,49 @@
   <data name="&gt;&gt;lbUnicah.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="dateTimePicker1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="pnAzul.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, -1</value>
   </data>
-  <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1325, 298</value>
+  <data name="pnAzul.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1781, 144</value>
   </data>
-  <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 22</value>
+  <data name="pnAzul.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
-  <data name="dateTimePicker1.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+  <data name="&gt;&gt;pnAzul.Name" xml:space="preserve">
+    <value>pnAzul</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.Name" xml:space="preserve">
-    <value>dateTimePicker1</value>
+  <data name="&gt;&gt;pnAzul.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnAzul.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pnAzul.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="dtpFecha.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="dtpFecha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1325, 298</value>
+  </data>
+  <data name="dtpFecha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 22</value>
+  </data>
+  <data name="dtpFecha.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;dtpFecha.Name" xml:space="preserve">
+    <value>dtpFecha</value>
+  </data>
+  <data name="&gt;&gt;dtpFecha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dtpFecha.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dtpFecha.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="lbFechaAdq.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">

@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Dgvempleados = new System.Windows.Forms.DataGridView();
+            this.Txtnom = new System.Windows.Forms.TextBox();
+            this.Cbxusu = new System.Windows.Forms.ComboBox();
+            this.Cbxarea = new System.Windows.Forms.ComboBox();
+            this.lbEstado = new System.Windows.Forms.Label();
+            this.lbUsuario = new System.Windows.Forms.Label();
+            this.lbArea = new System.Windows.Forms.Label();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.Btneliminar = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.Btnagregar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdquisicion = new System.Windows.Forms.Button();
@@ -61,7 +60,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lbId = new System.Windows.Forms.Label();
+            this.Txtid = new System.Windows.Forms.TextBox();
+            this.Rbtna = new System.Windows.Forms.RadioButton();
+            this.Rbtni = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgvempleados)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
@@ -74,146 +77,140 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // Dgvempleados
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(502, 535);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1212, 294);
-            this.dataGridView1.TabIndex = 32;
+            this.Dgvempleados.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Dgvempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgvempleados.Location = new System.Drawing.Point(502, 572);
+            this.Dgvempleados.Margin = new System.Windows.Forms.Padding(4);
+            this.Dgvempleados.Name = "Dgvempleados";
+            this.Dgvempleados.RowHeadersWidth = 51;
+            this.Dgvempleados.Size = new System.Drawing.Size(1212, 294);
+            this.Dgvempleados.TabIndex = 32;
+            this.Dgvempleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgvempleados_CellContentClick);
             // 
-            // textBox1
+            // Txtnom
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(675, 217);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(376, 22);
-            this.textBox1.TabIndex = 31;
+            this.Txtnom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txtnom.Location = new System.Drawing.Point(675, 254);
+            this.Txtnom.Margin = new System.Windows.Forms.Padding(4);
+            this.Txtnom.Name = "Txtnom";
+            this.Txtnom.Size = new System.Drawing.Size(376, 22);
+            this.Txtnom.TabIndex = 31;
             // 
-            // comboBox3
+            // Cbxusu
             // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(675, 344);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(376, 24);
-            this.comboBox3.TabIndex = 30;
+            this.Cbxusu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Cbxusu.FormattingEnabled = true;
+            this.Cbxusu.Location = new System.Drawing.Point(675, 381);
+            this.Cbxusu.Margin = new System.Windows.Forms.Padding(4);
+            this.Cbxusu.Name = "Cbxusu";
+            this.Cbxusu.Size = new System.Drawing.Size(376, 24);
+            this.Cbxusu.TabIndex = 30;
             // 
-            // comboBox2
+            // Cbxarea
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(675, 408);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(376, 24);
-            this.comboBox2.TabIndex = 29;
+            this.Cbxarea.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Cbxarea.FormattingEnabled = true;
+            this.Cbxarea.Location = new System.Drawing.Point(675, 316);
+            this.Cbxarea.Margin = new System.Windows.Forms.Padding(4);
+            this.Cbxarea.Name = "Cbxarea";
+            this.Cbxarea.Size = new System.Drawing.Size(376, 24);
+            this.Cbxarea.TabIndex = 28;
             // 
-            // comboBox1
+            // lbEstado
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(675, 279);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(376, 24);
-            this.comboBox1.TabIndex = 28;
+            this.lbEstado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbEstado.AutoSize = true;
+            this.lbEstado.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.lbEstado.ForeColor = System.Drawing.Color.Black;
+            this.lbEstado.Location = new System.Drawing.Point(527, 440);
+            this.lbEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbEstado.Name = "lbEstado";
+            this.lbEstado.Size = new System.Drawing.Size(91, 26);
+            this.lbEstado.TabIndex = 27;
+            this.lbEstado.Text = "Estado:";
             // 
-            // label14
+            // lbUsuario
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(527, 403);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(121, 26);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Empleado:";
+            this.lbUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbUsuario.AutoSize = true;
+            this.lbUsuario.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.lbUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lbUsuario.Location = new System.Drawing.Point(527, 376);
+            this.lbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbUsuario.Name = "lbUsuario";
+            this.lbUsuario.Size = new System.Drawing.Size(98, 26);
+            this.lbUsuario.TabIndex = 26;
+            this.lbUsuario.Text = "Usuario:";
             // 
-            // label13
+            // lbArea
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(527, 339);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 26);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Usuario:";
+            this.lbArea.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbArea.AutoSize = true;
+            this.lbArea.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.lbArea.ForeColor = System.Drawing.Color.Black;
+            this.lbArea.Location = new System.Drawing.Point(527, 314);
+            this.lbArea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbArea.Name = "lbArea";
+            this.lbArea.Size = new System.Drawing.Size(66, 26);
+            this.lbArea.TabIndex = 25;
+            this.lbArea.Text = "Area:";
             // 
-            // label12
+            // lbNombre
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(527, 277);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 26);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Area:";
+            this.lbNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.lbNombre.ForeColor = System.Drawing.Color.Black;
+            this.lbNombre.Location = new System.Drawing.Point(527, 249);
+            this.lbNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(100, 26);
+            this.lbNombre.TabIndex = 24;
+            this.lbNombre.Text = "Nombre:";
             // 
-            // label11
+            // Btneliminar
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(527, 212);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 26);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Nombre:";
+            this.Btneliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(102)))), ((int)(((byte)(79)))));
+            this.Btneliminar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
+            this.Btneliminar.Location = new System.Drawing.Point(1518, 408);
+            this.Btneliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btneliminar.Name = "Btneliminar";
+            this.Btneliminar.Size = new System.Drawing.Size(159, 49);
+            this.Btneliminar.TabIndex = 23;
+            this.Btneliminar.Text = "Eliminar";
+            this.Btneliminar.UseVisualStyleBackColor = false;
+            this.Btneliminar.Click += new System.EventHandler(this.Btneliminar_Click);
             // 
-            // button3
+            // BtnEditar
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(102)))), ((int)(((byte)(79)))));
-            this.button3.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(1518, 408);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 49);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.BtnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(78)))));
+            this.BtnEditar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
+            this.BtnEditar.Location = new System.Drawing.Point(1518, 320);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(159, 46);
+            this.BtnEditar.TabIndex = 22;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click_1);
             // 
-            // button2
+            // Btnagregar
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(78)))));
-            this.button2.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(1518, 320);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 46);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
-            this.button1.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(1518, 217);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 48);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btnagregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
+            this.Btnagregar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
+            this.Btnagregar.Location = new System.Drawing.Point(1518, 217);
+            this.Btnagregar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btnagregar.Name = "Btnagregar";
+            this.Btnagregar.Size = new System.Drawing.Size(159, 48);
+            this.Btnagregar.TabIndex = 21;
+            this.Btnagregar.Text = "Agregar";
+            this.Btnagregar.UseVisualStyleBackColor = false;
+            this.Btnagregar.Click += new System.EventHandler(this.Btnagregar_Click);
             // 
             // panel2
             // 
@@ -502,31 +499,79 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "UNICAH";
             // 
+            // lbId
+            // 
+            this.lbId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
+            this.lbId.ForeColor = System.Drawing.Color.Black;
+            this.lbId.Location = new System.Drawing.Point(527, 197);
+            this.lbId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(37, 26);
+            this.lbId.TabIndex = 33;
+            this.lbId.Text = "Id:";
+            // 
+            // Txtid
+            // 
+            this.Txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txtid.Location = new System.Drawing.Point(675, 197);
+            this.Txtid.Margin = new System.Windows.Forms.Padding(4);
+            this.Txtid.Name = "Txtid";
+            this.Txtid.Size = new System.Drawing.Size(376, 22);
+            this.Txtid.TabIndex = 34;
+            // 
+            // Rbtna
+            // 
+            this.Rbtna.AutoSize = true;
+            this.Rbtna.Location = new System.Drawing.Point(783, 483);
+            this.Rbtna.Name = "Rbtna";
+            this.Rbtna.Size = new System.Drawing.Size(65, 20);
+            this.Rbtna.TabIndex = 35;
+            this.Rbtna.TabStop = true;
+            this.Rbtna.Text = "Activo";
+            this.Rbtna.UseVisualStyleBackColor = true;
+            // 
+            // Rbtni
+            // 
+            this.Rbtni.AutoSize = true;
+            this.Rbtni.Location = new System.Drawing.Point(938, 483);
+            this.Rbtni.Name = "Rbtni";
+            this.Rbtni.Size = new System.Drawing.Size(74, 20);
+            this.Rbtni.TabIndex = 36;
+            this.Rbtni.TabStop = true;
+            this.Rbtni.Text = "Inactivo";
+            this.Rbtni.UseVisualStyleBackColor = true;
+            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1782, 953);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Rbtni);
+            this.Controls.Add(this.Rbtna);
+            this.Controls.Add(this.Txtid);
+            this.Controls.Add(this.lbId);
+            this.Controls.Add(this.Dgvempleados);
+            this.Controls.Add(this.Txtnom);
+            this.Controls.Add(this.Cbxusu);
+            this.Controls.Add(this.Cbxarea);
+            this.Controls.Add(this.lbEstado);
+            this.Controls.Add(this.lbUsuario);
+            this.Controls.Add(this.lbArea);
+            this.Controls.Add(this.lbNombre);
+            this.Controls.Add(this.Btneliminar);
+            this.Controls.Add(this.BtnEditar);
+            this.Controls.Add(this.Btnagregar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Empleados";
             this.Text = "Empleados";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Empleados_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.Dgvempleados)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
@@ -545,18 +590,17 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView Dgvempleados;
+        private System.Windows.Forms.TextBox Txtnom;
+        private System.Windows.Forms.ComboBox Cbxusu;
+        private System.Windows.Forms.ComboBox Cbxarea;
+        private System.Windows.Forms.Label lbEstado;
+        private System.Windows.Forms.Label lbUsuario;
+        private System.Windows.Forms.Label lbArea;
+        private System.Windows.Forms.Label lbNombre;
+        private System.Windows.Forms.Button Btneliminar;
+        private System.Windows.Forms.Button BtnEditar;
+        private System.Windows.Forms.Button Btnagregar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
@@ -577,5 +621,9 @@
         private System.Windows.Forms.PictureBox pbProdu;
         private System.Windows.Forms.PictureBox pbRequ;
         private System.Windows.Forms.PictureBox pbUsu;
+        private System.Windows.Forms.Label lbId;
+        private System.Windows.Forms.TextBox Txtid;
+        private System.Windows.Forms.RadioButton Rbtna;
+        private System.Windows.Forms.RadioButton Rbtni;
     }
 }

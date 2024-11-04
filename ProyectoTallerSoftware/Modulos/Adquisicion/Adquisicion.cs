@@ -17,6 +17,7 @@ namespace ProyectoTallerSoftware.Modulos.Adquisicion
             InitializeComponent();
         }
 
+
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             Usuarios.Usuarios UsuariosForm = new Usuarios.Usuarios();
@@ -71,6 +72,11 @@ namespace ProyectoTallerSoftware.Modulos.Adquisicion
             Login LoginForm = new Login();
             LoginForm.Show();
             this.Hide();
+        }
+
+        private void Adquisicion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

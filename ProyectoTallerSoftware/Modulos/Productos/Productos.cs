@@ -268,6 +268,7 @@ namespace ProyectoTallerSoftware.Modulos.Productos
             LoginForm.Show();
             this.Hide();
         }
+
     }
 }
 
