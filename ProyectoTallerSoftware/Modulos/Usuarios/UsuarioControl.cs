@@ -1,25 +1,24 @@
 ﻿using ProyectoTallerSoftware.Modulos.Clases;
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Security.Cryptography;
 
 namespace ProyectoTallerSoftware.Modulos.Usuarios
 {
-    public partial class Usuarios : Form
+    public partial class UsuarioControl : UserControl
     {
         private readonly Conexion _conexion;
-
-        public Usuarios()
+        public UsuarioControl()
         {
             InitializeComponent();
             _conexion = new Conexion();
         }
 
-        private void Usuarios_Load(object sender, EventArgs e)
+        private void UsuarioControl_Load(object sender, EventArgs e)
         {
             cmb_rol_usu.Items.Add(new { Text = "Administrador", Value = 1 });
             cmb_rol_usu.Items.Add(new { Text = "Empleado", Value = 0 });
@@ -97,7 +96,7 @@ namespace ProyectoTallerSoftware.Modulos.Usuarios
                 {
                     SqlCommand cmd = new SqlCommand("sp_UpdateUser", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-             
+
                     cmd.Parameters.AddWithValue("@nom_usu", txtb_nom_usu.Text);
                     if (!string.IsNullOrWhiteSpace(txtb_pass_usu.Text))
                     {
@@ -244,7 +243,7 @@ namespace ProyectoTallerSoftware.Modulos.Usuarios
                 MessageBox.Show("Por favor, selecciona el rol.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            
+
             if (cmb_sta_usu.SelectedItem == null)
             {
                 MessageBox.Show("Por favor, seleccione el estado.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -276,62 +275,6 @@ namespace ProyectoTallerSoftware.Modulos.Usuarios
                 }
                 return builder.ToString();
             }
-        }
-
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            Usuarios UsuariosForm = new Usuarios();
-            UsuariosForm.Show();
-            this.Hide();
-        }
-
-        private void btnRequisiciones_Click(object sender, EventArgs e)
-        {
-            Hoja_Requisicion.Hoja_Requisicion requisicionform = new Hoja_Requisicion.Hoja_Requisicion();
-            requisicionform.Show();
-            this.Hide();
-        }
-
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            Productos.Productos productoform = new Productos.Productos();
-            productoform.Show();
-            this.Hide();
-        }
-
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-            Reportes.Reportes ReportesForm = new Reportes.Reportes();
-            ReportesForm.Show();
-            this.Hide();
-        }
-
-        private void btnAdquisicion_Click(object sender, EventArgs e)
-        {
-            Adquisicion.Adquisicion AdquisicionForm = new Adquisicion.Adquisicion();
-            AdquisicionForm.Show();
-            this.Hide();
-        }
-
-        private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-            Empleados.Empleados EmpleadosForm = new Empleados.Empleados();
-            EmpleadosForm.Show();
-            this.Hide();
-        }
-
-        private void btnInventario_Click(object sender, EventArgs e)
-        {
-            Inventario.Inventario InventarioForm = new Inventario.Inventario();
-            InventarioForm.Show();
-            this.Hide();
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Login LoginForm = new Login();
-            LoginForm.Show();
-            this.Hide();
         }
     }
 }

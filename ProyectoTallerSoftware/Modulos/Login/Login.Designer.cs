@@ -41,14 +41,12 @@
             // 
             // btn_login
             // 
-            this.btn_login.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btn_login.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.Location = new System.Drawing.Point(532, 649);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(2);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(278, 32);
             this.btn_login.TabIndex = 13;
@@ -63,7 +61,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtb_pass_usu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtb_pass_usu.Location = new System.Drawing.Point(506, 553);
-            this.txtb_pass_usu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtb_pass_usu.Margin = new System.Windows.Forms.Padding(2);
             this.txtb_pass_usu.Name = "txtb_pass_usu";
             this.txtb_pass_usu.Size = new System.Drawing.Size(328, 23);
             this.txtb_pass_usu.TabIndex = 12;
@@ -77,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtb_nom_usu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtb_nom_usu.Location = new System.Drawing.Point(506, 444);
-            this.txtb_nom_usu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtb_nom_usu.Margin = new System.Windows.Forms.Padding(2);
             this.txtb_nom_usu.Name = "txtb_nom_usu";
             this.txtb_nom_usu.Size = new System.Drawing.Size(328, 23);
             this.txtb_nom_usu.TabIndex = 11;
@@ -130,7 +128,7 @@
             this.pb_logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pb_logo.Image = global::ProyectoTallerSoftware.Properties.Resources.unica;
             this.pb_logo.Location = new System.Drawing.Point(557, 56);
-            this.pb_logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pb_logo.Margin = new System.Windows.Forms.Padding(2);
             this.pb_logo.Name = "pb_logo";
             this.pb_logo.Size = new System.Drawing.Size(225, 225);
             this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -151,7 +149,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pb_logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

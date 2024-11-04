@@ -46,9 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Form1.cs" />
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
@@ -107,6 +105,12 @@
     <Compile Include="Modulos\Reportes\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Usuarios\UsuarioControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Usuarios\UsuarioControl.Designer.cs">
+      <DependentUpon>UsuarioControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Usuarios\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Reportes\Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Usuarios\UsuarioControl.resx">
+      <DependentUpon>UsuarioControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Usuarios\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>

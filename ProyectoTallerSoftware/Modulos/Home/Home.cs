@@ -1,29 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoTallerSoftware.Modulos.Home
 {
     public partial class Home : Form
     {
-        public Home()
+        public Home(string user)
         {
             InitializeComponent();
+            lbl_nom_usu.Text = user;
         }
 
-       
+        public void CambiarFormulario(UserControl control)
+        {
+            pnl_contenido.Controls.Clear();
+            pnl_contenido.Controls.Add(control);
+            control.Dock = DockStyle.Fill;
+        }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            Usuarios.Usuarios UsuariosForm = new Usuarios.Usuarios();
-            UsuariosForm.Show();
-            this.Hide();
+            CambiarFormulario(new Usuarios.UsuarioControl());
+            lbl_form.Text = "Usuarios";
         }
 
         private void btnRequisiciones_Click(object sender, EventArgs e)
