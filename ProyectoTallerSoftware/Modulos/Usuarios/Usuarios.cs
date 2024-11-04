@@ -25,12 +25,12 @@ namespace ProyectoTallerSoftware.Modulos.Usuarios
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-            cmb_rol_usu.Items.Add(new { Text = "Administrador", Value = 0 });
-            cmb_rol_usu.Items.Add(new { Text = "Empleado", Value = 1 });
+            cmb_rol_usu.Items.Add(new { Text = "Administrador", Value = 1 });
+            cmb_rol_usu.Items.Add(new { Text = "Empleado", Value = 0 });
             cmb_rol_usu.DisplayMember = "Text";
             cmb_rol_usu.ValueMember = "Value";
-            cmb_sta_usu.Items.Add(new { Text = "Inactivo", Value = 0 });
             cmb_sta_usu.Items.Add(new { Text = "Activo", Value = 1 });
+            cmb_sta_usu.Items.Add(new { Text = "Inactivo", Value = 0 });
             cmb_sta_usu.DisplayMember = "Text";
             cmb_sta_usu.ValueMember = "Value";
             LeerUsuarios();
@@ -175,6 +175,22 @@ namespace ProyectoTallerSoftware.Modulos.Usuarios
             {
                 txtb_nom_usu.Text = dgv_usuarios.CurrentRow.Cells["Nombre de Usuario"].Value?.ToString();
                 txtb_pass_usu.Text = "";
+                txtb_passc_usu.Text = "";
+                var rolText = dgv_usuarios.CurrentRow.Cells["Rol"].Value?.ToString();
+                cmb_rol_usu.SelectedItem = cmb_rol_usu.Items.Cast<dynamic>().FirstOrDefault(item => item.Text == rolText);
+
+                var estadoText = dgv_usuarios.CurrentRow.Cells["Estado"].Value?.ToString();
+                cmb_sta_usu.SelectedItem = cmb_sta_usu.Items.Cast<dynamic>().FirstOrDefault(item => item.Text == estadoText);
+            }
+        }
+
+        private void dgv_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv_usuarios.CurrentRow != null)
+            {
+                txtb_nom_usu.Text = dgv_usuarios.CurrentRow.Cells["Nombre de Usuario"].Value?.ToString();
+                txtb_pass_usu.Text = "";
+                txtb_passc_usu.Text = "";
                 var rolText = dgv_usuarios.CurrentRow.Cells["Rol"].Value?.ToString();
                 cmb_rol_usu.SelectedItem = cmb_rol_usu.Items.Cast<dynamic>().FirstOrDefault(item => item.Text == rolText);
 
@@ -191,6 +207,12 @@ namespace ProyectoTallerSoftware.Modulos.Usuarios
                 return false;
             }
 
+            if (txtb_nom_usu.Text.Length < 3 || txtb_nom_usu.Text.Length > 20)
+            {
+                MessageBox.Show("El nombre de usuario debe tener entre 3 y 20 caracteres.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             if (!esActualizacion)
             {
                 if (string.IsNullOrWhiteSpace(txtb_pass_usu.Text))
@@ -199,9 +221,21 @@ namespace ProyectoTallerSoftware.Modulos.Usuarios
                     return false;
                 }
 
+                if (txtb_pass_usu.Text.Length < 8 || txtb_pass_usu.Text.Length > 20)
+                {
+                    MessageBox.Show("La contraseña debe tener entre 8 y 20 caracteres.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
                 if (string.IsNullOrWhiteSpace(txtb_passc_usu.Text))
                 {
                     MessageBox.Show("Por favor, ingresa la confirmación de la contraseña.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (txtb_passc_usu.Text != txtb_pass_usu.Text)
+                {
+                    MessageBox.Show("La contraseña y la confirmación no coinciden.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
