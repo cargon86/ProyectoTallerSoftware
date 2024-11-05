@@ -1,35 +1,35 @@
-﻿using System;
+﻿using ProyectoTallerSoftware.Modulos.Clases;
+using System;
 using System.Collections.Generic;
-using ProyectoTallerSoftware.Modulos.Clases;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-
-
+using static System.Collections.Specialized.BitVector32;
 
 namespace ProyectoTallerSoftware.Modulos.Adquisicion
 {
-    public partial class Adquisicion : Form
+    public partial class AdquisicionControl : UserControl
     {
         private readonly Conexion _conexion;
+        private string usuario = "";
+        private int selectedAdqId;
+        private int selectedDetAdqId;
 
-
-        public Adquisicion()
+        public AdquisicionControl(string usuario)
         {
             InitializeComponent();
             _conexion = new Conexion();
-
+            this.usuario = usuario;
         }
 
-        private void Adquisicion_Load(object sender, EventArgs e)
+        private void AdquisicionControl_Load(object sender, EventArgs e)
         {
             LoadProducts();
-            //  LoadAdquisiciones();
             LoadDetalleAdquisicion();
         }
 
@@ -58,7 +58,6 @@ namespace ProyectoTallerSoftware.Modulos.Adquisicion
                 _conexion.CloseConnection(conn);
             }
         }
-
 
         private void LoadDetalleAdquisicion()
         {
@@ -95,254 +94,6 @@ namespace ProyectoTallerSoftware.Modulos.Adquisicion
                     _conexion.CloseConnection(conn);
                 }
             }
-        }
-
-
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            Usuarios.Usuarios UsuariosForm = new Usuarios.Usuarios();
-            UsuariosForm.Show();
-            this.Hide();
-        }
-
-        private void btnRequisiciones_Click(object sender, EventArgs e)
-        {
-            Hoja_Requisicion.Hoja_Requisicion requisicionform = new Hoja_Requisicion.Hoja_Requisicion();
-            requisicionform.Show();
-            this.Hide();
-        }
-
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            Productos.Productos productoform = new Productos.Productos();
-            productoform.Show();
-            this.Hide();
-        }
-
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-            Reportes.Reportes ReportesForm = new Reportes.Reportes();
-            ReportesForm.Show();
-            this.Hide();
-        }
-
-        private void btnAdquisicion_Click(object sender, EventArgs e)
-        {
-            Adquisicion AdquisicionForm = new Adquisicion();
-            AdquisicionForm.Show();
-            this.Hide();
-        }
-
-        private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-            Empleados.Empleados EmpleadosForm = new Empleados.Empleados();
-            EmpleadosForm.Show();
-            this.Hide();
-        }
-
-        private void btnInventario_Click(object sender, EventArgs e)
-        {
-            Inventario.Inventario InventarioForm = new Inventario.Inventario();
-            InventarioForm.Show();
-            this.Hide();
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Login LoginForm = new Login();
-            LoginForm.Show();
-            this.Hide();
-        }
-
-        // Variables para almacenar los IDs seleccionados
-        private int selectedAdqId;
-        private int selectedDetAdqId;
-
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            // Verificar si hay un usuario en la sesión
-            //if (!Session.IsUserLoggedIn())
-            //{
-            //    MessageBox.Show("Debe iniciar sesión para guardar una adquisición.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return; // Detener el proceso si el usuario no está logueado
-            //}
-
-            // Validar campos
-            if (!ValidateFields())
-            {
-                MessageBox.Show("Por favor, complete todos los campos requeridos.", "Validación de campos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Detener el proceso si los campos no son válidos
-            }
-
-            using (var conn = _conexion.GetConnection())
-            {
-                try
-                {
-                    _conexion.OpenConnection(conn);
-
-                    // Comando para insertar la adquisición
-                    SqlCommand cmdAdq = new SqlCommand("sp_InsertAdquisicion", conn);
-                    cmdAdq.CommandType = CommandType.StoredProcedure;
-
-                    //cmdAdq.Parameters.AddWithValue("@nom_usu", Session.CurrentUser);
-                    cmdAdq.Parameters.AddWithValue("@fec_adq", dtpFecha.Value);
-                    cmdAdq.Parameters.AddWithValue("@prov_adq", txtProveedor.Text);
-                    cmdAdq.Parameters.AddWithValue("@obs_adq", txtObservacion.Text);
-
-                    // Ejecutar el procedimiento almacenado para insertar la adquisición y obtener su ID
-                    var idAdq = Convert.ToInt32(cmdAdq.ExecuteScalar());
-
-                    // Comando para insertar el detalle de adquisición
-                    SqlCommand cmdDetalle = new SqlCommand("sp_InsertDetalleAdquisicion", conn);
-                    cmdDetalle.CommandType = CommandType.StoredProcedure;
-
-                    cmdDetalle.Parameters.AddWithValue("@id_adq", idAdq);
-                    cmdDetalle.Parameters.AddWithValue("@id_prod", ((dynamic)cmbProducto.SelectedItem).Value);
-                    cmdDetalle.Parameters.AddWithValue("@cant_ent", txtCantidad.Text);
-
-                    // Ejecutar el procedimiento almacenado para insertar el detalle
-                    cmdDetalle.ExecuteNonQuery();
-
-                    MessageBox.Show("Adquisición y su detalle guardados exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al guardar la adquisición: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    _conexion.CloseConnection(conn);
-                }
-            }
-
-            LoadDetalleAdquisicion(); // Recargar las adquisiciones
-            ClearFields(); // Limpiar los campos del formulario
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            // Verificar que haya una fila seleccionada
-            if (selectedAdqId == 0 || selectedDetAdqId == 0)
-            {
-                MessageBox.Show("Por favor, seleccione una adquisición para actualizar.", "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Validar campos antes de proceder
-            if (!ValidateFields())
-            {
-                MessageBox.Show("Por favor, complete todos los campos requeridos.", "Validación de campos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            using (var conn = _conexion.GetConnection())
-            {
-                try
-                {
-                    _conexion.OpenConnection(conn);
-
-                    // Comando para actualizar la adquisición
-                    SqlCommand cmdUpdateAdq = new SqlCommand("sp_UpdateAdquisicion", conn);
-                    cmdUpdateAdq.CommandType = CommandType.StoredProcedure;
-
-                    // Asignar los parámetros para la adquisición
-                    cmdUpdateAdq.Parameters.AddWithValue("@id_adq", selectedAdqId);
-                    //cmdUpdateAdq.Parameters.AddWithValue("@nom_usu", Session.CurrentUser);
-                    cmdUpdateAdq.Parameters.AddWithValue("@fec_adq", dtpFecha.Value);
-                    cmdUpdateAdq.Parameters.AddWithValue("@prov_adq", txtProveedor.Text);
-                    cmdUpdateAdq.Parameters.AddWithValue("@obs_adq", txtObservacion.Text);
-
-                    // Ejecutar el procedimiento almacenado para actualizar la adquisición
-                    cmdUpdateAdq.ExecuteNonQuery();
-
-                    // Comando para actualizar el detalle de adquisición
-                    SqlCommand cmdUpdateDetalle = new SqlCommand("sp_UpdateDetalleAdquisicion", conn);
-                    cmdUpdateDetalle.CommandType = CommandType.StoredProcedure;
-
-                    // Asignar los parámetros para el detalle de adquisición
-                    cmdUpdateDetalle.Parameters.AddWithValue("@id_det_adq", selectedDetAdqId);
-                    cmdUpdateDetalle.Parameters.AddWithValue("@id_adq", selectedAdqId);
-                    cmdUpdateDetalle.Parameters.AddWithValue("@id_prod", ((dynamic)cmbProducto.SelectedItem).Value);
-                    cmdUpdateDetalle.Parameters.AddWithValue("@cant_ent", txtCantidad.Text);
-
-                    // Ejecutar el procedimiento almacenado para actualizar el detalle
-                    cmdUpdateDetalle.ExecuteNonQuery();
-
-                    MessageBox.Show("Adquisición y su detalle actualizados exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al actualizar la adquisición: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    _conexion.CloseConnection(conn);
-                }
-            }
-
-            // Recargar la tabla con los datos actualizados
-            LoadDetalleAdquisicion();
-            ClearFields(); // Limpiar los campos del formulario después de la actualización
-        }
-
-       
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            // Verificar que haya una fila seleccionada
-            if (selectedAdqId == 0 || selectedDetAdqId == 0)
-            {
-                MessageBox.Show("Por favor, seleccione una adquisición para eliminar.", "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Preguntar al usuario si quiere eliminar toda la adquisición o solo el detalle
-            var result = MessageBox.Show("¿Desea eliminar toda la adquisición y sus detalles, o solo el detalle seleccionado?",
-                                         "Confirmar eliminación",
-                                         MessageBoxButtons.YesNoCancel,
-                                         MessageBoxIcon.Question,
-                                         MessageBoxDefaultButton.Button3);
-
-            using (var conn = _conexion.GetConnection())
-            {
-                try
-                {
-                    _conexion.OpenConnection(conn);
-
-                    if (result == DialogResult.Yes)
-                    {
-                        // Eliminar toda la adquisición junto con sus detalles
-                        SqlCommand cmdDeleteAdq = new SqlCommand("sp_DeleteAdquisicion", conn);
-                        cmdDeleteAdq.CommandType = CommandType.StoredProcedure;
-                        cmdDeleteAdq.Parameters.AddWithValue("@IdAdq", selectedAdqId);
-
-                        cmdDeleteAdq.ExecuteNonQuery();
-                        MessageBox.Show("Adquisición y todos sus detalles eliminados exitosamente.", "Eliminación Completa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        // Eliminar solo el detalle de adquisición seleccionado
-                        SqlCommand cmdDeleteDetalle = new SqlCommand("sp_DeleteDetalleAdquisicion", conn);
-                        cmdDeleteDetalle.CommandType = CommandType.StoredProcedure;
-                        cmdDeleteDetalle.Parameters.AddWithValue("@id_det_adq", selectedDetAdqId);
-
-                        cmdDeleteDetalle.ExecuteNonQuery();
-                        MessageBox.Show("Detalle de adquisición eliminado exitosamente.", "Eliminación Detalle", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al eliminar la adquisición o el detalle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    _conexion.CloseConnection(conn);
-                }
-            }
-
-            // Recargar la tabla con los datos actualizados
-            LoadDetalleAdquisicion();
-            ClearFields(); // Limpiar los campos del formulario después de la eliminación
         }
 
         private void dgvAdquisicion_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -393,6 +144,187 @@ namespace ProyectoTallerSoftware.Modulos.Adquisicion
             }
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (!ValidateFields())
+            {
+                MessageBox.Show("Por favor, complete todos los campos requeridos.", "Validación de campos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Detener el proceso si los campos no son válidos
+            }
+
+            using (var conn = _conexion.GetConnection())
+            {
+                try
+                {
+                    _conexion.OpenConnection(conn);
+
+                    // Comando para insertar la adquisición
+                    SqlCommand cmdAdq = new SqlCommand("sp_InsertAdquisicion", conn);
+                    cmdAdq.CommandType = CommandType.StoredProcedure;
+
+                    cmdAdq.Parameters.AddWithValue("@nom_usu", usuario);
+                    cmdAdq.Parameters.AddWithValue("@fec_adq", dtpFecha.Value);
+                    cmdAdq.Parameters.AddWithValue("@prov_adq", txtProveedor.Text);
+                    cmdAdq.Parameters.AddWithValue("@obs_adq", txtObservacion.Text);
+
+                    // Ejecutar el procedimiento almacenado para insertar la adquisición y obtener su ID
+                    var idAdq = Convert.ToInt32(cmdAdq.ExecuteScalar());
+
+                    // Comando para insertar el detalle de adquisición
+                    SqlCommand cmdDetalle = new SqlCommand("sp_InsertDetalleAdquisicion", conn);
+                    cmdDetalle.CommandType = CommandType.StoredProcedure;
+
+                    cmdDetalle.Parameters.AddWithValue("@id_adq", idAdq);
+                    cmdDetalle.Parameters.AddWithValue("@id_prod", ((dynamic)cmbProducto.SelectedItem).Value);
+                    cmdDetalle.Parameters.AddWithValue("@cant_ent", txtCantidad.Text);
+
+                    // Ejecutar el procedimiento almacenado para insertar el detalle
+                    cmdDetalle.ExecuteNonQuery();
+
+                    MessageBox.Show("Adquisición y su detalle guardados exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Clases.Bitacora bitacora = new Clases.Bitacora();
+                    bitacora.Insertar("Se agregó una adquisición y su detalle con número " + idAdq, usuario);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar la adquisición: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    _conexion.CloseConnection(conn);
+                }
+            }
+
+            LoadDetalleAdquisicion(); // Recargar las adquisiciones
+            ClearFields(); // Limpiar los campos del formulario
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (selectedAdqId == 0 || selectedDetAdqId == 0)
+            {
+                MessageBox.Show("Por favor, seleccione una adquisición para actualizar.", "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validar campos antes de proceder
+            if (!ValidateFields())
+            {
+                MessageBox.Show("Por favor, complete todos los campos requeridos.", "Validación de campos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (var conn = _conexion.GetConnection())
+            {
+                try
+                {
+                    _conexion.OpenConnection(conn);
+
+                    // Comando para actualizar la adquisición
+                    SqlCommand cmdUpdateAdq = new SqlCommand("sp_UpdateAdquisicion", conn);
+                    cmdUpdateAdq.CommandType = CommandType.StoredProcedure;
+
+                    // Asignar los parámetros para la adquisición
+                    cmdUpdateAdq.Parameters.AddWithValue("@id_adq", selectedAdqId);
+                    cmdUpdateAdq.Parameters.AddWithValue("@nom_usu", usuario);
+                    cmdUpdateAdq.Parameters.AddWithValue("@fec_adq", dtpFecha.Value);
+                    cmdUpdateAdq.Parameters.AddWithValue("@prov_adq", txtProveedor.Text);
+                    cmdUpdateAdq.Parameters.AddWithValue("@obs_adq", txtObservacion.Text);
+
+                    // Ejecutar el procedimiento almacenado para actualizar la adquisición
+                    cmdUpdateAdq.ExecuteNonQuery();
+
+                    // Comando para actualizar el detalle de adquisición
+                    SqlCommand cmdUpdateDetalle = new SqlCommand("sp_UpdateDetalleAdquisicion", conn);
+                    cmdUpdateDetalle.CommandType = CommandType.StoredProcedure;
+
+                    // Asignar los parámetros para el detalle de adquisición
+                    cmdUpdateDetalle.Parameters.AddWithValue("@id_det_adq", selectedDetAdqId);
+                    cmdUpdateDetalle.Parameters.AddWithValue("@id_adq", selectedAdqId);
+                    cmdUpdateDetalle.Parameters.AddWithValue("@id_prod", ((dynamic)cmbProducto.SelectedItem).Value);
+                    cmdUpdateDetalle.Parameters.AddWithValue("@cant_ent", txtCantidad.Text);
+
+                    // Ejecutar el procedimiento almacenado para actualizar el detalle
+                    cmdUpdateDetalle.ExecuteNonQuery();
+
+                    MessageBox.Show("Adquisición y su detalle actualizados exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Clases.Bitacora bitacora = new Clases.Bitacora();
+                    bitacora.Insertar("Se actualizó una adquisición y su detalle con número " + selectedAdqId + selectedDetAdqId, usuario);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al actualizar la adquisición: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    _conexion.CloseConnection(conn);
+                }
+            }
+
+            // Recargar la tabla con los datos actualizados
+            LoadDetalleAdquisicion();
+            ClearFields(); // Limpiar los campos del formulario después de la actualización
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (selectedAdqId == 0 || selectedDetAdqId == 0)
+            {
+                MessageBox.Show("Por favor, seleccione una adquisición para eliminar.", "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Preguntar al usuario si quiere eliminar toda la adquisición o solo el detalle
+            var result = MessageBox.Show("¿Desea eliminar toda la adquisición y sus detalles, o solo el detalle seleccionado?",
+                                         "Confirmar eliminación",
+                                         MessageBoxButtons.YesNoCancel,
+                                         MessageBoxIcon.Question,
+                                         MessageBoxDefaultButton.Button3);
+
+            using (var conn = _conexion.GetConnection())
+            {
+                try
+                {
+                    _conexion.OpenConnection(conn);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        // Eliminar toda la adquisición junto con sus detalles
+                        SqlCommand cmdDeleteAdq = new SqlCommand("sp_DeleteAdquisicion", conn);
+                        cmdDeleteAdq.CommandType = CommandType.StoredProcedure;
+                        cmdDeleteAdq.Parameters.AddWithValue("@IdAdq", selectedAdqId);
+
+                        cmdDeleteAdq.ExecuteNonQuery();
+                        MessageBox.Show("Adquisición y todos sus detalles eliminados exitosamente.", "Eliminación Completa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Clases.Bitacora bitacora = new Clases.Bitacora();
+                        bitacora.Insertar("Se eliminó una adquisición con número " + selectedAdqId, usuario);
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        // Eliminar solo el detalle de adquisición seleccionado
+                        SqlCommand cmdDeleteDetalle = new SqlCommand("sp_DeleteDetalleAdquisicion", conn);
+                        cmdDeleteDetalle.CommandType = CommandType.StoredProcedure;
+                        cmdDeleteDetalle.Parameters.AddWithValue("@id_det_adq", selectedDetAdqId);
+
+                        cmdDeleteDetalle.ExecuteNonQuery();
+                        MessageBox.Show("Detalle de adquisición eliminado exitosamente.", "Eliminación Detalle", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar la adquisición o el detalle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    _conexion.CloseConnection(conn);
+                }
+            }
+
+            // Recargar la tabla con los datos actualizados
+            LoadDetalleAdquisicion();
+            ClearFields(); // Limpiar los campos del formulario después de la eliminación
+        }
+
         private void ClearFields()
         {
             // Restablecer los controles a sus valores por defecto
@@ -402,7 +334,6 @@ namespace ProyectoTallerSoftware.Modulos.Adquisicion
             txtCantidad.Clear(); // Limpiar el campo de texto de cantidad
             cmbProducto.SelectedIndex = -1; // Reiniciar la selección del combo de productos
         }
-
 
         private bool ValidateFields()
         {
