@@ -31,28 +31,27 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
                 _conexion.OpenConnection(conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                // Lista para almacenar los empleados
+               
                 var listaEmpleados = new List<object>();
 
                 while (reader.Read())
                 {
                     listaEmpleados.Add(new
                     {
-                        id_emp = reader["id_emp"].ToString(),       // ID del empleado
-                        nom_emp = reader["nom_emp"].ToString()      // Nombre del empleado
+                        id_emp = reader["id_emp"].ToString(),       
+                        nom_emp = reader["nom_emp"].ToString()      
                     });
                 }
 
-                // Asignar la lista como DataSource del ComboBox
-                cmbSolicitante.DataSource = listaEmpleados;
-                cmbSolicitante.DisplayMember = "nom_emp";  // Muestra el nombre del empleado
-                cmbSolicitante.ValueMember = "id_emp";     // Almacena el ID del empleado
 
-                cmbRecibido.DataSource = listaEmpleados.ToList(); // Usa una copia de la lista para cmbRecibido
-                cmbRecibido.DisplayMember = "nom_emp";
+                cmbSolicitante.DataSource = listaEmpleados;
+                cmbSolicitante.DisplayMember = "nom_emp";  
+                cmbSolicitante.ValueMember = "id_emp";     
+
+                cmbRecibido.DataSource = listaEmpleados.ToList(); 
                 cmbRecibido.ValueMember = "id_emp";
 
-                // Comprobar si se encontraron empleados
+
                 if (listaEmpleados.Count == 0)
                 {
                     MessageBox.Show("No se encontraron empleados.");
@@ -66,26 +65,24 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
 
         private void LoadProductos()
         {
-            // Crea una nueva conexión y un comando para ejecutar el procedimiento almacenado
             using (var conn = _conexion.GetConnection())
             {
                 SqlCommand cmd = new SqlCommand("sp_GetProducts", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                // Abre la conexión
+            
                 _conexion.OpenConnection(conn);
 
-                // Crea un SqlDataAdapter para llenar un DataTable con los resultados del procedimiento almacenado
+
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable productosTable = new DataTable();
 
-                // Llena el DataTable
                 adapter.Fill(productosTable);
 
-                // Establece el DataTable como la fuente de datos para el DataGridView
+
                 dgvProductosHR.DataSource = productosTable;
 
-                // Cierra la conexión
+
                 _conexion.CloseConnection(conn);
             }
         }
@@ -102,20 +99,20 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
                 _conexion.OpenConnection(conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                cmbSolicitud.Items.Clear(); // Limpia el ComboBox antes de cargar
+                cmbSolicitud.Items.Clear(); 
 
                 while (reader.Read())
                 {
-                    // Crea un objeto anónimo con el nombre de usuario y el rol
+
                     cmbSolicitud.Items.Add(new
                     {
-                        Text = reader["Nombre de Usuario"].ToString(), // Nombre del usuario
-                        Value = reader["Rol"].ToString()               // Rol del usuario
+                        Text = reader["Nombre de Usuario"].ToString(), 
+                        Value = reader["Rol"].ToString()              
                     });
                 }
 
-                cmbSolicitud.DisplayMember = "Text"; // Miembro para mostrar
-                cmbSolicitud.ValueMember = "Value";   // Miembro para el valor
+                cmbSolicitud.DisplayMember = "Text"; 
+                cmbSolicitud.ValueMember = "Value";   
 
                 reader.Close();
                 _conexion.CloseConnection(conn);
@@ -132,20 +129,20 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
                 _conexion.OpenConnection(conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                cmbUnidadD.Items.Clear(); // Limpia el ComboBox antes de cargar
+                cmbUnidadD.Items.Clear();
 
                 while (reader.Read())
                 {
-                    // Añade el área al ComboBox
+
                     cmbUnidadD.Items.Add(new
                     {
-                        Text = reader["Nombre de Área"].ToString(), // Nombre del área
-                        Value = reader["ID"].ToString()             // ID del área
+                        Text = reader["Nombre de Área"].ToString(), 
+                        Value = reader["ID"].ToString()             
                     });
                 }
 
-                cmbUnidadD.DisplayMember = "Text"; // Miembro para mostrar
-                cmbUnidadD.ValueMember = "Value";   // Miembro para el valor
+                cmbUnidadD.DisplayMember = "Text"; 
+                cmbUnidadD.ValueMember = "Value";   
 
                 reader.Close();
                 _conexion.CloseConnection(conn);
@@ -246,20 +243,20 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
 
         private void LimpiarCampos()
         {
-            // Limpiar ComboBox
+     
             cmbSolicitante.SelectedIndex = -1;
             cmbSolicitud.SelectedIndex = -1;
             cmbRecibido.SelectedIndex = -1;
 
-            // Restablecer ComboBoxes a su valor predeterminado
+    
             cmbSolicitante.SelectedIndex = -1;
             cmbRecibido.SelectedIndex = -1;
 
-            // Restablecer DateTimePickers a la fecha actual o a una fecha predeterminada
+
             dtpSolicitud.Value = DateTime.Now;
             dtpEntrega.Value = DateTime.Now;
 
-            // Limpiar cualquier otra lista o campo adicional
+      
             if (dgvProductosHR.DataSource != null)
             {
                 dgvProductosHR.DataSource = null;
@@ -306,7 +303,7 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
                 }
                 finally
                 {
-                    // Cerrar la conexión después de completar la operación
+                 
                     conexion.CloseConnection(connection);
                 }
             }
@@ -337,7 +334,7 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
             }
         }
 
-        // Validación de cantidad en el carrito
+      
         private void dgvCarrito_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             if (dgvCarrito.Columns[e.ColumnIndex].Name == "cantidad")
@@ -361,9 +358,9 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
 
         private void btnGuardarHR_Click(object sender, EventArgs e)
         {
-            // Recolectar datos del formulario
+
             string id_emp = cmbSolicitante.SelectedValue?.ToString();
-            MessageBox.Show($"ID del solicitante: {id_emp}"); // Mensaje de depuración
+            MessageBox.Show($"ID del solicitante: {id_emp}"); 
             if (string.IsNullOrEmpty(id_emp))
             {
                 MessageBox.Show("Por favor, seleccione un solicitante.");
@@ -371,28 +368,28 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
             }
 
 
-            DateTime fec_sol = dtpSolicitante.Value; // Fecha de solicitud
-            DateTime? fec_rec = dtpSolicitud.Checked ? dtpSolicitud.Value : (DateTime?)null; // Fecha de recepción
-            DateTime? fec_ent = dtpEntrega.Checked ? dtpEntrega.Value : (DateTime?)null; // Fecha de entrega
-            bool est_req = true; // Suponiendo que una nueva requisición está activa
+            DateTime fec_sol = dtpSolicitante.Value; 
+            DateTime? fec_rec = dtpSolicitud.Checked ? dtpSolicitud.Value : (DateTime?)null; 
+            DateTime? fec_ent = dtpEntrega.Checked ? dtpEntrega.Value : (DateTime?)null; 
+            bool est_req = true; 
 
-            // Crear un DataTable para los detalles de la requisición
+
             DataTable detallesRequisicion = new DataTable();
             detallesRequisicion.Columns.Add("id_prod", typeof(int));
             detallesRequisicion.Columns.Add("cant_det", typeof(string));
 
-            // Recorrer el DataGridView dgvCarrito para obtener los detalles
+ 
             foreach (DataGridViewRow row in dgvCarrito.Rows)
             {
-                if (row.Cells["id_prod"].Value != null) // Asegurarse de que la fila no esté vacía
+                if (row.Cells["id_prod"].Value != null)
                 {
                     detallesRequisicion.Rows.Add(
                         Convert.ToInt32(row.Cells["id_prod"].Value),
-                        row.Cells["cantidad"].Value.ToString()); // Cambia "cantidad" al nombre correcto de la columna
+                        row.Cells["cantidad"].Value.ToString());
                 }
             }
 
-            // Llamar al método que ejecuta el procedimiento almacenado
+ 
             try
             {
                 GuardarRequisicion(id_emp, fec_sol, fec_rec, fec_ent, est_req, detallesRequisicion);
@@ -406,7 +403,7 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
             LimpiarCampos();
         }
 
-        // Método que llama al procedimiento almacenado
+
         private void GuardarRequisicion(string id_emp, DateTime fec_sol, DateTime? fec_rec, DateTime? fec_ent, bool estReq, DataTable detallesRequisicion)
         {
             using (var conn = _conexion.GetConnection())
@@ -414,19 +411,19 @@ namespace ProyectoTallerSoftware.Modulos.Hoja_Requisicion
                 SqlCommand cmd = new SqlCommand("sp_GuardarRequisicion", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                // Agregar parámetros
+    
                 cmd.Parameters.AddWithValue("@id_emp", id_emp);
                 cmd.Parameters.AddWithValue("@fec_sol", fec_sol);
-                cmd.Parameters.AddWithValue("@fec_rec", (object)fec_rec ?? DBNull.Value); // Para manejar valores nulos
+                cmd.Parameters.AddWithValue("@fec_rec", (object)fec_rec ?? DBNull.Value); 
                 cmd.Parameters.AddWithValue("@fec_ent", (object)fec_ent ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@est_req", estReq);
 
-                // Agregar el parámetro de tipo tabla
+
                 SqlParameter paramDetalles = cmd.Parameters.AddWithValue("@detallesRequisicion", detallesRequisicion);
                 paramDetalles.SqlDbType = SqlDbType.Structured;
-                paramDetalles.TypeName = "DetalleRequisicionType"; // Nombre del tipo de tabla que creaste
+                paramDetalles.TypeName = "DetalleRequisicionType"; 
 
-                // Abrir conexión y ejecutar
+
                 _conexion.OpenConnection(conn);
                 cmd.ExecuteNonQuery();
                 _conexion.CloseConnection(conn);

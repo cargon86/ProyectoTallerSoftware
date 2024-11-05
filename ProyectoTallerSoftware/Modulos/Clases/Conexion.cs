@@ -9,28 +9,28 @@ namespace ProyectoTallerSoftware.Modulos.Clases
 {
     public class Conexion
     {
-        // Cadena de conexión a la base de datos
-        private string connectionString = @"Server=WIN11-81W6\SQLEXPRESS;Database=Sis_Inventario;Trusted_Connection=True;";
+        
+        private string connectionString = @"Server=DESKTOP-8QVBGAE\SQLEXPRESS;Database=Sis_Inventario;Trusted_Connection=True;";
 
-        // Método para obtener la conexión
+        
         public SqlConnection GetConnection()
         {
             try
             {
-                // Crear una nueva conexión SQL con la cadena de conexión
+                
                 SqlConnection connection = new SqlConnection(connectionString);
                 return connection;
             }
             catch (Exception ex)
             {
-                // Manejar cualquier excepción que ocurra
+                
                 Console.WriteLine("Error al conectar a la base de datos: " + ex.Message);
                 return null;
             }
         }
 
 
-        // Método para abrir la conexión
+       
         public void OpenConnection(SqlConnection connection)
         {
             try

@@ -24,7 +24,7 @@ namespace ProyectoTallerSoftware.Modulos.Productos
 
         private void Productos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sis_InventarioDataSet.Productos' Puede moverla o quitarla según sea necesario.
+           
             LoadMeasures();
             LoadProducts();
         }
@@ -33,18 +33,18 @@ namespace ProyectoTallerSoftware.Modulos.Productos
         {
             using (var conn = _conexion.GetConnection())
             {
-                SqlCommand cmd = new SqlCommand("sp_GetMeasures", conn); // Cambia al nombre correcto del SP para cargar medidas
+                SqlCommand cmd = new SqlCommand("sp_GetMeasures", conn); 
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 _conexion.OpenConnection(conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                cmbMedida.Items.Clear(); // Limpia el ComboBox antes de cargar
+                cmbMedida.Items.Clear(); 
                 while (reader.Read())
                 {
                     cmbMedida.Items.Add(new
                     {
-                        Text = reader["nom_med"].ToString(), // Cambia según tu base de datos
+                        Text = reader["nom_med"].ToString(), 
                         Value = reader["id_med"].ToString()
                     });
                 }
@@ -68,14 +68,14 @@ namespace ProyectoTallerSoftware.Modulos.Productos
                 da.Fill(dt);
                 dgvProductos.DataSource = dt;
 
-                // Opcional: Ajustar las columnas visibles en el DataGridView
-                dgvProductos.Columns["id_prod"].Visible = false; // Oculta el ID si no es necesario mostrarlo
+
+                dgvProductos.Columns["id_prod"].Visible = false; 
                 _conexion.CloseConnection(conn);
             }
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Validar campos
+
             if (ValidateFields())
             {
                 using (var conn = _conexion.GetConnection())
@@ -83,7 +83,7 @@ namespace ProyectoTallerSoftware.Modulos.Productos
                     SqlCommand cmd = new SqlCommand("sp_AddProduct", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    // Asegúrate de que estos nombres coincidan con los parámetros del SP
+
                     cmd.Parameters.AddWithValue("@NomProd", txtProducto.Text);
                     cmd.Parameters.AddWithValue("@DesProd", txtDescripcion.Text);
                     cmd.Parameters.AddWithValue("@IdMed", ((dynamic)cmbMedida.SelectedItem).Value);
@@ -103,8 +103,8 @@ namespace ProyectoTallerSoftware.Modulos.Productos
                         _conexion.CloseConnection(conn);
                     }
                 }
-                LoadProducts(); // Actualiza la lista después de agregar
-                ClearFields(); // Limpia los campos después de guardar
+                LoadProducts(); 
+                ClearFields(); 
             }
         }
 
@@ -134,8 +134,8 @@ namespace ProyectoTallerSoftware.Modulos.Productos
                     cmd.ExecuteNonQuery();
                     _conexion.CloseConnection(conn);
                 }
-                LoadProducts(); // Actualiza la lista después de actualizar
-                ClearFields(); // Limpia los campos después de actualizar
+                LoadProducts(); 
+                ClearFields();
             }
         }
 
@@ -161,7 +161,7 @@ namespace ProyectoTallerSoftware.Modulos.Productos
                     cmd.ExecuteNonQuery();
                     _conexion.CloseConnection(conn);
                 }
-                LoadProducts(); // Actualiza la lista después de eliminar
+                LoadProducts(); 
             }
 
         }
@@ -170,11 +170,11 @@ namespace ProyectoTallerSoftware.Modulos.Productos
         {
             if (dgvProductos.CurrentRow != null)
             {
-                // Verifica si el valor no es nulo antes de asignar
+   
                 txtProducto.Text = dgvProductos.CurrentRow.Cells["nom_prod"].Value.ToString();
                 txtDescripcion.Text = dgvProductos.CurrentRow.Cells["des_prod"].Value.ToString();
 
-                // Para el ComboBox de Medida
+
                 var selectedIdMed = dgvProductos.CurrentRow.Cells["id_med"].Value?.ToString();
                 if (!string.IsNullOrEmpty(selectedIdMed))
                 {
@@ -182,12 +182,12 @@ namespace ProyectoTallerSoftware.Modulos.Productos
                 }
                 else
                 {
-                    cmbMedida.SelectedIndex = -1; // Desseleccionar si el valor es nulo o vacío
+                    cmbMedida.SelectedIndex = -1; 
                 }
             }
         }
 
-        // Método para validar los campos antes de guardar o actualizar
+
         private bool ValidateFields()
         {
             if (string.IsNullOrWhiteSpace(txtProducto.Text))
@@ -205,12 +205,12 @@ namespace ProyectoTallerSoftware.Modulos.Productos
             return true;
         }
 
-        // Método para limpiar los campos después de guardar o actualizar
+
         private void ClearFields()
         {
             txtProducto.Clear();
             txtDescripcion.Clear();
-            cmbMedida.SelectedIndex = -1; // Desmarca el ComboBox
+            cmbMedida.SelectedIndex = -1;
         }
 
         private void btnUsuarios_Click_1(object sender, EventArgs e)

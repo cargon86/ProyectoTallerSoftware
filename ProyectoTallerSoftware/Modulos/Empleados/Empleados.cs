@@ -36,14 +36,14 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
                         {
                             if (reader.Read())
                             {
-                                // Llenar los campos con los datos del empleado
+
                                 Txtnom.Text = reader["Nombre Empleado"].ToString();
 
-                                // Seleccionar el usuario en el ComboBox
+
                                 string nomUsu = reader["Nombre Usuario"].ToString();
                                 Cbxusu.SelectedItem = nomUsu;
 
-                                // Seleccionar el área en el ComboBox
+
                                 string nomArea = reader["Nombre Area"].ToString();
                                 foreach (KeyValuePair<int, string> area in Cbxarea.Items)
                                 {
@@ -54,7 +54,7 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
                                     }
                                 }
 
-                                // Configurar el estado del empleado
+
                                 bool estadoEmpleado = Convert.ToBoolean(reader["Estado Empleado"]);
                                 Rbtna.Checked = estadoEmpleado;
                                 Rbtni.Checked = !estadoEmpleado;
@@ -62,7 +62,7 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
                             else
                             {
                                 MessageBox.Show("Empleado no encontrado.");
-                                LimpiarControles(); // Limpiar controles si no se encuentra el empleado
+                                LimpiarControles(); 
                             }
                         }
                     }
@@ -148,11 +148,11 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
         private int ObtenerEstadoEmpleado()
         {
             if (Rbtna.Checked)
-                return 1; // Activo
+                return 1; 
             else if (Rbtni.Checked)
-                return 0; // Inactivo
+                return 0; 
             else
-                return 0; // Valor predeterminado
+                return 0; 
         }
 
 
@@ -160,10 +160,10 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
         {
             Txtid.Clear();
             Txtnom.Clear();
-            Cbxusu.SelectedIndex = -1; // Deseleccionar ComboBox de usuarios
-            Cbxarea.SelectedIndex = -1; // Deseleccionar ComboBox de áreas
-            Rbtna.Checked = false; // Limpiar RadioButton Activo
-            Rbtni.Checked = false; // Limpiar RadioButton Inactivo
+            Cbxusu.SelectedIndex = -1; 
+            Cbxarea.SelectedIndex = -1; 
+            Rbtna.Checked = false; 
+            Rbtni.Checked = false; 
         }
 
         private void MostrarEmpleados()
@@ -252,7 +252,7 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
 
         private void Txtid_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Detectar si se presionó la tecla Enter
+
             if (e.KeyChar == (char)Keys.Enter)
             {
 
@@ -281,7 +281,7 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
                 {
                     conexion.OpenConnection(connection);
 
-                    // Verificar si el ID ya existe
+
                     using (SqlCommand checkCommand = new SqlCommand("SELECT COUNT(1) FROM Empleados WHERE id_emp = @id_emp", connection))
                     {
                         checkCommand.Parameters.AddWithValue("@id_emp", Txtid.Text);
@@ -330,10 +330,10 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
 
         private void Btneliminar_Click(object sender, EventArgs e)
         {
-            // Verificar que se ha seleccionado un empleado en el DataGridView
+
             if (Dgvempleados.SelectedRows.Count > 0)
             {
-                // Obtener el ID del empleado seleccionado
+
                 string idEmp = Dgvempleados.SelectedRows[0].Cells["ID Empleado"].Value.ToString();
 
                 DialogResult dialogResult = MessageBox.Show("¿Estás seguro de que deseas eliminar este empleado?",
@@ -382,7 +382,7 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
 
                 if (dialogResult == DialogResult.Yes)
                 {
-                    // Obtener el ID del empleado seleccionado
+
                     string idEmp = Dgvempleados.SelectedRows[0].Cells["ID Empleado"].Value.ToString();
 
                     if (Cbxusu.SelectedItem == null)
@@ -440,7 +440,7 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
                 Txtid.Text = row.Cells["ID Empleado"].Value.ToString();
                 Txtnom.Text = row.Cells["Nombre Empleado"].Value.ToString();
 
-                // Seleccionar el usuario
+
                 Cbxusu.SelectedItem = row.Cells["Nombre Usuario"].Value.ToString();
 
                 string nombreArea = row.Cells["Nombre Area"].Value.ToString();
@@ -456,13 +456,13 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
 
                 if (Convert.ToBoolean(row.Cells["Estado Empleado"].Value))
                 {
-                    Rbtna.Checked = true; // Activo
-                    Rbtni.Checked = false; // Inactivo
+                    Rbtna.Checked = true; 
+                    Rbtni.Checked = false; 
                 }
                 else
                 {
-                    Rbtna.Checked = false; // Activo
-                    Rbtni.Checked = true; // Inactivo
+                    Rbtna.Checked = false; 
+                    Rbtni.Checked = true; 
                 }
             }
         }
