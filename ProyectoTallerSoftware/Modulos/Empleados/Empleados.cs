@@ -155,12 +155,6 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
                 return 0; // Valor predeterminado
         }
 
-        private void Empleados_Load(object sender, EventArgs e)
-        {
-            MostrarEmpleados();
-            LlenarComboUsuarios();
-            LlenarComboArea();
-        }
 
         private void LimpiarControles()
         {
@@ -477,6 +471,7 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
         {
             LlenarComboArea();
             LlenarComboUsuarios();
+            MostrarEmpleados();
         }
     }
 }

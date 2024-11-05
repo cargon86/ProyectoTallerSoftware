@@ -29,24 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hoja_Requisicion));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cmbUnidadD = new System.Windows.Forms.ComboBox();
+            this.dtpEntrega = new System.Windows.Forms.DateTimePicker();
+            this.dtpSolicitud = new System.Windows.Forms.DateTimePicker();
+            this.dtpSolicitante = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCarrito = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lbNombreP = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbjose = new System.Windows.Forms.Label();
-            this.lbUnicah = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdquisicion = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
@@ -63,9 +57,16 @@
             this.pbProdu = new System.Windows.Forms.PictureBox();
             this.pbRequ = new System.Windows.Forms.PictureBox();
             this.pbUsu = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbjose = new System.Windows.Forms.Label();
+            this.lbUnicah = new System.Windows.Forms.Label();
+            this.cmbSolicitante = new System.Windows.Forms.ComboBox();
+            this.cmbSolicitud = new System.Windows.Forms.ComboBox();
+            this.cmbRecibido = new System.Windows.Forms.ComboBox();
+            this.dgvProductosHR = new System.Windows.Forms.DataGridView();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).BeginInit();
@@ -74,88 +75,57 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosHR)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbUnidadD
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbUnidadD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbUnidadD.FormattingEnabled = true;
+            this.cmbUnidadD.Items.AddRange(new object[] {
             "Aseo",
             "Jardineria",
             "Mantenimiento",
             "Papeleria"});
-            this.comboBox1.Location = new System.Drawing.Point(660, 211);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(304, 24);
-            this.comboBox1.TabIndex = 51;
+            this.cmbUnidadD.Location = new System.Drawing.Point(660, 195);
+            this.cmbUnidadD.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbUnidadD.Name = "cmbUnidadD";
+            this.cmbUnidadD.Size = new System.Drawing.Size(304, 24);
+            this.cmbUnidadD.TabIndex = 51;
             // 
-            // textBox3
+            // dtpEntrega
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(399, 650);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(390, 32);
-            this.textBox3.TabIndex = 50;
+            this.dtpEntrega.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpEntrega.Location = new System.Drawing.Point(1398, 810);
+            this.dtpEntrega.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEntrega.Name = "dtpEntrega";
+            this.dtpEntrega.Size = new System.Drawing.Size(245, 22);
+            this.dtpEntrega.TabIndex = 48;
             // 
-            // textBox2
+            // dtpSolicitud
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(863, 650);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(390, 32);
-            this.textBox2.TabIndex = 49;
+            this.dtpSolicitud.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpSolicitud.Location = new System.Drawing.Point(931, 811);
+            this.dtpSolicitud.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpSolicitud.Name = "dtpSolicitud";
+            this.dtpSolicitud.Size = new System.Drawing.Size(245, 22);
+            this.dtpSolicitud.TabIndex = 47;
             // 
-            // dateTimePicker3
+            // dtpSolicitante
             // 
-            this.dateTimePicker3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker3.Location = new System.Drawing.Point(1402, 688);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(245, 22);
-            this.dateTimePicker3.TabIndex = 48;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.Location = new System.Drawing.Point(935, 689);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(245, 22);
-            this.dateTimePicker2.TabIndex = 47;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Location = new System.Drawing.Point(470, 689);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(245, 22);
-            this.dateTimePicker1.TabIndex = 46;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(1327, 650);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(390, 32);
-            this.textBox4.TabIndex = 45;
+            this.dtpSolicitante.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpSolicitante.Location = new System.Drawing.Point(466, 811);
+            this.dtpSolicitante.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpSolicitante.Name = "dtpSolicitante";
+            this.dtpSolicitante.Size = new System.Drawing.Size(245, 22);
+            this.dtpSolicitante.TabIndex = 46;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1423, 619);
+            this.label4.Location = new System.Drawing.Point(1419, 741);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(224, 28);
@@ -167,7 +137,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(930, 619);
+            this.label3.Location = new System.Drawing.Point(926, 741);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(255, 28);
@@ -179,7 +149,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(523, 619);
+            this.label2.Location = new System.Drawing.Point(519, 741);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 28);
@@ -187,16 +157,16 @@
             this.label2.Text = "Solicitante";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dataGridView1
+            // dgvCarrito
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(423, 288);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1310, 283);
-            this.dataGridView1.TabIndex = 42;
+            this.dgvCarrito.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarrito.Location = new System.Drawing.Point(419, 410);
+            this.dgvCarrito.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCarrito.Name = "dgvCarrito";
+            this.dgvCarrito.RowHeadersWidth = 51;
+            this.dgvCarrito.Size = new System.Drawing.Size(1310, 283);
+            this.dgvCarrito.TabIndex = 42;
             // 
             // label1
             // 
@@ -206,22 +176,23 @@
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(1084, 208);
+            this.label1.Location = new System.Drawing.Point(1084, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 27);
             this.label1.TabIndex = 41;
             this.label1.Text = "Buscar";
             // 
-            // textBox1
+            // txtBuscar
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1204, 207);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(504, 32);
-            this.textBox1.TabIndex = 40;
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscar.BackColor = System.Drawing.Color.White;
+            this.txtBuscar.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(1205, 195);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(504, 32);
+            this.txtBuscar.TabIndex = 40;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged_1);
             // 
             // lbNombreP
             // 
@@ -231,7 +202,7 @@
             this.lbNombreP.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
             this.lbNombreP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbNombreP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbNombreP.Location = new System.Drawing.Point(394, 208);
+            this.lbNombreP.Location = new System.Drawing.Point(396, 192);
             this.lbNombreP.Name = "lbNombreP";
             this.lbNombreP.Size = new System.Drawing.Size(245, 27);
             this.lbNombreP.TabIndex = 39;
@@ -263,46 +234,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(362, 812);
             this.panel2.TabIndex = 38;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.panel1.Controls.Add(this.lbjose);
-            this.panel1.Controls.Add(this.lbUnicah);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1781, 144);
-            this.panel1.TabIndex = 37;
-            // 
-            // lbjose
-            // 
-            this.lbjose.AutoSize = true;
-            this.lbjose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbjose.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.lbjose.ForeColor = System.Drawing.Color.White;
-            this.lbjose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbjose.Location = new System.Drawing.Point(355, 68);
-            this.lbjose.Name = "lbjose";
-            this.lbjose.Size = new System.Drawing.Size(325, 35);
-            this.lbjose.TabIndex = 6;
-            this.lbjose.Text = "Hoja de requisiciones";
-            // 
-            // lbUnicah
-            // 
-            this.lbUnicah.AutoSize = true;
-            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
-            this.lbUnicah.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold);
-            this.lbUnicah.ForeColor = System.Drawing.Color.White;
-            this.lbUnicah.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbUnicah.Location = new System.Drawing.Point(9, 34);
-            this.lbUnicah.Name = "lbUnicah";
-            this.lbUnicah.Size = new System.Drawing.Size(289, 78);
-            this.lbUnicah.TabIndex = 5;
-            this.lbUnicah.Text = "UNICAH";
             // 
             // pictureBox1
             // 
@@ -527,25 +458,139 @@
             this.pbUsu.TabIndex = 48;
             this.pbUsu.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.panel1.Controls.Add(this.lbjose);
+            this.panel1.Controls.Add(this.lbUnicah);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1781, 144);
+            this.panel1.TabIndex = 37;
+            // 
+            // lbjose
+            // 
+            this.lbjose.AutoSize = true;
+            this.lbjose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbjose.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.lbjose.ForeColor = System.Drawing.Color.White;
+            this.lbjose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbjose.Location = new System.Drawing.Point(355, 68);
+            this.lbjose.Name = "lbjose";
+            this.lbjose.Size = new System.Drawing.Size(325, 35);
+            this.lbjose.TabIndex = 6;
+            this.lbjose.Text = "Hoja de requisiciones";
+            // 
+            // lbUnicah
+            // 
+            this.lbUnicah.AutoSize = true;
+            this.lbUnicah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.lbUnicah.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold);
+            this.lbUnicah.ForeColor = System.Drawing.Color.White;
+            this.lbUnicah.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbUnicah.Location = new System.Drawing.Point(9, 34);
+            this.lbUnicah.Name = "lbUnicah";
+            this.lbUnicah.Size = new System.Drawing.Size(289, 78);
+            this.lbUnicah.TabIndex = 5;
+            this.lbUnicah.Text = "UNICAH";
+            // 
+            // cmbSolicitante
+            // 
+            this.cmbSolicitante.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbSolicitante.FormattingEnabled = true;
+            this.cmbSolicitante.Items.AddRange(new object[] {
+            "Aseo",
+            "Jardineria",
+            "Mantenimiento",
+            "Papeleria"});
+            this.cmbSolicitante.Location = new System.Drawing.Point(436, 773);
+            this.cmbSolicitante.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbSolicitante.Name = "cmbSolicitante";
+            this.cmbSolicitante.Size = new System.Drawing.Size(304, 24);
+            this.cmbSolicitante.TabIndex = 52;
+            // 
+            // cmbSolicitud
+            // 
+            this.cmbSolicitud.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbSolicitud.FormattingEnabled = true;
+            this.cmbSolicitud.Items.AddRange(new object[] {
+            "Aseo",
+            "Jardineria",
+            "Mantenimiento",
+            "Papeleria"});
+            this.cmbSolicitud.Location = new System.Drawing.Point(900, 773);
+            this.cmbSolicitud.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbSolicitud.Name = "cmbSolicitud";
+            this.cmbSolicitud.Size = new System.Drawing.Size(304, 24);
+            this.cmbSolicitud.TabIndex = 53;
+            // 
+            // cmbRecibido
+            // 
+            this.cmbRecibido.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbRecibido.FormattingEnabled = true;
+            this.cmbRecibido.Items.AddRange(new object[] {
+            "Aseo",
+            "Jardineria",
+            "Mantenimiento",
+            "Papeleria"});
+            this.cmbRecibido.Location = new System.Drawing.Point(1369, 773);
+            this.cmbRecibido.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbRecibido.Name = "cmbRecibido";
+            this.cmbRecibido.Size = new System.Drawing.Size(304, 24);
+            this.cmbRecibido.TabIndex = 54;
+            // 
+            // dgvProductosHR
+            // 
+            this.dgvProductosHR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvProductosHR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductosHR.Location = new System.Drawing.Point(419, 245);
+            this.dgvProductosHR.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvProductosHR.Name = "dgvProductosHR";
+            this.dgvProductosHR.RowHeadersWidth = 51;
+            this.dgvProductosHR.Size = new System.Drawing.Size(1310, 141);
+            this.dgvProductosHR.TabIndex = 55;
+            this.dgvProductosHR.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductosHR_CellClick);
+            this.dgvProductosHR.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvCarrito_CellValidating);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
+            this.btnGuardar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnGuardar.Location = new System.Drawing.Point(950, 864);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(210, 45);
+            this.btnGuardar.TabIndex = 56;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardarHR_Click);
+            // 
             // Hoja_Requisicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1782, 953);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.dgvProductosHR);
+            this.Controls.Add(this.cmbRecibido);
+            this.Controls.Add(this.cmbSolicitud);
+            this.Controls.Add(this.cmbSolicitante);
+            this.Controls.Add(this.cmbUnidadD);
+            this.Controls.Add(this.dtpEntrega);
+            this.Controls.Add(this.dtpSolicitud);
+            this.Controls.Add(this.dtpSolicitante);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCarrito);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbNombreP);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -553,10 +598,9 @@
             this.Name = "Hoja_Requisicion";
             this.Text = "Hoja_Requisicion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Hoja_Requisicion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInvent)).EndInit();
@@ -565,6 +609,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosHR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,19 +619,16 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox cmbUnidadD;
+        private System.Windows.Forms.DateTimePicker dtpEntrega;
+        private System.Windows.Forms.DateTimePicker dtpSolicitud;
+        private System.Windows.Forms.DateTimePicker dtpSolicitante;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCarrito;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lbNombreP;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
@@ -606,5 +650,10 @@
         private System.Windows.Forms.PictureBox pbProdu;
         private System.Windows.Forms.PictureBox pbRequ;
         private System.Windows.Forms.PictureBox pbUsu;
+        private System.Windows.Forms.ComboBox cmbSolicitante;
+        private System.Windows.Forms.ComboBox cmbSolicitud;
+        private System.Windows.Forms.ComboBox cmbRecibido;
+        private System.Windows.Forms.DataGridView dgvProductosHR;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

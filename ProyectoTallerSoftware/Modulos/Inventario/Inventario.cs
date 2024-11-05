@@ -22,7 +22,6 @@ namespace ProyectoTallerSoftware.Modulos.Inventario
         {
             InitializeComponent();
             conexion = new Conexion();
-            LoadInventarioData();
             txtBuscar.KeyPress += new KeyPressEventHandler(txtBuscar_KeyPress);
 
         }
@@ -56,6 +55,7 @@ namespace ProyectoTallerSoftware.Modulos.Inventario
                 }
             }
         }
+
 
 
         private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
@@ -122,6 +122,26 @@ namespace ProyectoTallerSoftware.Modulos.Inventario
             Login LoginForm = new Login();
             LoginForm.Show();
             this.Hide();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtBuscar.Text.Trim();
+
+            // Si el filtro está vacío, se cargan todos los datos nuevamente
+            if (string.IsNullOrEmpty(filtro))
+            {
+                LoadInventarioData();
+            }
+            else
+            {
+                LoadInventarioData(filtro);
+            }
+        }
+
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+            LoadInventarioData();
         }
     }
 }
