@@ -58,14 +58,32 @@
     <Compile Include="Modulos\Adquisicion\Adquisicion.Designer.cs">
       <DependentUpon>Adquisicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Adquisicion\AdquisicionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Adquisicion\AdquisicionControl.Designer.cs">
+      <DependentUpon>AdquisicionControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Bitacora\Bitacora.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\Bitacora\Bitacora.Designer.cs">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Bitacora\BitacoraControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Bitacora\BitacoraControl.Designer.cs">
+      <DependentUpon>BitacoraControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Clases\Bitacora.cs" />
     <Compile Include="Modulos\Clases\Conexion.cs" />
-    <Compile Include="Modulos\Clases\Session.cs" />
+    <Compile Include="Modulos\Empleados\EmpleadoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Empleados\EmpleadoControl.Designer.cs">
+      <DependentUpon>EmpleadoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Empleados\Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +95,12 @@
     </Compile>
     <Compile Include="Modulos\Hoja_Requisicion\Hoja_Requisicion.Designer.cs">
       <DependentUpon>Hoja_Requisicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Hoja_Requisicion\RequisicionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Hoja_Requisicion\RequisicionControl.Designer.cs">
+      <DependentUpon>RequisicionControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Home\Home.cs">
       <SubType>Form</SubType>
@@ -90,11 +114,23 @@
     <Compile Include="Modulos\Inventario\Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Inventario\InventarioControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Inventario\InventarioControl.Designer.cs">
+      <DependentUpon>InventarioControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Login\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Productos\ProductoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Productos\ProductoControl.Designer.cs">
+      <DependentUpon>ProductoControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Productos\Productos.cs">
       <SubType>Form</SubType>
@@ -102,11 +138,23 @@
     <Compile Include="Modulos\Productos\Productos.Designer.cs">
       <DependentUpon>Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Reportes\ReporteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteControl.Designer.cs">
+      <DependentUpon>ReporteControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Reportes\Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\Reportes\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Usuarios\UsuarioControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\Usuarios\UsuarioControl.Designer.cs">
+      <DependentUpon>UsuarioControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Usuarios\Usuarios.cs">
       <SubType>Form</SubType>
@@ -122,8 +170,17 @@
     <EmbeddedResource Include="Modulos\Adquisicion\Adquisicion.resx">
       <DependentUpon>Adquisicion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Adquisicion\AdquisicionControl.resx">
+      <DependentUpon>AdquisicionControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Bitacora\Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Bitacora\BitacoraControl.resx">
+      <DependentUpon>BitacoraControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Empleados\EmpleadoControl.resx">
+      <DependentUpon>EmpleadoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Empleados\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
@@ -137,8 +194,14 @@
     <EmbeddedResource Include="Modulos\Inventario\Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Inventario\InventarioControl.resx">
+      <DependentUpon>InventarioControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Productos\ProductoControl.resx">
+      <DependentUpon>ProductoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Productos\Productos.aa.resx">
       <DependentUpon>Productos.cs</DependentUpon>
@@ -146,8 +209,14 @@
     <EmbeddedResource Include="Modulos\Productos\Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReporteControl.resx">
+      <DependentUpon>ReporteControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Reportes\Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Usuarios\UsuarioControl.resx">
+      <DependentUpon>UsuarioControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Usuarios\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>

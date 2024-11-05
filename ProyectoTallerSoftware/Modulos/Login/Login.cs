@@ -77,7 +77,7 @@ namespace ProyectoTallerSoftware.Modulos
             string username = txtb_nom_usu.Text;
             string password = txtb_pass_usu.Text;
 
-            string hashedPassword = CrearHashContraseña(password);
+            string hashedPassword = HashedContraseña(password);
 
             using (var conn = _conexion.GetConnection())
             {
@@ -94,11 +94,11 @@ namespace ProyectoTallerSoftware.Modulos
 
                     if (reader.Read())
                     {
-                        Session.CurrentUser = username;
-
                         MessageBox.Show("Inicio de sesión exitoso.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Home.Home usuariosForm = new Home.Home();
-                        usuariosForm.Show();
+                        Clases.Bitacora bitacora = new Clases.Bitacora();
+                        bitacora.Insertar("Inicio de sesión: " + username, username);
+                        Home.Home homeForm = new Home.Home(username);
+                        homeForm.Show();
                         this.Hide();
                     }
                     else
@@ -133,7 +133,7 @@ namespace ProyectoTallerSoftware.Modulos
             return true;
         }
 
-        public string CrearHashContraseña(string contraseña)
+        public string HashedContraseña(string contraseña)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
@@ -147,7 +147,5 @@ namespace ProyectoTallerSoftware.Modulos
                 return builder.ToString();
             }
         }
-
-        
     }
 }
