@@ -16,5 +16,58 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
         {
             InitializeComponent();
         }
+
+        private void ReporteControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CambiarReportes(UserControl control)
+        {
+            pnl_contenedor.Controls.Clear();
+            pnl_contenedor.Controls.Add(control);
+            control.Dock = DockStyle.Fill;
+        }
+
+        private void btnSemanales_Click(object sender, EventArgs e)
+        {
+            ReporteMensual reporteMensual = new ReporteMensual();
+            CambiarReportes(reporteMensual);
+        }
+
+        private void btnMensuales_Click(object sender, EventArgs e)
+        {
+            ReporteMensual reporteMensual = new ReporteMensual();
+            CambiarReportes(reporteMensual);
+        }
+
+        private void btnTrimestrales_Click(object sender, EventArgs e)
+        {
+            ReporteTrimestral reporteTrimestral = new ReporteTrimestral();
+            CambiarReportes(reporteTrimestral);
+        }
+        private void btnAseo_Click(object sender, EventArgs e)
+        {
+            ReporteAseo reporteAseo = new ReporteAseo();
+            CambiarReportes(reporteAseo);
+        }
+
+        private void btnPapeleria_Click(object sender, EventArgs e)
+        {
+            ReportePapeleria reportePapeleria = new ReportePapeleria();
+            CambiarReportes(reportePapeleria);
+        }
+
+        private void btnJardineria_Click(object sender, EventArgs e)
+        {
+            ReporteJardineria reporteJardineria = new ReporteJardineria();
+            CambiarReportes(reporteJardineria);
+        }
+
+        private void btnMantenimiento_Click(object sender, EventArgs e)
+        {
+            ReporteMantenimiento reporteMantenimiento = new ReporteMantenimiento();
+            CambiarReportes(reporteMantenimiento);
+        }
     }
 }
