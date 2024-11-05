@@ -188,6 +188,9 @@
     <EmbeddedResource Include="Modulos\Hoja_Requisicion\Hoja_Requisicion.resx">
       <DependentUpon>Hoja_Requisicion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Hoja_Requisicion\RequisicionControl.resx">
+      <DependentUpon>RequisicionControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Home\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>

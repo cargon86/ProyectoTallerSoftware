@@ -36,15 +36,17 @@ namespace ProyectoTallerSoftware.Modulos.Home
                     btnAdquisicion.Enabled = true;
                     btnEmpleados.Enabled = true;
                     btnInventario.Enabled = true;
+                    btn_bitacora.Enabled = true;
                     break;
                 case "0":
                     btnUsuarios.Enabled = false;
-                    btnRequisiciones.Enabled = false;
-                    btnProductos.Enabled = false;
-                    btnReportes.Enabled = false;
+                    btnRequisiciones.Enabled = true;
+                    btnProductos.Enabled = true;
+                    btnReportes.Enabled = true;
                     btnAdquisicion.Enabled = false;
                     btnEmpleados.Enabled = false;
-                    btnInventario.Enabled = false;
+                    btnInventario.Enabled = true;
+                    btn_bitacora.Enabled = false;
                     break;
             }
         }
@@ -98,7 +100,7 @@ namespace ProyectoTallerSoftware.Modulos.Home
 
         private void btnRequisiciones_Click(object sender, EventArgs e)
         {
-            CambiarFormulario(new Hoja_Requisicion.RequisicionControl());
+            CambiarFormulario(new Hoja_Requisicion.RequisicionControl(usuario));
             lbl_formulario.Text = "Requisición";
         }
 
