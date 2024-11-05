@@ -1,4 +1,5 @@
 ﻿using ProyectoTallerSoftware.Modulos;
+using ProyectoTallerSoftware.Modulos.Reportes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace ProyectoTallerSoftware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new ReporteTrimestral());
         }
     }
 }

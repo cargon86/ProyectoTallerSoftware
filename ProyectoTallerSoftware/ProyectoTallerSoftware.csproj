@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +40,24 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modulos\Clases\Conexion.cs" />
     <Compile Include="Modulos\Empleados\Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,11 +108,53 @@
     <Compile Include="Modulos\Productos\Productos.Designer.cs">
       <DependentUpon>Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Reportes\ReporteAseo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteAseo.Designer.cs">
+      <DependentUpon>ReporteAseo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteJardineria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteJardineria.Designer.cs">
+      <DependentUpon>ReporteJardineria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteMantenimiento.Designer.cs">
+      <DependentUpon>ReporteMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteMensual.Designer.cs">
+      <DependentUpon>ReporteMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReportePapeleria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReportePapeleria.Designer.cs">
+      <DependentUpon>ReportePapeleria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Reportes\Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\Reportes\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteSemanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteSemanal.Designer.cs">
+      <DependentUpon>ReporteSemanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteTrimestral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteTrimestral.Designer.cs">
+      <DependentUpon>ReporteTrimestral.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Usuarios\Usuarios.cs">
       <SubType>Form</SubType>
@@ -100,11 +164,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sis_InventarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sis_InventarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sis_InventarioDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sis_InventarioDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Modulos\Home\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReporteAseo.resx">
+      <DependentUpon>ReporteAseo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReporteJardineria.resx">
+      <DependentUpon>ReporteJardineria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReporteMantenimiento.resx">
+      <DependentUpon>ReporteMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReporteMensual.resx">
+      <DependentUpon>ReporteMensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReportePapeleria.resx">
+      <DependentUpon>ReportePapeleria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReporteSemanal.resx">
+      <DependentUpon>ReporteSemanal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReporteTrimestral.resx">
+      <DependentUpon>ReporteTrimestral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +217,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteAseo.rdlc" />
+    <EmbeddedResource Include="ReporteJardineria.rdlc" />
+    <EmbeddedResource Include="ReporteMantenimiento.rdlc" />
+    <EmbeddedResource Include="ReporteMensual.rdlc" />
+    <EmbeddedResource Include="ReportePapeleria.rdlc" />
+    <EmbeddedResource Include="ReporteSemanal.rdlc" />
+    <EmbeddedResource Include="ReporteTrimestral.rdlc" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,6 +237,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Sis_InventarioDataSet.xsc">
+      <DependentUpon>Sis_InventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sis_InventarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sis_InventarioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sis_InventarioDataSet.xss">
+      <DependentUpon>Sis_InventarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sis_InventarioDataSet1.xsc">
+      <DependentUpon>Sis_InventarioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Sis_InventarioDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sis_InventarioDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sis_InventarioDataSet1.xss">
+      <DependentUpon>Sis_InventarioDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -157,4 +291,10 @@
     <None Include="Resources\logo_inicio.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
 </Project>
