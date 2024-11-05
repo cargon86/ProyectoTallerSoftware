@@ -128,7 +128,7 @@ namespace ProyectoTallerSoftware.Modulos.Inventario
         {
             string filtro = txtBuscar.Text.Trim();
 
-            // Si el filtro está vacío, se cargan todos los datos nuevamente
+
             if (string.IsNullOrEmpty(filtro))
             {
                 LoadInventarioData();

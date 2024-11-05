@@ -93,6 +93,16 @@ namespace ProyectoTallerSoftware.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bitacora {
+            get {
+                object obj = ResourceManager.GetObject("bitacora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar_secion {
             get {
                 object obj = ResourceManager.GetObject("cerrar_secion", resourceCulture);
