@@ -65,6 +65,7 @@
       <DependentUpon>Bitacora.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Clases\Conexion.cs" />
+    <Compile Include="Modulos\Clases\Session.cs" />
     <Compile Include="Modulos\Empleados\Empleados.cs">
       <SubType>Form</SubType>
     </Compile>

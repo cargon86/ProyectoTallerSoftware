@@ -79,7 +79,6 @@
             this.pnAzul.Controls.Add(this.lbjose);
             this.pnAzul.Controls.Add(this.lbUnicah);
             this.pnAzul.Name = "pnAzul";
-
             // 
             // lbjose
             // 

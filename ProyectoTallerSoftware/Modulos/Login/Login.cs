@@ -94,6 +94,8 @@ namespace ProyectoTallerSoftware.Modulos
 
                     if (reader.Read())
                     {
+                        Session.CurrentUser = username;
+
                         MessageBox.Show("Inicio de sesión exitoso.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Home.Home usuariosForm = new Home.Home();
                         usuariosForm.Show();
@@ -145,5 +147,7 @@ namespace ProyectoTallerSoftware.Modulos
                 return builder.ToString();
             }
         }
+
+        
     }
 }

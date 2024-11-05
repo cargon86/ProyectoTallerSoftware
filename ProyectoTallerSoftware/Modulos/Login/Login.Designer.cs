@@ -47,10 +47,10 @@
             this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btn_login.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(532, 649);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_login.Location = new System.Drawing.Point(709, 799);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(278, 32);
+            this.btn_login.Size = new System.Drawing.Size(371, 39);
             this.btn_login.TabIndex = 13;
             this.btn_login.Text = "Iniciar Sesión";
             this.btn_login.UseVisualStyleBackColor = false;
@@ -62,10 +62,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtb_pass_usu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtb_pass_usu.Location = new System.Drawing.Point(506, 553);
-            this.txtb_pass_usu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtb_pass_usu.Location = new System.Drawing.Point(675, 681);
+            this.txtb_pass_usu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtb_pass_usu.Name = "txtb_pass_usu";
-            this.txtb_pass_usu.Size = new System.Drawing.Size(328, 23);
+            this.txtb_pass_usu.Size = new System.Drawing.Size(436, 27);
             this.txtb_pass_usu.TabIndex = 12;
             this.txtb_pass_usu.Enter += new System.EventHandler(this.txtb_pass_usu_Enter);
             this.txtb_pass_usu.Leave += new System.EventHandler(this.txtb_pass_usu_Leave);
@@ -76,10 +76,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtb_nom_usu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtb_nom_usu.Location = new System.Drawing.Point(506, 444);
-            this.txtb_nom_usu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtb_nom_usu.Location = new System.Drawing.Point(675, 546);
+            this.txtb_nom_usu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtb_nom_usu.Name = "txtb_nom_usu";
-            this.txtb_nom_usu.Size = new System.Drawing.Size(328, 23);
+            this.txtb_nom_usu.Size = new System.Drawing.Size(436, 27);
             this.txtb_nom_usu.TabIndex = 11;
             this.txtb_nom_usu.Tag = "";
             this.txtb_nom_usu.Enter += new System.EventHandler(this.txtb_nom_usu_Enter);
@@ -92,10 +92,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(503, 525);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(671, 646);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 21);
+            this.label3.Size = new System.Drawing.Size(130, 26);
             this.label3.TabIndex = 10;
             this.label3.Text = "Contraseña";
             // 
@@ -106,10 +105,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(503, 416);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(671, 512);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 21);
+            this.label2.Size = new System.Drawing.Size(91, 26);
             this.label2.TabIndex = 9;
             this.label2.Text = "Usuario";
             // 
@@ -118,10 +116,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(590, 332);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(787, 409);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 22);
+            this.label1.Size = new System.Drawing.Size(189, 27);
             this.label1.TabIndex = 8;
             this.label1.Text = "Inicio de Sesión";
             // 
@@ -129,8 +126,8 @@
             // 
             this.pb_logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pb_logo.Image = global::ProyectoTallerSoftware.Properties.Resources.unica;
-            this.pb_logo.Location = new System.Drawing.Point(557, 56);
-            this.pb_logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pb_logo.Location = new System.Drawing.Point(743, 69);
+            this.pb_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pb_logo.Name = "pb_logo";
             this.pb_logo.Size = new System.Drawing.Size(225, 225);
             this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -139,10 +136,10 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1336, 774);
+            this.ClientSize = new System.Drawing.Size(1781, 953);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txtb_pass_usu);
             this.Controls.Add(this.txtb_nom_usu);
@@ -151,7 +148,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pb_logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

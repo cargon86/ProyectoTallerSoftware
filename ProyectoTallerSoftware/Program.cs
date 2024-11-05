@@ -13,6 +13,7 @@ using ProyectoTallerSoftware.Modulos.Home;
 using ProyectoTallerSoftware.Modulos.Empleados;
 using ProyectoTallerSoftware.Modulos.Hoja_Requisicion;
 using ProyectoTallerSoftware.Modulos.Adquisicion;
+using ProyectoTallerSoftware.Modulos.Usuarios;
 
 namespace ProyectoTallerSoftware
 {
@@ -26,7 +27,7 @@ namespace ProyectoTallerSoftware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new Login());
 
             // Crear una instancia de la clase Conexion
             Conexion conexion = new Conexion();
