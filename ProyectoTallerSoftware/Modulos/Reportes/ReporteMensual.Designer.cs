@@ -30,16 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.obtenerProductosUltimoMesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_regresar = new System.Windows.Forms.Button();
-            this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
-            this.obtenerProductosUltimoMesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerProductosUltimoMesTableAdapter = new ProyectoTallerSoftware.Sis_InventarioDataSetTableAdapters.ObtenerProductosUltimoMesTableAdapter();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosUltimoMesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // obtenerProductosUltimoMesBindingSource
+            // 
+            this.obtenerProductosUltimoMesBindingSource.DataMember = "ObtenerProductosUltimoMes";
+            this.obtenerProductosUltimoMesBindingSource.DataSource = this.sis_InventarioDataSet;
+            // 
+            // sis_InventarioDataSet
+            // 
+            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
+            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -47,19 +57,19 @@
             reportDataSource1.Value = this.obtenerProductosUltimoMesBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoTallerSoftware.ReporteMensual.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(23, 100);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 55);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1075, 541);
+            this.reportViewer1.Size = new System.Drawing.Size(1122, 628);
             this.reportViewer1.TabIndex = 5;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.btn_regresar);
-            this.panel1.Location = new System.Drawing.Point(23, 42);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1077, 58);
+            this.panel1.Size = new System.Drawing.Size(1122, 58);
             this.panel1.TabIndex = 4;
             // 
             // btn_regresar
@@ -70,16 +80,7 @@
             this.btn_regresar.TabIndex = 0;
             this.btn_regresar.Text = "Regresar";
             this.btn_regresar.UseVisualStyleBackColor = true;
-            // 
-            // sis_InventarioDataSet
-            // 
-            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
-            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // obtenerProductosUltimoMesBindingSource
-            // 
-            this.obtenerProductosUltimoMesBindingSource.DataMember = "ObtenerProductosUltimoMes";
-            this.obtenerProductosUltimoMesBindingSource.DataSource = this.sis_InventarioDataSet;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
             // obtenerProductosUltimoMesTableAdapter
             // 
@@ -93,9 +94,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "ReporteMensual";
             this.Size = new System.Drawing.Size(1122, 683);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
+            this.Load += new System.EventHandler(this.ReporteMensual_Load);
             ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosUltimoMesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
