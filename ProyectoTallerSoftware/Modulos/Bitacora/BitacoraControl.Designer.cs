@@ -30,6 +30,8 @@
         {
             this.lbCambios = new System.Windows.Forms.Label();
             this.dgv_bitacora = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFiltroUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_bitacora)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +43,7 @@
             this.lbCambios.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.lbCambios.ForeColor = System.Drawing.Color.Black;
             this.lbCambios.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbCambios.Location = new System.Drawing.Point(114, 29);
+            this.lbCambios.Location = new System.Drawing.Point(98, 9);
             this.lbCambios.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCambios.Name = "lbCambios";
             this.lbCambios.Size = new System.Drawing.Size(274, 29);
@@ -60,10 +62,38 @@
             this.dgv_bitacora.Size = new System.Drawing.Size(783, 341);
             this.dgv_bitacora.TabIndex = 30;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(86, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 22);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Buscar:";
+            // 
+            // txtFiltroUsuario
+            // 
+            this.txtFiltroUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFiltroUsuario.BackColor = System.Drawing.Color.White;
+            this.txtFiltroUsuario.Location = new System.Drawing.Point(174, 56);
+            this.txtFiltroUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFiltroUsuario.Name = "txtFiltroUsuario";
+            this.txtFiltroUsuario.Size = new System.Drawing.Size(556, 20);
+            this.txtFiltroUsuario.TabIndex = 38;
+            this.txtFiltroUsuario.TextChanged += new System.EventHandler(this.txtFiltroUsuario_TextChanged_1);
+            // 
             // BitacoraControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtFiltroUsuario);
             this.Controls.Add(this.lbCambios);
             this.Controls.Add(this.dgv_bitacora);
             this.Name = "BitacoraControl";
@@ -79,5 +109,7 @@
 
         private System.Windows.Forms.Label lbCambios;
         private System.Windows.Forms.DataGridView dgv_bitacora;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtFiltroUsuario;
     }
 }

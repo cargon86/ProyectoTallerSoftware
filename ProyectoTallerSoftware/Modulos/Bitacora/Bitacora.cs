@@ -72,5 +72,12 @@ namespace ProyectoTallerSoftware.Modulos.Bitacora
             LoginForm.Show();
             this.Hide();
         }
+
+        private void Bitacora_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
