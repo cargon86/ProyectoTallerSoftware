@@ -46,11 +46,11 @@
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.obtenerProductosUltimoTrimestreBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoTallerSoftware.ReporteSemanal.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(3, 96);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoTallerSoftware.ReporteTrimestral.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 57);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1075, 541);
+            this.reportViewer1.Size = new System.Drawing.Size(1083, 618);
             this.reportViewer1.TabIndex = 9;
             // 
             // btn_regresar
@@ -61,14 +61,15 @@
             this.btn_regresar.TabIndex = 0;
             this.btn_regresar.Text = "Regresar";
             this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.btn_regresar);
-            this.panel1.Location = new System.Drawing.Point(3, 38);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1077, 58);
+            this.panel1.Size = new System.Drawing.Size(1083, 58);
             this.panel1.TabIndex = 8;
             // 
             // sis_InventarioDataSet
@@ -93,6 +94,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ReporteTrimestral";
             this.Size = new System.Drawing.Size(1083, 675);
+            this.Load += new System.EventHandler(this.ReporteTrimestral_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosUltimoTrimestreBindingSource)).EndInit();

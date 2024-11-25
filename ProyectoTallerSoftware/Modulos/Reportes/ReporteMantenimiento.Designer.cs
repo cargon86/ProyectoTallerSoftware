@@ -30,16 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.btn_regresar = new System.Windows.Forms.Button();
+            this.obtenerProductosMantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
+            this.btn_regresar = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.obtenerProductosMantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerProductosMantenimientoTableAdapter = new ProyectoTallerSoftware.Sis_InventarioDataSetTableAdapters.ObtenerProductosMantenimientoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosMantenimientoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosMantenimientoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // obtenerProductosMantenimientoBindingSource
+            // 
+            this.obtenerProductosMantenimientoBindingSource.DataMember = "ObtenerProductosMantenimiento";
+            this.obtenerProductosMantenimientoBindingSource.DataSource = this.sis_InventarioDataSet;
+            // 
+            // sis_InventarioDataSet
+            // 
+            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
+            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_regresar
             // 
@@ -49,11 +59,7 @@
             this.btn_regresar.TabIndex = 0;
             this.btn_regresar.Text = "Regresar";
             this.btn_regresar.UseVisualStyleBackColor = true;
-            // 
-            // sis_InventarioDataSet
-            // 
-            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
-            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
             // reportViewer1
             // 
@@ -61,25 +67,20 @@
             reportDataSource1.Value = this.obtenerProductosMantenimientoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoTallerSoftware.ReporteMantenimiento.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(22, 91);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 58);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1075, 541);
+            this.reportViewer1.Size = new System.Drawing.Size(1121, 606);
             this.reportViewer1.TabIndex = 3;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.btn_regresar);
-            this.panel1.Location = new System.Drawing.Point(22, 33);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1077, 58);
+            this.panel1.Size = new System.Drawing.Size(1121, 58);
             this.panel1.TabIndex = 2;
-            // 
-            // obtenerProductosMantenimientoBindingSource
-            // 
-            this.obtenerProductosMantenimientoBindingSource.DataMember = "ObtenerProductosMantenimiento";
-            this.obtenerProductosMantenimientoBindingSource.DataSource = this.sis_InventarioDataSet;
             // 
             // obtenerProductosMantenimientoTableAdapter
             // 
@@ -93,9 +94,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "ReporteMantenimiento";
             this.Size = new System.Drawing.Size(1121, 664);
+            this.Load += new System.EventHandler(this.ReporteMantenimiento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosMantenimientoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosMantenimientoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

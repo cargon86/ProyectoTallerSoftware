@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lb_nom_usu = new System.Windows.Forms.Label();
             this.txtb_nom_usu = new System.Windows.Forms.TextBox();
-            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
             this.cmb_rol_usu = new System.Windows.Forms.ComboBox();
             this.txtb_passc_usu = new System.Windows.Forms.TextBox();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.txtb_pass_usu = new System.Windows.Forms.TextBox();
-            this.cmb_sta_usu = new System.Windows.Forms.ComboBox();
-            this.lb_sta_usu = new System.Windows.Forms.Label();
             this.lb_rol_usu = new System.Windows.Forms.Label();
             this.lb_passc_usu = new System.Windows.Forms.Label();
             this.lb_pass_usu = new System.Windows.Forms.Label();
+            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,35 +66,19 @@
             this.txtb_nom_usu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtb_nom_usu.BackColor = System.Drawing.Color.White;
             this.txtb_nom_usu.Location = new System.Drawing.Point(331, 27);
-            this.txtb_nom_usu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtb_nom_usu.Margin = new System.Windows.Forms.Padding(2);
             this.txtb_nom_usu.Name = "txtb_nom_usu";
             this.txtb_nom_usu.Size = new System.Drawing.Size(327, 20);
             this.txtb_nom_usu.TabIndex = 41;
-            // 
-            // dgv_usuarios
-            // 
-            this.dgv_usuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_usuarios.Location = new System.Drawing.Point(97, 225);
-            this.dgv_usuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dgv_usuarios.MultiSelect = false;
-            this.dgv_usuarios.Name = "dgv_usuarios";
-            this.dgv_usuarios.ReadOnly = true;
-            this.dgv_usuarios.RowHeadersWidth = 51;
-            this.dgv_usuarios.RowTemplate.Height = 24;
-            this.dgv_usuarios.Size = new System.Drawing.Size(794, 277);
-            this.dgv_usuarios.TabIndex = 40;
-            this.dgv_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellClick);
-            this.dgv_usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellContentClick);
             // 
             // cmb_rol_usu
             // 
             this.cmb_rol_usu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmb_rol_usu.FormattingEnabled = true;
             this.cmb_rol_usu.Location = new System.Drawing.Point(331, 140);
-            this.cmb_rol_usu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_rol_usu.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_rol_usu.Name = "cmb_rol_usu";
-            this.cmb_rol_usu.Size = new System.Drawing.Size(183, 21);
+            this.cmb_rol_usu.Size = new System.Drawing.Size(157, 21);
             this.cmb_rol_usu.TabIndex = 39;
             // 
             // txtb_passc_usu
@@ -101,7 +86,7 @@
             this.txtb_passc_usu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtb_passc_usu.BackColor = System.Drawing.Color.White;
             this.txtb_passc_usu.Location = new System.Drawing.Point(331, 102);
-            this.txtb_passc_usu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtb_passc_usu.Margin = new System.Windows.Forms.Padding(2);
             this.txtb_passc_usu.Name = "txtb_passc_usu";
             this.txtb_passc_usu.Size = new System.Drawing.Size(327, 20);
             this.txtb_passc_usu.TabIndex = 38;
@@ -113,7 +98,7 @@
             this.btn_eliminar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
             this.btn_eliminar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btn_eliminar.Location = new System.Drawing.Point(784, 123);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(107, 37);
             this.btn_eliminar.TabIndex = 37;
@@ -128,7 +113,7 @@
             this.btn_actualizar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
             this.btn_actualizar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btn_actualizar.Location = new System.Drawing.Point(784, 75);
-            this.btn_actualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(107, 37);
             this.btn_actualizar.TabIndex = 36;
@@ -143,7 +128,7 @@
             this.btn_guardar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
             this.btn_guardar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btn_guardar.Location = new System.Drawing.Point(784, 27);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(107, 37);
             this.btn_guardar.TabIndex = 35;
@@ -156,35 +141,10 @@
             this.txtb_pass_usu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtb_pass_usu.BackColor = System.Drawing.Color.White;
             this.txtb_pass_usu.Location = new System.Drawing.Point(331, 64);
-            this.txtb_pass_usu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtb_pass_usu.Margin = new System.Windows.Forms.Padding(2);
             this.txtb_pass_usu.Name = "txtb_pass_usu";
             this.txtb_pass_usu.Size = new System.Drawing.Size(327, 20);
             this.txtb_pass_usu.TabIndex = 34;
-            // 
-            // cmb_sta_usu
-            // 
-            this.cmb_sta_usu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmb_sta_usu.FormattingEnabled = true;
-            this.cmb_sta_usu.Location = new System.Drawing.Point(331, 177);
-            this.cmb_sta_usu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmb_sta_usu.Name = "cmb_sta_usu";
-            this.cmb_sta_usu.Size = new System.Drawing.Size(183, 21);
-            this.cmb_sta_usu.TabIndex = 33;
-            // 
-            // lb_sta_usu
-            // 
-            this.lb_sta_usu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_sta_usu.AutoSize = true;
-            this.lb_sta_usu.BackColor = System.Drawing.Color.White;
-            this.lb_sta_usu.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold);
-            this.lb_sta_usu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lb_sta_usu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lb_sta_usu.Location = new System.Drawing.Point(93, 176);
-            this.lb_sta_usu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_sta_usu.Name = "lb_sta_usu";
-            this.lb_sta_usu.Size = new System.Drawing.Size(82, 22);
-            this.lb_sta_usu.TabIndex = 32;
-            this.lb_sta_usu.Text = "Estado:";
             // 
             // lb_rol_usu
             // 
@@ -231,21 +191,62 @@
             this.lb_pass_usu.TabIndex = 29;
             this.lb_pass_usu.Text = "Contraseña:";
             // 
+            // dgv_usuarios
+            // 
+            this.dgv_usuarios.AllowUserToAddRows = false;
+            this.dgv_usuarios.AllowUserToDeleteRows = false;
+            this.dgv_usuarios.AllowUserToResizeColumns = false;
+            this.dgv_usuarios.AllowUserToResizeRows = false;
+            this.dgv_usuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgv_usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_usuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_usuarios.Location = new System.Drawing.Point(97, 193);
+            this.dgv_usuarios.MultiSelect = false;
+            this.dgv_usuarios.Name = "dgv_usuarios";
+            this.dgv_usuarios.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_usuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgv_usuarios.Size = new System.Drawing.Size(794, 358);
+            this.dgv_usuarios.TabIndex = 43;
+            this.dgv_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellClick);
+            this.dgv_usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellContentClick);
+            // 
             // UsuarioControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgv_usuarios);
             this.Controls.Add(this.lb_nom_usu);
             this.Controls.Add(this.txtb_nom_usu);
-            this.Controls.Add(this.dgv_usuarios);
             this.Controls.Add(this.cmb_rol_usu);
             this.Controls.Add(this.txtb_passc_usu);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_actualizar);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.txtb_pass_usu);
-            this.Controls.Add(this.cmb_sta_usu);
-            this.Controls.Add(this.lb_sta_usu);
             this.Controls.Add(this.lb_rol_usu);
             this.Controls.Add(this.lb_passc_usu);
             this.Controls.Add(this.lb_pass_usu);
@@ -262,17 +263,15 @@
 
         private System.Windows.Forms.Label lb_nom_usu;
         private System.Windows.Forms.TextBox txtb_nom_usu;
-        private System.Windows.Forms.DataGridView dgv_usuarios;
         private System.Windows.Forms.ComboBox cmb_rol_usu;
         private System.Windows.Forms.TextBox txtb_passc_usu;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.TextBox txtb_pass_usu;
-        private System.Windows.Forms.ComboBox cmb_sta_usu;
-        private System.Windows.Forms.Label lb_sta_usu;
         private System.Windows.Forms.Label lb_rol_usu;
         private System.Windows.Forms.Label lb_passc_usu;
         private System.Windows.Forms.Label lb_pass_usu;
+        private System.Windows.Forms.DataGridView dgv_usuarios;
     }
 }

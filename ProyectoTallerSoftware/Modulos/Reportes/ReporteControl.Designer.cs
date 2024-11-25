@@ -45,7 +45,7 @@
             this.btnMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnMantenimiento.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimiento.Location = new System.Drawing.Point(440, 294);
+            this.btnMantenimiento.Location = new System.Drawing.Point(406, 298);
             this.btnMantenimiento.Margin = new System.Windows.Forms.Padding(2);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Size = new System.Drawing.Size(194, 68);
@@ -60,7 +60,7 @@
             this.btnPapeleria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnPapeleria.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnPapeleria.ForeColor = System.Drawing.Color.White;
-            this.btnPapeleria.Location = new System.Drawing.Point(440, 173);
+            this.btnPapeleria.Location = new System.Drawing.Point(406, 177);
             this.btnPapeleria.Margin = new System.Windows.Forms.Padding(2);
             this.btnPapeleria.Name = "btnPapeleria";
             this.btnPapeleria.Size = new System.Drawing.Size(194, 68);
@@ -75,7 +75,7 @@
             this.btnAseo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnAseo.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnAseo.ForeColor = System.Drawing.Color.White;
-            this.btnAseo.Location = new System.Drawing.Point(194, 173);
+            this.btnAseo.Location = new System.Drawing.Point(160, 177);
             this.btnAseo.Margin = new System.Windows.Forms.Padding(2);
             this.btnAseo.Name = "btnAseo";
             this.btnAseo.Size = new System.Drawing.Size(194, 68);
@@ -90,7 +90,7 @@
             this.btnJardineria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnJardineria.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnJardineria.ForeColor = System.Drawing.Color.White;
-            this.btnJardineria.Location = new System.Drawing.Point(701, 173);
+            this.btnJardineria.Location = new System.Drawing.Point(667, 177);
             this.btnJardineria.Margin = new System.Windows.Forms.Padding(2);
             this.btnJardineria.Name = "btnJardineria";
             this.btnJardineria.Size = new System.Drawing.Size(194, 68);
@@ -105,7 +105,7 @@
             this.btnTrimestrales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnTrimestrales.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnTrimestrales.ForeColor = System.Drawing.Color.White;
-            this.btnTrimestrales.Location = new System.Drawing.Point(701, 61);
+            this.btnTrimestrales.Location = new System.Drawing.Point(667, 65);
             this.btnTrimestrales.Margin = new System.Windows.Forms.Padding(2);
             this.btnTrimestrales.Name = "btnTrimestrales";
             this.btnTrimestrales.Size = new System.Drawing.Size(194, 68);
@@ -120,7 +120,7 @@
             this.btnMensuales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnMensuales.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnMensuales.ForeColor = System.Drawing.Color.White;
-            this.btnMensuales.Location = new System.Drawing.Point(440, 61);
+            this.btnMensuales.Location = new System.Drawing.Point(406, 65);
             this.btnMensuales.Margin = new System.Windows.Forms.Padding(2);
             this.btnMensuales.Name = "btnMensuales";
             this.btnMensuales.Size = new System.Drawing.Size(194, 68);
@@ -135,7 +135,7 @@
             this.btnSemanales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
             this.btnSemanales.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnSemanales.ForeColor = System.Drawing.Color.White;
-            this.btnSemanales.Location = new System.Drawing.Point(194, 61);
+            this.btnSemanales.Location = new System.Drawing.Point(160, 65);
             this.btnSemanales.Margin = new System.Windows.Forms.Padding(2);
             this.btnSemanales.Name = "btnSemanales";
             this.btnSemanales.Size = new System.Drawing.Size(194, 68);
@@ -146,6 +146,8 @@
             // 
             // pnl_contenedor
             // 
+            this.pnl_contenedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_contenedor.Controls.Add(this.btnSemanales);
             this.pnl_contenedor.Controls.Add(this.btnJardineria);
             this.pnl_contenedor.Controls.Add(this.btnMantenimiento);
@@ -155,7 +157,7 @@
             this.pnl_contenedor.Controls.Add(this.btnAseo);
             this.pnl_contenedor.Location = new System.Drawing.Point(0, 0);
             this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(1123, 655);
+            this.pnl_contenedor.Size = new System.Drawing.Size(1054, 662);
             this.pnl_contenedor.TabIndex = 34;
             // 
             // ReporteControl
@@ -164,8 +166,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl_contenedor);
             this.Name = "ReporteControl";
-            this.Size = new System.Drawing.Size(1123, 655);
-            this.Load += new System.EventHandler(this.ReporteControl_Load);
+            this.Size = new System.Drawing.Size(1054, 662);
             this.pnl_contenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 

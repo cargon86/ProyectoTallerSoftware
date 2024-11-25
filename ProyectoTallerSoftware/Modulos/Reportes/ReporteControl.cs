@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +17,6 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
             InitializeComponent();
         }
 
-        private void ReporteControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void CambiarReportes(UserControl control)
         {
             pnl_contenedor.Controls.Clear();
@@ -29,10 +24,24 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
             control.Dock = DockStyle.Fill;
         }
 
+        public void RegresarAReportes()
+        {
+            pnl_contenedor.Controls.Clear();
+            pnl_contenedor.Controls.AddRange(new Control[] {
+                btnSemanales,
+                btnMensuales,
+                btnTrimestrales,
+                btnAseo,
+                btnPapeleria,
+                btnJardineria,
+                btnMantenimiento
+            });
+        }
+
         private void btnSemanales_Click(object sender, EventArgs e)
         {
-            ReporteMensual reporteMensual = new ReporteMensual();
-            CambiarReportes(reporteMensual);
+            ReporteSemanal reporteSemanal = new ReporteSemanal();
+            CambiarReportes(reporteSemanal);
         }
 
         private void btnMensuales_Click(object sender, EventArgs e)
@@ -46,6 +55,7 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
             ReporteTrimestral reporteTrimestral = new ReporteTrimestral();
             CambiarReportes(reporteTrimestral);
         }
+        
         private void btnAseo_Click(object sender, EventArgs e)
         {
             ReporteAseo reporteAseo = new ReporteAseo();
