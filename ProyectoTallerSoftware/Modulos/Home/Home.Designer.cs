@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_bitacora = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdquisicion = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -39,6 +41,13 @@
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnRequisiciones = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
+            this.pbCerrar = new System.Windows.Forms.PictureBox();
+            this.pbInvent = new System.Windows.Forms.PictureBox();
+            this.pbEmplead = new System.Windows.Forms.PictureBox();
+            this.pbRepor = new System.Windows.Forms.PictureBox();
+            this.pbProdu = new System.Windows.Forms.PictureBox();
+            this.pbRequ = new System.Windows.Forms.PictureBox();
+            this.pbUsu = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.lbl_formulario = new System.Windows.Forms.Label();
@@ -48,19 +57,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbCerrar = new System.Windows.Forms.PictureBox();
-            this.pbInvent = new System.Windows.Forms.PictureBox();
-            this.pbEmplead = new System.Windows.Forms.PictureBox();
-            this.pbRepor = new System.Windows.Forms.PictureBox();
-            this.pbProdu = new System.Windows.Forms.PictureBox();
-            this.pbRequ = new System.Windows.Forms.PictureBox();
-            this.pbUsu = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.pnl_contenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
@@ -70,6 +67,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.pnl_contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -118,6 +118,30 @@
             this.btn_bitacora.Text = "Bitacora";
             this.btn_bitacora.UseVisualStyleBackColor = false;
             this.btn_bitacora.Click += new System.EventHandler(this.btn_bitacora_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoTallerSoftware.Properties.Resources.bitacora;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 558);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 64;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoTallerSoftware.Properties.Resources.adquisicionn;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 341);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 63;
+            this.pictureBox1.TabStop = false;
             // 
             // btnAdquisicion
             // 
@@ -262,6 +286,90 @@
             this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
+            // pbCerrar
+            // 
+            this.pbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbCerrar.Image")));
+            this.pbCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pbCerrar.Location = new System.Drawing.Point(15, 630);
+            this.pbCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbCerrar.Name = "pbCerrar";
+            this.pbCerrar.Size = new System.Drawing.Size(49, 46);
+            this.pbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCerrar.TabIndex = 55;
+            this.pbCerrar.TabStop = false;
+            // 
+            // pbInvent
+            // 
+            this.pbInvent.Image = global::ProyectoTallerSoftware.Properties.Resources.inventario;
+            this.pbInvent.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pbInvent.Location = new System.Drawing.Point(15, 482);
+            this.pbInvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbInvent.Name = "pbInvent";
+            this.pbInvent.Size = new System.Drawing.Size(49, 46);
+            this.pbInvent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbInvent.TabIndex = 54;
+            this.pbInvent.TabStop = false;
+            // 
+            // pbEmplead
+            // 
+            this.pbEmplead.Image = global::ProyectoTallerSoftware.Properties.Resources.empleados;
+            this.pbEmplead.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pbEmplead.Location = new System.Drawing.Point(15, 414);
+            this.pbEmplead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbEmplead.Name = "pbEmplead";
+            this.pbEmplead.Size = new System.Drawing.Size(49, 46);
+            this.pbEmplead.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEmplead.TabIndex = 53;
+            this.pbEmplead.TabStop = false;
+            // 
+            // pbRepor
+            // 
+            this.pbRepor.Image = global::ProyectoTallerSoftware.Properties.Resources.reportes;
+            this.pbRepor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pbRepor.Location = new System.Drawing.Point(15, 268);
+            this.pbRepor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbRepor.Name = "pbRepor";
+            this.pbRepor.Size = new System.Drawing.Size(49, 46);
+            this.pbRepor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRepor.TabIndex = 52;
+            this.pbRepor.TabStop = false;
+            // 
+            // pbProdu
+            // 
+            this.pbProdu.Image = global::ProyectoTallerSoftware.Properties.Resources.productos;
+            this.pbProdu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pbProdu.Location = new System.Drawing.Point(15, 196);
+            this.pbProdu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbProdu.Name = "pbProdu";
+            this.pbProdu.Size = new System.Drawing.Size(49, 46);
+            this.pbProdu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProdu.TabIndex = 51;
+            this.pbProdu.TabStop = false;
+            // 
+            // pbRequ
+            // 
+            this.pbRequ.Image = global::ProyectoTallerSoftware.Properties.Resources.requisicion;
+            this.pbRequ.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pbRequ.Location = new System.Drawing.Point(15, 126);
+            this.pbRequ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbRequ.Name = "pbRequ";
+            this.pbRequ.Size = new System.Drawing.Size(49, 46);
+            this.pbRequ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRequ.TabIndex = 50;
+            this.pbRequ.TabStop = false;
+            // 
+            // pbUsu
+            // 
+            this.pbUsu.Image = global::ProyectoTallerSoftware.Properties.Resources.usuarios;
+            this.pbUsu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pbUsu.Location = new System.Drawing.Point(15, 50);
+            this.pbUsu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbUsu.Name = "pbUsu";
+            this.pbUsu.Size = new System.Drawing.Size(49, 46);
+            this.pbUsu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsu.TabIndex = 48;
+            this.pbUsu.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -353,7 +461,7 @@
             this.pnl_contenedor.Controls.Add(this.pictureBox8);
             this.pnl_contenedor.Controls.Add(this.label12);
             this.pnl_contenedor.Location = new System.Drawing.Point(361, 142);
-            this.pnl_contenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_contenedor.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_contenedor.Name = "pnl_contenedor";
             this.pnl_contenedor.Size = new System.Drawing.Size(1420, 812);
             this.pnl_contenedor.TabIndex = 14;
@@ -369,114 +477,6 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 13;
             this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProyectoTallerSoftware.Properties.Resources.bitacora;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 558);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 46);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 64;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoTallerSoftware.Properties.Resources.adquisicionn;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 341);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 63;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbCerrar
-            // 
-            this.pbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbCerrar.Image")));
-            this.pbCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pbCerrar.Location = new System.Drawing.Point(15, 630);
-            this.pbCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbCerrar.Name = "pbCerrar";
-            this.pbCerrar.Size = new System.Drawing.Size(49, 46);
-            this.pbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCerrar.TabIndex = 55;
-            this.pbCerrar.TabStop = false;
-            // 
-            // pbInvent
-            // 
-            this.pbInvent.Image = global::ProyectoTallerSoftware.Properties.Resources.inventario;
-            this.pbInvent.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pbInvent.Location = new System.Drawing.Point(15, 482);
-            this.pbInvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbInvent.Name = "pbInvent";
-            this.pbInvent.Size = new System.Drawing.Size(49, 46);
-            this.pbInvent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbInvent.TabIndex = 54;
-            this.pbInvent.TabStop = false;
-            // 
-            // pbEmplead
-            // 
-            this.pbEmplead.Image = global::ProyectoTallerSoftware.Properties.Resources.empleados;
-            this.pbEmplead.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pbEmplead.Location = new System.Drawing.Point(15, 414);
-            this.pbEmplead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbEmplead.Name = "pbEmplead";
-            this.pbEmplead.Size = new System.Drawing.Size(49, 46);
-            this.pbEmplead.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEmplead.TabIndex = 53;
-            this.pbEmplead.TabStop = false;
-            // 
-            // pbRepor
-            // 
-            this.pbRepor.Image = global::ProyectoTallerSoftware.Properties.Resources.reportes;
-            this.pbRepor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pbRepor.Location = new System.Drawing.Point(15, 268);
-            this.pbRepor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbRepor.Name = "pbRepor";
-            this.pbRepor.Size = new System.Drawing.Size(49, 46);
-            this.pbRepor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbRepor.TabIndex = 52;
-            this.pbRepor.TabStop = false;
-            // 
-            // pbProdu
-            // 
-            this.pbProdu.Image = global::ProyectoTallerSoftware.Properties.Resources.productos;
-            this.pbProdu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pbProdu.Location = new System.Drawing.Point(15, 196);
-            this.pbProdu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbProdu.Name = "pbProdu";
-            this.pbProdu.Size = new System.Drawing.Size(49, 46);
-            this.pbProdu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbProdu.TabIndex = 51;
-            this.pbProdu.TabStop = false;
-            // 
-            // pbRequ
-            // 
-            this.pbRequ.Image = global::ProyectoTallerSoftware.Properties.Resources.requisicion;
-            this.pbRequ.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pbRequ.Location = new System.Drawing.Point(15, 126);
-            this.pbRequ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbRequ.Name = "pbRequ";
-            this.pbRequ.Size = new System.Drawing.Size(49, 46);
-            this.pbRequ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbRequ.TabIndex = 50;
-            this.pbRequ.TabStop = false;
-            // 
-            // pbUsu
-            // 
-            this.pbUsu.Image = global::ProyectoTallerSoftware.Properties.Resources.usuarios;
-            this.pbUsu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pbUsu.Location = new System.Drawing.Point(15, 50);
-            this.pbUsu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbUsu.Name = "pbUsu";
-            this.pbUsu.Size = new System.Drawing.Size(49, 46);
-            this.pbUsu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUsu.TabIndex = 48;
-            this.pbUsu.TabStop = false;
             // 
             // Home
             // 
@@ -494,11 +494,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.pnl_contenedor.ResumeLayout(false);
-            this.pnl_contenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
@@ -508,6 +503,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProdu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRequ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.pnl_contenedor.ResumeLayout(false);
+            this.pnl_contenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
