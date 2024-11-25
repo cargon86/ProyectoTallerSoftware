@@ -29,17 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.btn_regresar = new System.Windows.Forms.Button();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.obtenerProductosJardineriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
+            this.btn_regresar = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.obtenerProductosJardineriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerProductosJardineriaTableAdapter = new ProyectoTallerSoftware.Sis_InventarioDataSetTableAdapters.ObtenerProductosJardineriaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosJardineriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosJardineriaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // obtenerProductosJardineriaBindingSource
+            // 
+            this.obtenerProductosJardineriaBindingSource.DataMember = "ObtenerProductosJardineria";
+            this.obtenerProductosJardineriaBindingSource.DataSource = this.sis_InventarioDataSet;
+            // 
+            // sis_InventarioDataSet
+            // 
+            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
+            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_regresar
             // 
@@ -49,37 +59,28 @@
             this.btn_regresar.TabIndex = 0;
             this.btn_regresar.Text = "Regresar";
             this.btn_regresar.UseVisualStyleBackColor = true;
-            // 
-            // sis_InventarioDataSet
-            // 
-            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
-            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
             // reportViewer1
             // 
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.obtenerProductosJardineriaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.obtenerProductosJardineriaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoTallerSoftware.ReporteJardineria.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(10, 79);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 57);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1075, 541);
+            this.reportViewer1.Size = new System.Drawing.Size(1097, 583);
             this.reportViewer1.TabIndex = 3;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.btn_regresar);
-            this.panel1.Location = new System.Drawing.Point(10, 21);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1077, 58);
+            this.panel1.Size = new System.Drawing.Size(1097, 58);
             this.panel1.TabIndex = 2;
-            // 
-            // obtenerProductosJardineriaBindingSource
-            // 
-            this.obtenerProductosJardineriaBindingSource.DataMember = "ObtenerProductosJardineria";
-            this.obtenerProductosJardineriaBindingSource.DataSource = this.sis_InventarioDataSet;
             // 
             // obtenerProductosJardineriaTableAdapter
             // 
@@ -94,9 +95,9 @@
             this.Name = "ReporteJardineria";
             this.Size = new System.Drawing.Size(1097, 640);
             this.Load += new System.EventHandler(this.ReporteJardineria_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosJardineriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosJardineriaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

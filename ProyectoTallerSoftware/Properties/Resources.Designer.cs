@@ -199,5 +199,25 @@ namespace ProyectoTallerSoftware.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_11_12_at_10_00_57_AM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp_Image_2024_11_12_at_10_00_57_AM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_11_12_at_10_02_40_AM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp_Image_2024_11_12_at_10_02_40_AM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

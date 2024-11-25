@@ -29,52 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_regresar = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.obtenerProductosAseoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.obtenerProductosAseoTableAdapter = new ProyectoTallerSoftware.Sis_InventarioDataSetTableAdapters.ObtenerProductosAseoTableAdapter();
-            this.btn_regresar = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosAseoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // obtenerProductosAseoBindingSource
-            // 
-            this.obtenerProductosAseoBindingSource.DataMember = "ObtenerProductosAseo";
-            this.obtenerProductosAseoBindingSource.DataSource = this.sis_InventarioDataSet;
-            // 
-            // sis_InventarioDataSet
-            // 
-            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
-            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(183)))));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.btn_regresar);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1077, 58);
+            this.panel1.Size = new System.Drawing.Size(1171, 58);
             this.panel1.TabIndex = 0;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.obtenerProductosAseoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoTallerSoftware.ReporteAseo.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 58);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1075, 541);
-            this.reportViewer1.TabIndex = 1;
-            // 
-            // obtenerProductosAseoTableAdapter
-            // 
-            this.obtenerProductosAseoTableAdapter.ClearBeforeFill = true;
             // 
             // btn_regresar
             // 
@@ -86,6 +62,34 @@
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_click);
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.obtenerProductosAseoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoTallerSoftware.ReporteAseo.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 55);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1171, 554);
+            this.reportViewer1.TabIndex = 1;
+            // 
+            // obtenerProductosAseoBindingSource
+            // 
+            this.obtenerProductosAseoBindingSource.DataMember = "ObtenerProductosAseo";
+            this.obtenerProductosAseoBindingSource.DataSource = this.sis_InventarioDataSet;
+            // 
+            // sis_InventarioDataSet
+            // 
+            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
+            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // obtenerProductosAseoTableAdapter
+            // 
+            this.obtenerProductosAseoTableAdapter.ClearBeforeFill = true;
+            // 
             // ReporteAseo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,11 +97,11 @@
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
             this.Name = "ReporteAseo";
-            this.Size = new System.Drawing.Size(1077, 599);
+            this.Size = new System.Drawing.Size(1171, 609);
             this.Load += new System.EventHandler(this.ReporteAseo_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosAseoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

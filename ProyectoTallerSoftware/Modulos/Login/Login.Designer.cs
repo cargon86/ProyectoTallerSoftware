@@ -124,13 +124,13 @@
             // 
             // pb_logo
             // 
-            this.pb_logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pb_logo.Image = global::ProyectoTallerSoftware.Properties.Resources.unica;
-            this.pb_logo.Location = new System.Drawing.Point(743, 69);
+            this.pb_logo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pb_logo.Image = global::ProyectoTallerSoftware.Properties.Resources.WhatsApp_Image_2024_11_12_at_10_00_57_AM;
+            this.pb_logo.Location = new System.Drawing.Point(778, 116);
             this.pb_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pb_logo.Name = "pb_logo";
-            this.pb_logo.Size = new System.Drawing.Size(225, 225);
-            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pb_logo.Size = new System.Drawing.Size(210, 210);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_logo.TabIndex = 7;
             this.pb_logo.TabStop = false;
             // 

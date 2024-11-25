@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using System.Windows.Forms;
 
 namespace ProyectoTallerSoftware.Modulos.Reportes
@@ -24,7 +17,10 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
 
         private void btn_regresar_click(object sender, EventArgs e)
         {
-
+            if (Parent != null && Parent.Parent is ReporteControl reporteControl)
+            {
+                reporteControl.RegresarAReportes();
+            }
         }
     }
 }
