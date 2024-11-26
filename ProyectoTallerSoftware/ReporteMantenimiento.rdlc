@@ -486,8 +486,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Sis_InventarioDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\jazmi\Source\Repos\ProyectoTallerSoftware\ProyectoTallerSoftware\Sis_InventarioDataSet1.xsd</rd:SchemaPath>
+        <rd:DataSetName>Sis_InventarioDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\carlo\Source\Repos\ProyectoTallerSoftware\ProyectoTallerSoftware\Sis_InventarioDataSet.xsd</rd:SchemaPath>
         <rd:TableName>ObtenerProductosMantenimiento</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

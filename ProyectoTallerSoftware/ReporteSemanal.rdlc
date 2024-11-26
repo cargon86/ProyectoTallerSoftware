@@ -209,6 +209,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -458,7 +459,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>97140ee5-2d99-4cee-9508-be5f1f8b47bf</rd:DataSourceID>
+      <rd:DataSourceID>3f843d38-e7bf-467f-b435-f3cb9ebc57ca</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -487,7 +488,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Sis_InventarioDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\carlo\source\repos\ProyectoTallerSoftware\ProyectoTallerSoftware\Sis_InventarioDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\carlo\Source\Repos\ProyectoTallerSoftware\ProyectoTallerSoftware\Sis_InventarioDataSet.xsd</rd:SchemaPath>
         <rd:TableName>ObtenerProductosUltimaSemana</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

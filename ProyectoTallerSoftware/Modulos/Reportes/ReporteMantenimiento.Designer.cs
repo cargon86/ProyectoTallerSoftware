@@ -30,26 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.obtenerProductosMantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
+            this.obtenerProductosMantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerProductosMantenimientoTableAdapter = new ProyectoTallerSoftware.Sis_InventarioDataSetTableAdapters.ObtenerProductosMantenimientoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosMantenimientoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosMantenimientoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // obtenerProductosMantenimientoBindingSource
-            // 
-            this.obtenerProductosMantenimientoBindingSource.DataMember = "ObtenerProductosMantenimiento";
-            this.obtenerProductosMantenimientoBindingSource.DataSource = this.sis_InventarioDataSet;
-            // 
-            // sis_InventarioDataSet
-            // 
-            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
-            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_regresar
             // 
@@ -82,6 +72,16 @@
             this.panel1.Size = new System.Drawing.Size(1121, 58);
             this.panel1.TabIndex = 2;
             // 
+            // sis_InventarioDataSet
+            // 
+            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
+            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // obtenerProductosMantenimientoBindingSource
+            // 
+            this.obtenerProductosMantenimientoBindingSource.DataMember = "ObtenerProductosMantenimiento";
+            this.obtenerProductosMantenimientoBindingSource.DataSource = this.sis_InventarioDataSet;
+            // 
             // obtenerProductosMantenimientoTableAdapter
             // 
             this.obtenerProductosMantenimientoTableAdapter.ClearBeforeFill = true;
@@ -95,9 +95,9 @@
             this.Name = "ReporteMantenimiento";
             this.Size = new System.Drawing.Size(1121, 664);
             this.Load += new System.EventHandler(this.ReporteMantenimiento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosMantenimientoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosMantenimientoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,10 +105,10 @@
         #endregion
 
         private System.Windows.Forms.Button btn_regresar;
-        private Sis_InventarioDataSet sis_InventarioDataSet;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.BindingSource obtenerProductosMantenimientoBindingSource;
+        private Sis_InventarioDataSet sis_InventarioDataSet;
         private Sis_InventarioDataSetTableAdapters.ObtenerProductosMantenimientoTableAdapter obtenerProductosMantenimientoTableAdapter;
     }
 }

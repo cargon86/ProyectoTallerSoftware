@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Sis_InventarioConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Sis_InventarioConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProyectoTallerSoftware.Properties.Settings.GlobalReference.Default.Sis_InventarioConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Sis_InventarioConnection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Sis_InventarioConnection (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProyectoTallerSoftware.Properties.Settings.GlobalReference.Default.Sis_InventarioConnection" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AdquisicionTableAdapter" GeneratorDataComponentClassName="AdquisicionTableAdapter" Name="Adquisicion" UserDataComponentName="AdquisicionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.Adquisicion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.Adquisicion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Adquisicion] WHERE (([id_adq] = @Original_id_adq) AND ([nom_usu] = @Original_nom_usu) AND ([fec_adq] = @Original_fec_adq) AND ([prov_adq] = @Original_prov_adq))</CommandText>
@@ -69,7 +69,7 @@ SELECT id_adq, nom_usu, fec_adq, prov_adq, obs_adq FROM Adquisicion WHERE (id_ad
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AreaTableAdapter" GeneratorDataComponentClassName="AreaTableAdapter" Name="Area" UserDataComponentName="AreaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.Area" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.Area" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Area] WHERE (([id_area] = @Original_id_area) AND ([nom_area] = @Original_nom_area))</CommandText>
@@ -119,7 +119,7 @@ SELECT id_area, nom_area, desc_area FROM Area WHERE (id_area = @id_area)</Comman
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BitacoraTableAdapter" GeneratorDataComponentClassName="BitacoraTableAdapter" Name="Bitacora" UserDataComponentName="BitacoraTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.Bitacora" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.Bitacora" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Bitacora] WHERE (([id_bita] = @Original_id_bita) AND ([nom_usu] = @Original_nom_usu) AND ([fecha_bita] = @Original_fecha_bita) AND ([acc_bita] = @Original_acc_bita))</CommandText>
@@ -176,7 +176,7 @@ SELECT id_bita, nom_usu, fecha_bita, acc_bita FROM Bitacora WHERE (id_bita = @id
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DetalleAdquisicionTableAdapter" GeneratorDataComponentClassName="DetalleAdquisicionTableAdapter" Name="DetalleAdquisicion" UserDataComponentName="DetalleAdquisicionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.DetalleAdquisicion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.DetalleAdquisicion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[DetalleAdquisicion] WHERE (([id_det_adq] = @Original_id_det_adq) AND ([id_adq] = @Original_id_adq) AND ([id_prod] = @Original_id_prod) AND ([cant_ent] = @Original_cant_ent))</CommandText>
@@ -233,7 +233,7 @@ SELECT id_det_adq, id_adq, id_prod, cant_ent FROM DetalleAdquisicion WHERE (id_d
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DetalleRequisicionTableAdapter" GeneratorDataComponentClassName="DetalleRequisicionTableAdapter" Name="DetalleRequisicion" UserDataComponentName="DetalleRequisicionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.DetalleRequisicion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.DetalleRequisicion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[DetalleRequisicion] WHERE (([id_det_req] = @Original_id_det_req) AND ([id_req] = @Original_id_req) AND ([id_prod] = @Original_id_prod) AND ([cant_det] = @Original_cant_det))</CommandText>
@@ -290,7 +290,7 @@ SELECT id_det_req, id_req, id_prod, cant_det FROM DetalleRequisicion WHERE (id_d
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmpleadosTableAdapter" GeneratorDataComponentClassName="EmpleadosTableAdapter" Name="Empleados" UserDataComponentName="EmpleadosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.Empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.Empleados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Empleados] WHERE (([id_emp] = @Original_id_emp) AND ([nom_emp] = @Original_nom_emp) AND ([nom_usu] = @Original_nom_usu) AND ([id_area] = @Original_id_area) AND ([est_emp] = @Original_est_emp))</CommandText>
@@ -353,7 +353,7 @@ SELECT id_emp, nom_emp, nom_usu, id_area, est_emp FROM Empleados WHERE (id_emp =
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InventarioTableAdapter" GeneratorDataComponentClassName="InventarioTableAdapter" Name="Inventario" UserDataComponentName="InventarioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.Inventario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.Inventario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Inventario] WHERE (([id_inv] = @Original_id_inv) AND ([id_prod] = @Original_id_prod) AND ([cant_inv] = @Original_cant_inv) AND ([fec_act] = @Original_fec_act))</CommandText>
@@ -410,7 +410,7 @@ SELECT id_inv, id_prod, cant_inv, fec_act FROM Inventario WHERE (id_inv = @id_in
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MedidasTableAdapter" GeneratorDataComponentClassName="MedidasTableAdapter" Name="Medidas" UserDataComponentName="MedidasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.Medidas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.Medidas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Medidas] WHERE (([id_med] = @Original_id_med) AND ([nom_med] = @Original_nom_med))</CommandText>
@@ -457,7 +457,7 @@ SELECT id_med, nom_med FROM Medidas WHERE (id_med = @id_med)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductosTableAdapter" GeneratorDataComponentClassName="ProductosTableAdapter" Name="Productos" UserDataComponentName="ProductosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.Productos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.Productos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Productos] WHERE (([id_prod] = @Original_id_prod) AND ([nom_prod] = @Original_nom_prod) AND ([id_med] = @Original_id_med))</CommandText>
@@ -512,7 +512,7 @@ SELECT id_prod, nom_prod, des_prod, id_med FROM Productos WHERE (id_prod = @id_p
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RequisicionTableAdapter" GeneratorDataComponentClassName="RequisicionTableAdapter" Name="Requisicion" UserDataComponentName="RequisicionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.Requisicion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.Requisicion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Requisicion] WHERE (([id_req] = @Original_id_req) AND ([id_emp] = @Original_id_emp) AND ([fec_sol] = @Original_fec_sol) AND ((@IsNull_fec_rec = 1 AND [fec_rec] IS NULL) OR ([fec_rec] = @Original_fec_rec)) AND ((@IsNull_fec_ent = 1 AND [fec_ent] IS NULL) OR ([fec_ent] = @Original_fec_ent)) AND ([est_req] = @Original_est_req))</CommandText>
@@ -583,7 +583,7 @@ SELECT id_req, id_emp, fec_sol, fec_rec, fec_ent, est_req FROM Requisicion WHERE
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuariosTableAdapter" GeneratorDataComponentClassName="UsuariosTableAdapter" Name="Usuarios" UserDataComponentName="UsuariosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Usuarios] WHERE (([nom_usu] = @Original_nom_usu) AND ([con_usu] = @Original_con_usu) AND ([rol_usu] = @Original_rol_usu) AND ([est_usu] = @Original_est_usu))</CommandText>
@@ -639,9 +639,27 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerAreasTableAdapter" GeneratorDataComponentClassName="ObtenerAreasTableAdapter" Name="ObtenerAreas" UserDataComponentName="ObtenerAreasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerAreas" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ObtenerAreas</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nom_area" DataSetColumn="nom_area" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerEmpleadoPorIDTableAdapter" GeneratorDataComponentClassName="ObtenerEmpleadoPorIDTableAdapter" Name="ObtenerEmpleadoPorID" UserDataComponentName="ObtenerEmpleadoPorIDTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerEmpleadoPorID" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerEmpleadoPorID" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerEmpleadoPorID</CommandText>
@@ -664,7 +682,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerEmpleadosTableAdapter" GeneratorDataComponentClassName="ObtenerEmpleadosTableAdapter" Name="ObtenerEmpleados" UserDataComponentName="ObtenerEmpleadosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerEmpleados" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerEmpleados" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerEmpleados</CommandText>
@@ -688,7 +706,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerEmpleadosConDetallesTableAdapter" GeneratorDataComponentClassName="ObtenerEmpleadosConDetallesTableAdapter" Name="ObtenerEmpleadosConDetalles" UserDataComponentName="ObtenerEmpleadosConDetallesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerEmpleadosConDetalles" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerEmpleadosConDetalles" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerEmpleadosConDetalles</CommandText>
@@ -708,9 +726,32 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerEmpleadosEmpTableAdapter" GeneratorDataComponentClassName="ObtenerEmpleadosEmpTableAdapter" Name="ObtenerEmpleadosEmp" UserDataComponentName="ObtenerEmpleadosEmpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerEmpleadosEmp" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ObtenerEmpleadosEmp</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@id_emp" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="Area" DataSetColumn="Area" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerEmpleadosPorAreaTableAdapter" GeneratorDataComponentClassName="ObtenerEmpleadosPorAreaTableAdapter" Name="ObtenerEmpleadosPorArea" UserDataComponentName="ObtenerEmpleadosPorAreaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerEmpleadosPorArea" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerEmpleadosPorArea" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerEmpleadosPorArea</CommandText>
@@ -732,9 +773,28 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerIdAreaPorNombreTableAdapter" GeneratorDataComponentClassName="ObtenerIdAreaPorNombreTableAdapter" Name="ObtenerIdAreaPorNombre" UserDataComponentName="ObtenerIdAreaPorNombreTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerIdAreaPorNombre" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ObtenerIdAreaPorNombre</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@nombreArea" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_area" DataSetColumn="id_area" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerInventarioTableAdapter" GeneratorDataComponentClassName="ObtenerInventarioTableAdapter" Name="ObtenerInventario" UserDataComponentName="ObtenerInventarioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerInventario" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerInventario" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerInventario</CommandText>
@@ -759,9 +819,28 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerNombreAreaPorIDTableAdapter" GeneratorDataComponentClassName="ObtenerNombreAreaPorIDTableAdapter" Name="ObtenerNombreAreaPorID" UserDataComponentName="ObtenerNombreAreaPorIDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerNombreAreaPorID" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ObtenerNombreAreaPorID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_area" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nom_area" DataSetColumn="nom_area" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerProductosAseoTableAdapter" GeneratorDataComponentClassName="ObtenerProductosAseoTableAdapter" Name="ObtenerProductosAseo" UserDataComponentName="ObtenerProductosAseoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosAseo" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosAseo" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerProductosAseo</CommandText>
@@ -782,7 +861,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerProductosJardineriaTableAdapter" GeneratorDataComponentClassName="ObtenerProductosJardineriaTableAdapter" Name="ObtenerProductosJardineria" UserDataComponentName="ObtenerProductosJardineriaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosJardineria" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosJardineria" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerProductosJardineria</CommandText>
@@ -803,7 +882,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerProductosMantenimientoTableAdapter" GeneratorDataComponentClassName="ObtenerProductosMantenimientoTableAdapter" Name="ObtenerProductosMantenimiento" UserDataComponentName="ObtenerProductosMantenimientoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosMantenimiento" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosMantenimiento" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerProductosMantenimiento</CommandText>
@@ -824,7 +903,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerProductosPapeleriaTableAdapter" GeneratorDataComponentClassName="ObtenerProductosPapeleriaTableAdapter" Name="ObtenerProductosPapeleria" UserDataComponentName="ObtenerProductosPapeleriaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosPapeleria" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosPapeleria" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerProductosPapeleria</CommandText>
@@ -845,7 +924,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerProductosUltimaSemanaTableAdapter" GeneratorDataComponentClassName="ObtenerProductosUltimaSemanaTableAdapter" Name="ObtenerProductosUltimaSemana" UserDataComponentName="ObtenerProductosUltimaSemanaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosUltimaSemana" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosUltimaSemana" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerProductosUltimaSemana</CommandText>
@@ -866,7 +945,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerProductosUltimoMesTableAdapter" GeneratorDataComponentClassName="ObtenerProductosUltimoMesTableAdapter" Name="ObtenerProductosUltimoMes" UserDataComponentName="ObtenerProductosUltimoMesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosUltimoMes" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosUltimoMes" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerProductosUltimoMes</CommandText>
@@ -887,7 +966,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerProductosUltimoTrimestreTableAdapter" GeneratorDataComponentClassName="ObtenerProductosUltimoTrimestreTableAdapter" Name="ObtenerProductosUltimoTrimestre" UserDataComponentName="ObtenerProductosUltimoTrimestreTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosUltimoTrimestre" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerProductosUltimoTrimestre" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerProductosUltimoTrimestre</CommandText>
@@ -906,9 +985,27 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerUsuariosTableAdapter" GeneratorDataComponentClassName="ObtenerUsuariosTableAdapter" Name="ObtenerUsuarios" UserDataComponentName="ObtenerUsuariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ObtenerUsuarios" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ObtenerUsuarios</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nom_usu" DataSetColumn="nom_usu" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_CargarProductosFilteredTableAdapter" GeneratorDataComponentClassName="sp_CargarProductosFilteredTableAdapter" Name="sp_CargarProductosFiltered" UserDataComponentName="sp_CargarProductosFilteredTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_CargarProductosFiltered" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_CargarProductosFiltered" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_CargarProductosFiltered</CommandText>
@@ -931,7 +1028,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetAllAdquisicionesTableAdapter" GeneratorDataComponentClassName="sp_GetAllAdquisicionesTableAdapter" Name="sp_GetAllAdquisiciones" UserDataComponentName="sp_GetAllAdquisicionesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetAllAdquisiciones" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetAllAdquisiciones" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GetAllAdquisiciones</CommandText>
@@ -953,7 +1050,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetAreasTableAdapter" GeneratorDataComponentClassName="sp_GetAreasTableAdapter" Name="sp_GetAreas" UserDataComponentName="sp_GetAreasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetAreas" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetAreas" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GetAreas</CommandText>
@@ -972,7 +1069,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetBitacoraTableAdapter" GeneratorDataComponentClassName="sp_GetBitacoraTableAdapter" Name="sp_GetBitacora" UserDataComponentName="sp_GetBitacoraTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetBitacora" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetBitacora" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GetBitacora</CommandText>
@@ -993,7 +1090,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetDetalleAdquisicionTableAdapter" GeneratorDataComponentClassName="sp_GetDetalleAdquisicionTableAdapter" Name="sp_GetDetalleAdquisicion" UserDataComponentName="sp_GetDetalleAdquisicionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetDetalleAdquisicion" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetDetalleAdquisicion" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GetDetalleAdquisicion</CommandText>
@@ -1015,9 +1112,28 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetHashPassTableAdapter" GeneratorDataComponentClassName="sp_GetHashPassTableAdapter" Name="sp_GetHashPass" UserDataComponentName="sp_GetHashPassTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetHashPass" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.sp_GetHashPass</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@nom_usu" Precision="0" ProviderType="VarChar" Scale="0" Size="25" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="con_usu" DataSetColumn="con_usu" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetMeasuresTableAdapter" GeneratorDataComponentClassName="sp_GetMeasuresTableAdapter" Name="sp_GetMeasures" UserDataComponentName="sp_GetMeasuresTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetMeasures" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetMeasures" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GetMeasures</CommandText>
@@ -1036,7 +1152,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetProductsTableAdapter" GeneratorDataComponentClassName="sp_GetProductsTableAdapter" Name="sp_GetProducts" UserDataComponentName="sp_GetProductsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetProducts" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetProducts" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GetProducts</CommandText>
@@ -1058,7 +1174,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetProductsAdquisicionTableAdapter" GeneratorDataComponentClassName="sp_GetProductsAdquisicionTableAdapter" Name="sp_GetProductsAdquisicion" UserDataComponentName="sp_GetProductsAdquisicionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetProductsAdquisicion" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetProductsAdquisicion" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GetProductsAdquisicion</CommandText>
@@ -1077,7 +1193,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetRolUserTableAdapter" GeneratorDataComponentClassName="sp_GetRolUserTableAdapter" Name="sp_GetRolUser" UserDataComponentName="sp_GetRolUserTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetRolUser" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetRolUser" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GetRolUser</CommandText>
@@ -1096,12 +1212,13 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GetUsersTableAdapter" GeneratorDataComponentClassName="sp_GetUsersTableAdapter" Name="sp_GetUsers" UserDataComponentName="sp_GetUsersTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetUsers" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GetUsers" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GetUsers</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@nom_usu" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
@@ -1116,7 +1233,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_GuardarRequisicionTableAdapter" GeneratorDataComponentClassName="sp_GuardarRequisicionTableAdapter" Name="sp_GuardarRequisicion" UserDataComponentName="sp_GuardarRequisicionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GuardarRequisicion" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_GuardarRequisicion" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_GuardarRequisicion</CommandText>
@@ -1140,7 +1257,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_InsertAdquisicionTableAdapter" GeneratorDataComponentClassName="sp_InsertAdquisicionTableAdapter" Name="sp_InsertAdquisicion" UserDataComponentName="sp_InsertAdquisicionTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_InsertAdquisicion" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_InsertAdquisicion" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_InsertAdquisicion</CommandText>
@@ -1162,7 +1279,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_VerifyLoginTableAdapter" GeneratorDataComponentClassName="sp_VerifyLoginTableAdapter" Name="sp_VerifyLogin" UserDataComponentName="sp_VerifyLoginTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_VerifyLogin" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_VerifyLogin" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.sp_VerifyLogin</CommandText>
@@ -1178,14 +1295,31 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             <Mappings>
               <Mapping SourceColumn="nom_usu" DataSetColumn="nom_usu" />
               <Mapping SourceColumn="con_usu" DataSetColumn="con_usu" />
-              <Mapping SourceColumn="rol_usu" DataSetColumn="rol_usu" />
-              <Mapping SourceColumn="est_usu" DataSetColumn="est_usu" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VerificarReferenciasTableAdapter" GeneratorDataComponentClassName="VerificarReferenciasTableAdapter" Name="VerificarReferencias" UserDataComponentName="VerificarReferenciasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.VerificarReferencias" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.VerificarReferencias</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@id_emp" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Column1" DataSetColumn="Column1" />
             </Mappings>
             <Sources />
           </TableAdapter>
         </Tables>
         <Sources>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.ActualizarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ActualizarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="ActualizarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ActualizarEmpleado">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.ActualizarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ActualizarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="ActualizarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ActualizarEmpleado">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.ActualizarEmpleado</CommandText>
@@ -1200,7 +1334,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.AgregarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="AgregarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="AgregarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="AgregarEmpleado">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.AgregarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="AgregarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="AgregarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="AgregarEmpleado">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.AgregarEmpleado</CommandText>
@@ -1215,18 +1349,22 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.EliminarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="EliminarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="EliminarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="EliminarEmpleado">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.EditarEmpleado" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="EditarEmpleado" MethodsParameterType="CLR" Modifier="Public" Name="EditarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="EditarEmpleado">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
-                <CommandText>dbo.EliminarEmpleado</CommandText>
+                <CommandText>dbo.EditarEmpleado</CommandText>
                 <Parameters>
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@id_emp" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@id_emp" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@nom_emp" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@nom_usu" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_area" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@est_emp" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
                 </Parameters>
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_AddProduct" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_AddProduct" MethodsParameterType="CLR" Modifier="Public" Name="sp_AddProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="sp_AddProduct">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_AddProduct" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_AddProduct" MethodsParameterType="CLR" Modifier="Public" Name="sp_AddProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="sp_AddProduct">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_AddProduct</CommandText>
@@ -1239,7 +1377,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_CrearUsuario" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_CrearUsuario" MethodsParameterType="CLR" Modifier="Public" Name="sp_CrearUsuario" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="sp_CrearUsuario">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_CrearUsuario" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_CrearUsuario" MethodsParameterType="CLR" Modifier="Public" Name="sp_CrearUsuario" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="sp_CrearUsuario">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_CrearUsuario</CommandText>
@@ -1253,7 +1391,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_DeleteAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_DeleteAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_DeleteAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="sp_DeleteAdquisicion">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_DeleteAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_DeleteAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_DeleteAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="sp_DeleteAdquisicion">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_DeleteAdquisicion</CommandText>
@@ -1264,7 +1402,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_DeleteDetalleAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_DeleteDetalleAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_DeleteDetalleAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="sp_DeleteDetalleAdquisicion">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_DeleteDetalleAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_DeleteDetalleAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_DeleteDetalleAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="sp_DeleteDetalleAdquisicion">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_DeleteDetalleAdquisicion</CommandText>
@@ -1275,7 +1413,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_DeleteProduct" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_DeleteProduct" MethodsParameterType="CLR" Modifier="Public" Name="sp_DeleteProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="sp_DeleteProduct">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_DeleteProduct" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_DeleteProduct" MethodsParameterType="CLR" Modifier="Public" Name="sp_DeleteProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="sp_DeleteProduct">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_DeleteProduct</CommandText>
@@ -1286,7 +1424,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_DeleteUser" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_DeleteUser" MethodsParameterType="CLR" Modifier="Public" Name="sp_DeleteUser" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="sp_DeleteUser">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_DeleteUser" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_DeleteUser" MethodsParameterType="CLR" Modifier="Public" Name="sp_DeleteUser" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="sp_DeleteUser">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_DeleteUser</CommandText>
@@ -1297,7 +1435,18 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_InsertBitacora" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_InsertBitacora" MethodsParameterType="CLR" Modifier="Public" Name="sp_InsertBitacora" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="sp_InsertBitacora">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_insertarInventario" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_insertarInventario" MethodsParameterType="CLR" Modifier="Public" Name="sp_insertarInventario" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="sp_insertarInventario">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.sp_insertarInventario</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_prod" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_InsertBitacora" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_InsertBitacora" MethodsParameterType="CLR" Modifier="Public" Name="sp_InsertBitacora" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="sp_InsertBitacora">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_InsertBitacora</CommandText>
@@ -1309,7 +1458,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_InsertDetalleAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_InsertDetalleAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_InsertDetalleAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="sp_InsertDetalleAdquisicion">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_InsertDetalleAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_InsertDetalleAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_InsertDetalleAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="sp_InsertDetalleAdquisicion">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_InsertDetalleAdquisicion</CommandText>
@@ -1322,7 +1471,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_UpdateAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_UpdateAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_UpdateAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="sp_UpdateAdquisicion">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_UpdateAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_UpdateAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_UpdateAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy12" UserSourceName="sp_UpdateAdquisicion">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_UpdateAdquisicion</CommandText>
@@ -1337,7 +1486,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_UpdateDetalleAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_UpdateDetalleAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_UpdateDetalleAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy12" UserSourceName="sp_UpdateDetalleAdquisicion">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_UpdateDetalleAdquisicion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_UpdateDetalleAdquisicion" MethodsParameterType="CLR" Modifier="Public" Name="sp_UpdateDetalleAdquisicion" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy13" UserSourceName="sp_UpdateDetalleAdquisicion">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_UpdateDetalleAdquisicion</CommandText>
@@ -1351,7 +1500,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_UpdateProduct" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_UpdateProduct" MethodsParameterType="CLR" Modifier="Public" Name="sp_UpdateProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy13" UserSourceName="sp_UpdateProduct">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_UpdateProduct" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_UpdateProduct" MethodsParameterType="CLR" Modifier="Public" Name="sp_UpdateProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy14" UserSourceName="sp_UpdateProduct">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_UpdateProduct</CommandText>
@@ -1365,7 +1514,7 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               </DbCommand>
             </SelectCommand>
           </DbSource>
-          <DbSource ConnectionRef="Sis_InventarioConnectionString1 (Settings)" DbObjectName="Sis_Inventario.dbo.sp_UpdateUser" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_UpdateUser" MethodsParameterType="CLR" Modifier="Public" Name="sp_UpdateUser" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy14" UserSourceName="sp_UpdateUser">
+          <DbSource ConnectionRef="Sis_InventarioConnection (Settings)" DbObjectName="Sis_Inventario.dbo.sp_UpdateUser" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="sp_UpdateUser" MethodsParameterType="CLR" Modifier="Public" Name="sp_UpdateUser" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy15" UserSourceName="sp_UpdateUser">
             <SelectCommand>
               <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                 <CommandText>dbo.sp_UpdateUser</CommandText>
@@ -1374,7 +1523,6 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@nom_usu" Precision="0" ProviderType="VarChar" Scale="0" Size="25" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@con_usu" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
                   <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@rol_usu" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
-                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@est_usu" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
                 </Parameters>
               </DbCommand>
             </SelectCommand>
@@ -1611,6 +1759,19 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ObtenerAreas" msprop:Generator_RowEvHandlerName="ObtenerAreasRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerAreasRowDeleted" msprop:Generator_RowDeletingName="ObtenerAreasRowDeleting" msprop:Generator_RowEvArgName="ObtenerAreasRowChangeEvent" msprop:Generator_TablePropName="ObtenerAreas" msprop:Generator_RowChangedName="ObtenerAreasRowChanged" msprop:Generator_RowChangingName="ObtenerAreasRowChanging" msprop:Generator_TableClassName="ObtenerAreasDataTable" msprop:Generator_RowClassName="ObtenerAreasRow" msprop:Generator_TableVarName="tableObtenerAreas" msprop:Generator_UserTableName="ObtenerAreas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nom_area" msprop:Generator_ColumnPropNameInRow="nom_area" msprop:Generator_ColumnPropNameInTable="nom_areaColumn" msprop:Generator_ColumnVarNameInTable="columnnom_area" msprop:Generator_UserColumnName="nom_area">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="ObtenerEmpleadoPorID" msprop:Generator_RowEvHandlerName="ObtenerEmpleadoPorIDRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerEmpleadoPorIDRowDeleted" msprop:Generator_RowDeletingName="ObtenerEmpleadoPorIDRowDeleting" msprop:Generator_RowEvArgName="ObtenerEmpleadoPorIDRowChangeEvent" msprop:Generator_TablePropName="ObtenerEmpleadoPorID" msprop:Generator_RowChangedName="ObtenerEmpleadoPorIDRowChanged" msprop:Generator_RowChangingName="ObtenerEmpleadoPorIDRowChanging" msprop:Generator_TableClassName="ObtenerEmpleadoPorIDDataTable" msprop:Generator_RowClassName="ObtenerEmpleadoPorIDRow" msprop:Generator_TableVarName="tableObtenerEmpleadoPorID" msprop:Generator_UserTableName="ObtenerEmpleadoPorID">
           <xs:complexType>
             <xs:sequence>
@@ -1717,6 +1878,41 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ObtenerEmpleadosEmp" msprop:Generator_RowEvHandlerName="ObtenerEmpleadosEmpRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerEmpleadosEmpRowDeleted" msprop:Generator_RowDeletingName="ObtenerEmpleadosEmpRowDeleting" msprop:Generator_RowEvArgName="ObtenerEmpleadosEmpRowChangeEvent" msprop:Generator_TablePropName="ObtenerEmpleadosEmp" msprop:Generator_RowChangedName="ObtenerEmpleadosEmpRowChanged" msprop:Generator_RowChangingName="ObtenerEmpleadosEmpRowChanging" msprop:Generator_TableClassName="ObtenerEmpleadosEmpDataTable" msprop:Generator_RowClassName="ObtenerEmpleadosEmpRow" msprop:Generator_TableVarName="tableObtenerEmpleadosEmp" msprop:Generator_UserTableName="ObtenerEmpleadosEmp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_UserColumnName="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Usuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_UserColumnName="Usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Area" msprop:Generator_ColumnPropNameInRow="Area" msprop:Generator_ColumnPropNameInTable="AreaColumn" msprop:Generator_ColumnVarNameInTable="columnArea" msprop:Generator_UserColumnName="Area">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_UserColumnName="Estado" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="ObtenerEmpleadosPorArea" msprop:Generator_RowEvHandlerName="ObtenerEmpleadosPorAreaRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerEmpleadosPorAreaRowDeleted" msprop:Generator_RowDeletingName="ObtenerEmpleadosPorAreaRowDeleting" msprop:Generator_RowEvArgName="ObtenerEmpleadosPorAreaRowChangeEvent" msprop:Generator_TablePropName="ObtenerEmpleadosPorArea" msprop:Generator_RowChangedName="ObtenerEmpleadosPorAreaRowChanged" msprop:Generator_RowChangingName="ObtenerEmpleadosPorAreaRowChanging" msprop:Generator_TableClassName="ObtenerEmpleadosPorAreaDataTable" msprop:Generator_RowClassName="ObtenerEmpleadosPorAreaRow" msprop:Generator_TableVarName="tableObtenerEmpleadosPorArea" msprop:Generator_UserTableName="ObtenerEmpleadosPorArea">
           <xs:complexType>
             <xs:sequence>
@@ -1753,6 +1949,13 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ObtenerIdAreaPorNombre" msprop:Generator_RowEvHandlerName="ObtenerIdAreaPorNombreRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerIdAreaPorNombreRowDeleted" msprop:Generator_RowDeletingName="ObtenerIdAreaPorNombreRowDeleting" msprop:Generator_RowEvArgName="ObtenerIdAreaPorNombreRowChangeEvent" msprop:Generator_TablePropName="ObtenerIdAreaPorNombre" msprop:Generator_RowChangedName="ObtenerIdAreaPorNombreRowChanged" msprop:Generator_RowChangingName="ObtenerIdAreaPorNombreRowChanging" msprop:Generator_TableClassName="ObtenerIdAreaPorNombreDataTable" msprop:Generator_RowClassName="ObtenerIdAreaPorNombreRow" msprop:Generator_TableVarName="tableObtenerIdAreaPorNombre" msprop:Generator_UserTableName="ObtenerIdAreaPorNombre">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_area" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="id_area" msprop:Generator_ColumnPropNameInTable="id_areaColumn" msprop:Generator_ColumnVarNameInTable="columnid_area" msprop:Generator_UserColumnName="id_area" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="ObtenerInventario" msprop:Generator_RowEvHandlerName="ObtenerInventarioRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerInventarioRowDeleted" msprop:Generator_RowDeletingName="ObtenerInventarioRowDeleting" msprop:Generator_RowEvArgName="ObtenerInventarioRowChangeEvent" msprop:Generator_TablePropName="ObtenerInventario" msprop:Generator_RowChangedName="ObtenerInventarioRowChanged" msprop:Generator_RowChangingName="ObtenerInventarioRowChanging" msprop:Generator_TableClassName="ObtenerInventarioDataTable" msprop:Generator_RowClassName="ObtenerInventarioRow" msprop:Generator_TableVarName="tableObtenerInventario" msprop:Generator_UserTableName="ObtenerInventario">
           <xs:complexType>
             <xs:sequence>
@@ -1783,6 +1986,19 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
               <xs:element name="Entradas_x0020_Por_x0020_Compras" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Entradas_Por_Compras" msprop:Generator_ColumnPropNameInTable="Entradas_Por_ComprasColumn" msprop:Generator_ColumnVarNameInTable="columnEntradas_Por_Compras" msprop:Generator_UserColumnName="Entradas Por Compras" type="xs:int" minOccurs="0" />
               <xs:element name="Consumo_x0020_Periodo" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Consumo_Periodo" msprop:Generator_ColumnPropNameInTable="Consumo_PeriodoColumn" msprop:Generator_ColumnVarNameInTable="columnConsumo_Periodo" msprop:Generator_UserColumnName="Consumo Periodo" type="xs:int" minOccurs="0" />
               <xs:element name="Existencia_x0020_Actual" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Existencia_Actual" msprop:Generator_ColumnPropNameInTable="Existencia_ActualColumn" msprop:Generator_ColumnVarNameInTable="columnExistencia_Actual" msprop:Generator_UserColumnName="Existencia Actual" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ObtenerNombreAreaPorID" msprop:Generator_RowEvHandlerName="ObtenerNombreAreaPorIDRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerNombreAreaPorIDRowDeleted" msprop:Generator_RowDeletingName="ObtenerNombreAreaPorIDRowDeleting" msprop:Generator_RowEvArgName="ObtenerNombreAreaPorIDRowChangeEvent" msprop:Generator_TablePropName="ObtenerNombreAreaPorID" msprop:Generator_RowChangedName="ObtenerNombreAreaPorIDRowChanged" msprop:Generator_RowChangingName="ObtenerNombreAreaPorIDRowChanging" msprop:Generator_TableClassName="ObtenerNombreAreaPorIDDataTable" msprop:Generator_RowClassName="ObtenerNombreAreaPorIDRow" msprop:Generator_TableVarName="tableObtenerNombreAreaPorID" msprop:Generator_UserTableName="ObtenerNombreAreaPorID">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nom_area" msprop:Generator_ColumnPropNameInRow="nom_area" msprop:Generator_ColumnPropNameInTable="nom_areaColumn" msprop:Generator_ColumnVarNameInTable="columnnom_area" msprop:Generator_UserColumnName="nom_area">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1940,6 +2156,19 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ObtenerUsuarios" msprop:Generator_RowEvHandlerName="ObtenerUsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerUsuariosRowDeleted" msprop:Generator_RowDeletingName="ObtenerUsuariosRowDeleting" msprop:Generator_RowEvArgName="ObtenerUsuariosRowChangeEvent" msprop:Generator_TablePropName="ObtenerUsuarios" msprop:Generator_RowChangedName="ObtenerUsuariosRowChanged" msprop:Generator_RowChangingName="ObtenerUsuariosRowChanging" msprop:Generator_TableClassName="ObtenerUsuariosDataTable" msprop:Generator_RowClassName="ObtenerUsuariosRow" msprop:Generator_TableVarName="tableObtenerUsuarios" msprop:Generator_UserTableName="ObtenerUsuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nom_usu" msprop:Generator_ColumnPropNameInRow="nom_usu" msprop:Generator_ColumnPropNameInTable="nom_usuColumn" msprop:Generator_ColumnVarNameInTable="columnnom_usu" msprop:Generator_UserColumnName="nom_usu">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="sp_CargarProductosFiltered" msprop:Generator_RowEvHandlerName="sp_CargarProductosFilteredRowChangeEventHandler" msprop:Generator_RowDeletedName="sp_CargarProductosFilteredRowDeleted" msprop:Generator_RowDeletingName="sp_CargarProductosFilteredRowDeleting" msprop:Generator_RowEvArgName="sp_CargarProductosFilteredRowChangeEvent" msprop:Generator_TablePropName="sp_CargarProductosFiltered" msprop:Generator_RowChangedName="sp_CargarProductosFilteredRowChanged" msprop:Generator_RowChangingName="sp_CargarProductosFilteredRowChanging" msprop:Generator_TableClassName="sp_CargarProductosFilteredDataTable" msprop:Generator_RowClassName="sp_CargarProductosFilteredRow" msprop:Generator_TableVarName="tablesp_CargarProductosFiltered" msprop:Generator_UserTableName="sp_CargarProductosFiltered">
           <xs:complexType>
             <xs:sequence>
@@ -2071,6 +2300,19 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="sp_GetHashPass" msprop:Generator_RowEvHandlerName="sp_GetHashPassRowChangeEventHandler" msprop:Generator_RowDeletedName="sp_GetHashPassRowDeleted" msprop:Generator_RowDeletingName="sp_GetHashPassRowDeleting" msprop:Generator_RowEvArgName="sp_GetHashPassRowChangeEvent" msprop:Generator_TablePropName="sp_GetHashPass" msprop:Generator_RowChangedName="sp_GetHashPassRowChanged" msprop:Generator_RowChangingName="sp_GetHashPassRowChanging" msprop:Generator_TableClassName="sp_GetHashPassDataTable" msprop:Generator_RowClassName="sp_GetHashPassRow" msprop:Generator_TableVarName="tablesp_GetHashPass" msprop:Generator_UserTableName="sp_GetHashPass">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="con_usu" msprop:Generator_ColumnPropNameInRow="con_usu" msprop:Generator_ColumnPropNameInTable="con_usuColumn" msprop:Generator_ColumnVarNameInTable="columncon_usu" msprop:Generator_UserColumnName="con_usu">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="sp_GetMeasures" msprop:Generator_RowEvHandlerName="sp_GetMeasuresRowChangeEventHandler" msprop:Generator_RowDeletedName="sp_GetMeasuresRowDeleted" msprop:Generator_RowDeletingName="sp_GetMeasuresRowDeleting" msprop:Generator_RowEvArgName="sp_GetMeasuresRowChangeEvent" msprop:Generator_TablePropName="sp_GetMeasures" msprop:Generator_RowChangedName="sp_GetMeasuresRowChanged" msprop:Generator_RowChangingName="sp_GetMeasuresRowChanging" msprop:Generator_TableClassName="sp_GetMeasuresDataTable" msprop:Generator_RowClassName="sp_GetMeasuresRow" msprop:Generator_TableVarName="tablesp_GetMeasures" msprop:Generator_UserTableName="sp_GetMeasures">
           <xs:complexType>
             <xs:sequence>
@@ -2193,8 +2435,13 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="rol_usu" msprop:Generator_ColumnPropNameInRow="rol_usu" msprop:Generator_ColumnPropNameInTable="rol_usuColumn" msprop:Generator_ColumnVarNameInTable="columnrol_usu" msprop:Generator_UserColumnName="rol_usu" type="xs:boolean" />
-              <xs:element name="est_usu" msprop:Generator_ColumnPropNameInRow="est_usu" msprop:Generator_ColumnPropNameInTable="est_usuColumn" msprop:Generator_ColumnVarNameInTable="columnest_usu" msprop:Generator_UserColumnName="est_usu" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VerificarReferencias" msprop:Generator_RowEvHandlerName="VerificarReferenciasRowChangeEventHandler" msprop:Generator_RowDeletedName="VerificarReferenciasRowDeleted" msprop:Generator_RowDeletingName="VerificarReferenciasRowDeleting" msprop:Generator_RowEvArgName="VerificarReferenciasRowChangeEvent" msprop:Generator_TablePropName="VerificarReferencias" msprop:Generator_RowChangedName="VerificarReferenciasRowChanged" msprop:Generator_RowChangingName="VerificarReferenciasRowChanging" msprop:Generator_TableClassName="VerificarReferenciasDataTable" msprop:Generator_RowClassName="VerificarReferenciasRow" msprop:Generator_TableVarName="tableVerificarReferencias" msprop:Generator_UserTableName="VerificarReferencias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Column1" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Column1" msprop:Generator_ColumnPropNameInTable="Column1Column" msprop:Generator_ColumnVarNameInTable="columnColumn1" msprop:Generator_UserColumnName="Column1" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -2252,9 +2499,17 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
       <xs:selector xpath=".//mstns:ObtenerEmpleadosConDetalles" />
       <xs:field xpath="mstns:ID_x0020_Empleado" />
     </xs:unique>
+    <xs:unique name="ObtenerEmpleadosEmp_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ObtenerEmpleadosEmp" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
     <xs:unique name="ObtenerEmpleadosPorArea_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ObtenerEmpleadosPorArea" />
       <xs:field xpath="mstns:id_emp" />
+    </xs:unique>
+    <xs:unique name="ObtenerIdAreaPorNombre_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ObtenerIdAreaPorNombre" />
+      <xs:field xpath="mstns:id_area" />
     </xs:unique>
     <xs:unique name="ObtenerInventario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ObtenerInventario" />
@@ -2287,6 +2542,10 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
     <xs:unique name="ObtenerProductosUltimoTrimestre_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ObtenerProductosUltimoTrimestre" />
       <xs:field xpath="mstns:id_prod" />
+    </xs:unique>
+    <xs:unique name="ObtenerUsuarios_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ObtenerUsuarios" />
+      <xs:field xpath="mstns:nom_usu" />
     </xs:unique>
     <xs:unique name="sp_CargarProductosFiltered_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:sp_CargarProductosFiltered" />
@@ -2327,17 +2586,17 @@ SELECT nom_usu, con_usu, rol_usu, est_usu FROM Usuarios WHERE (nom_usu = @nom_us
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Adquisici__nom_u__5FB337D6" msdata:parent="Usuarios" msdata:child="Adquisicion" msdata:parentkey="nom_usu" msdata:childkey="nom_usu" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Adquisicion" msprop:Generator_RelationVarName="relationFK__Adquisici__nom_u__5FB337D6" msprop:Generator_UserRelationName="FK__Adquisici__nom_u__5FB337D6" msprop:Generator_ChildPropName="GetAdquisicionRows" msprop:Generator_ParentPropName="UsuariosRow" />
-      <msdata:Relationship name="FK__Bitacora__nom_us__66603565" msdata:parent="Usuarios" msdata:child="Bitacora" msdata:parentkey="nom_usu" msdata:childkey="nom_usu" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Bitacora" msprop:Generator_RelationVarName="relationFK__Bitacora__nom_us__66603565" msprop:Generator_UserRelationName="FK__Bitacora__nom_us__66603565" msprop:Generator_ChildPropName="GetBitacoraRows" msprop:Generator_ParentPropName="UsuariosRow" />
-      <msdata:Relationship name="FK__DetalleAd__id_ad__628FA481" msdata:parent="Adquisicion" msdata:child="DetalleAdquisicion" msdata:parentkey="id_adq" msdata:childkey="id_adq" msprop:Generator_UserParentTable="Adquisicion" msprop:Generator_UserChildTable="DetalleAdquisicion" msprop:Generator_RelationVarName="relationFK__DetalleAd__id_ad__628FA481" msprop:Generator_ChildPropName="GetDetalleAdquisicionRows" msprop:Generator_ParentPropName="AdquisicionRow" msprop:Generator_UserRelationName="FK__DetalleAd__id_ad__628FA481" />
+      <msdata:Relationship name="FK__Adquisici__nom_u__5DCAEF64" msdata:parent="Usuarios" msdata:child="Adquisicion" msdata:parentkey="nom_usu" msdata:childkey="nom_usu" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Adquisicion" msprop:Generator_RelationVarName="relationFK__Adquisici__nom_u__5DCAEF64" msprop:Generator_UserRelationName="FK__Adquisici__nom_u__5DCAEF64" msprop:Generator_ChildPropName="GetAdquisicionRows" msprop:Generator_ParentPropName="UsuariosRow" />
+      <msdata:Relationship name="FK__Bitacora__nom_us__5FB337D6" msdata:parent="Usuarios" msdata:child="Bitacora" msdata:parentkey="nom_usu" msdata:childkey="nom_usu" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Bitacora" msprop:Generator_RelationVarName="relationFK__Bitacora__nom_us__5FB337D6" msprop:Generator_UserRelationName="FK__Bitacora__nom_us__5FB337D6" msprop:Generator_ChildPropName="GetBitacoraRows" msprop:Generator_ParentPropName="UsuariosRow" />
+      <msdata:Relationship name="FK__DetalleAd__id_ad__619B8048" msdata:parent="Adquisicion" msdata:child="DetalleAdquisicion" msdata:parentkey="id_adq" msdata:childkey="id_adq" msprop:Generator_UserParentTable="Adquisicion" msprop:Generator_UserChildTable="DetalleAdquisicion" msprop:Generator_RelationVarName="relationFK__DetalleAd__id_ad__619B8048" msprop:Generator_ChildPropName="GetDetalleAdquisicionRows" msprop:Generator_ParentPropName="AdquisicionRow" msprop:Generator_UserRelationName="FK__DetalleAd__id_ad__619B8048" />
       <msdata:Relationship name="FK__DetalleAd__id_pr__6383C8BA" msdata:parent="Productos" msdata:child="DetalleAdquisicion" msdata:parentkey="id_prod" msdata:childkey="id_prod" msprop:Generator_UserParentTable="Productos" msprop:Generator_UserChildTable="DetalleAdquisicion" msprop:Generator_RelationVarName="relationFK__DetalleAd__id_pr__6383C8BA" msprop:Generator_UserRelationName="FK__DetalleAd__id_pr__6383C8BA" msprop:Generator_ChildPropName="GetDetalleAdquisicionRows" msprop:Generator_ParentPropName="ProductosRow" />
-      <msdata:Relationship name="FK__DetalleRe__id_pr__5CD6CB2B" msdata:parent="Productos" msdata:child="DetalleRequisicion" msdata:parentkey="id_prod" msdata:childkey="id_prod" msprop:Generator_UserParentTable="Productos" msprop:Generator_UserChildTable="DetalleRequisicion" msprop:Generator_RelationVarName="relationFK__DetalleRe__id_pr__5CD6CB2B" msprop:Generator_UserRelationName="FK__DetalleRe__id_pr__5CD6CB2B" msprop:Generator_ChildPropName="GetDetalleRequisicionRows" msprop:Generator_ParentPropName="ProductosRow" />
-      <msdata:Relationship name="FK__DetalleRe__id_re__5BE2A6F2" msdata:parent="Requisicion" msdata:child="DetalleRequisicion" msdata:parentkey="id_req" msdata:childkey="id_req" msprop:Generator_UserParentTable="Requisicion" msprop:Generator_UserChildTable="DetalleRequisicion" msprop:Generator_RelationVarName="relationFK__DetalleRe__id_re__5BE2A6F2" msprop:Generator_UserRelationName="FK__DetalleRe__id_re__5BE2A6F2" msprop:Generator_ChildPropName="GetDetalleRequisicionRows" msprop:Generator_ParentPropName="RequisicionRow" />
-      <msdata:Relationship name="FK__Empleados__id_ar__4E88ABD4" msdata:parent="Area" msdata:child="Empleados" msdata:parentkey="id_area" msdata:childkey="id_area" msprop:Generator_UserParentTable="Area" msprop:Generator_UserChildTable="Empleados" msprop:Generator_RelationVarName="relationFK__Empleados__id_ar__4E88ABD4" msprop:Generator_ChildPropName="GetEmpleadosRows" msprop:Generator_ParentPropName="AreaRow" msprop:Generator_UserRelationName="FK__Empleados__id_ar__4E88ABD4" />
-      <msdata:Relationship name="FK__Empleados__nom_u__4D94879B" msdata:parent="Usuarios" msdata:child="Empleados" msdata:parentkey="nom_usu" msdata:childkey="nom_usu" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Empleados" msprop:Generator_RelationVarName="relationFK__Empleados__nom_u__4D94879B" msprop:Generator_UserRelationName="FK__Empleados__nom_u__4D94879B" msprop:Generator_ChildPropName="GetEmpleadosRows" msprop:Generator_ParentPropName="UsuariosRow" />
-      <msdata:Relationship name="FK__Inventari__id_pr__59063A47" msdata:parent="Productos" msdata:child="Inventario" msdata:parentkey="id_prod" msdata:childkey="id_prod" msprop:Generator_UserParentTable="Productos" msprop:Generator_UserChildTable="Inventario" msprop:Generator_RelationVarName="relationFK__Inventari__id_pr__59063A47" msprop:Generator_UserRelationName="FK__Inventari__id_pr__59063A47" msprop:Generator_ChildPropName="GetInventarioRows" msprop:Generator_ParentPropName="ProductosRow" />
-      <msdata:Relationship name="FK__Productos__id_me__5629CD9C" msdata:parent="Medidas" msdata:child="Productos" msdata:parentkey="id_med" msdata:childkey="id_med" msprop:Generator_UserParentTable="Medidas" msprop:Generator_UserChildTable="Productos" msprop:Generator_RelationVarName="relationFK__Productos__id_me__5629CD9C" msprop:Generator_ChildPropName="GetProductosRows" msprop:Generator_ParentPropName="MedidasRow" msprop:Generator_UserRelationName="FK__Productos__id_me__5629CD9C" />
-      <msdata:Relationship name="FK__Requisici__id_em__5165187F" msdata:parent="Empleados" msdata:child="Requisicion" msdata:parentkey="id_emp" msdata:childkey="id_emp" msprop:Generator_UserParentTable="Empleados" msprop:Generator_UserChildTable="Requisicion" msprop:Generator_RelationVarName="relationFK__Requisici__id_em__5165187F" msprop:Generator_ChildPropName="GetRequisicionRows" msprop:Generator_ParentPropName="EmpleadosRow" msprop:Generator_UserRelationName="FK__Requisici__id_em__5165187F" />
+      <msdata:Relationship name="FK__DetalleRe__id_pr__656C112C" msdata:parent="Productos" msdata:child="DetalleRequisicion" msdata:parentkey="id_prod" msdata:childkey="id_prod" msprop:Generator_UserParentTable="Productos" msprop:Generator_UserChildTable="DetalleRequisicion" msprop:Generator_RelationVarName="relationFK__DetalleRe__id_pr__656C112C" msprop:Generator_UserRelationName="FK__DetalleRe__id_pr__656C112C" msprop:Generator_ChildPropName="GetDetalleRequisicionRows" msprop:Generator_ParentPropName="ProductosRow" />
+      <msdata:Relationship name="FK__DetalleRe__id_re__6754599E" msdata:parent="Requisicion" msdata:child="DetalleRequisicion" msdata:parentkey="id_req" msdata:childkey="id_req" msprop:Generator_UserParentTable="Requisicion" msprop:Generator_UserChildTable="DetalleRequisicion" msprop:Generator_RelationVarName="relationFK__DetalleRe__id_re__6754599E" msprop:Generator_UserRelationName="FK__DetalleRe__id_re__6754599E" msprop:Generator_ChildPropName="GetDetalleRequisicionRows" msprop:Generator_ParentPropName="RequisicionRow" />
+      <msdata:Relationship name="FK__Empleados__id_ar__693CA210" msdata:parent="Area" msdata:child="Empleados" msdata:parentkey="id_area" msdata:childkey="id_area" msprop:Generator_UserParentTable="Area" msprop:Generator_UserChildTable="Empleados" msprop:Generator_RelationVarName="relationFK__Empleados__id_ar__693CA210" msprop:Generator_ChildPropName="GetEmpleadosRows" msprop:Generator_ParentPropName="AreaRow" msprop:Generator_UserRelationName="FK__Empleados__id_ar__693CA210" />
+      <msdata:Relationship name="FK__Empleados__nom_u__6B24EA82" msdata:parent="Usuarios" msdata:child="Empleados" msdata:parentkey="nom_usu" msdata:childkey="nom_usu" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_UserChildTable="Empleados" msprop:Generator_RelationVarName="relationFK__Empleados__nom_u__6B24EA82" msprop:Generator_UserRelationName="FK__Empleados__nom_u__6B24EA82" msprop:Generator_ChildPropName="GetEmpleadosRows" msprop:Generator_ParentPropName="UsuariosRow" />
+      <msdata:Relationship name="FK__Inventari__id_pr__6D0D32F4" msdata:parent="Productos" msdata:child="Inventario" msdata:parentkey="id_prod" msdata:childkey="id_prod" msprop:Generator_UserParentTable="Productos" msprop:Generator_UserChildTable="Inventario" msprop:Generator_RelationVarName="relationFK__Inventari__id_pr__6D0D32F4" msprop:Generator_UserRelationName="FK__Inventari__id_pr__6D0D32F4" msprop:Generator_ChildPropName="GetInventarioRows" msprop:Generator_ParentPropName="ProductosRow" />
+      <msdata:Relationship name="FK__Productos__id_me__6EF57B66" msdata:parent="Medidas" msdata:child="Productos" msdata:parentkey="id_med" msdata:childkey="id_med" msprop:Generator_UserParentTable="Medidas" msprop:Generator_UserChildTable="Productos" msprop:Generator_RelationVarName="relationFK__Productos__id_me__6EF57B66" msprop:Generator_ChildPropName="GetProductosRows" msprop:Generator_ParentPropName="MedidasRow" msprop:Generator_UserRelationName="FK__Productos__id_me__6EF57B66" />
+      <msdata:Relationship name="FK__Requisici__id_em__70DDC3D8" msdata:parent="Empleados" msdata:child="Requisicion" msdata:parentkey="id_emp" msdata:childkey="id_emp" msprop:Generator_UserParentTable="Empleados" msprop:Generator_UserChildTable="Requisicion" msprop:Generator_RelationVarName="relationFK__Requisici__id_em__70DDC3D8" msprop:Generator_ChildPropName="GetRequisicionRows" msprop:Generator_ParentPropName="EmpleadosRow" msprop:Generator_UserRelationName="FK__Requisici__id_em__70DDC3D8" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

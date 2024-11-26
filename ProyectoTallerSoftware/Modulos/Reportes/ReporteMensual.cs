@@ -20,6 +20,7 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
 
         private void ReporteMensual_Load(object sender, EventArgs e)
         {
+            this.obtenerProductosUltimoMesTableAdapter.Fill(this.sis_InventarioDataSet.ObtenerProductosUltimoMes);
             this.reportViewer1.RefreshReport();
         }
     }
