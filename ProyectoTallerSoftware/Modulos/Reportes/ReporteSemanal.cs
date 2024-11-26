@@ -20,6 +20,7 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
 
         private void ReporteSemanal_Load(object sender, EventArgs e)
         {
+            this.obtenerProductosUltimaSemanaTableAdapter.Fill(this.sis_InventarioDataSet.ObtenerProductosUltimaSemana);
             this.reportViewer1.RefreshReport();
         }
     }

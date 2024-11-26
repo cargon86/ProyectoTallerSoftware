@@ -30,26 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.obtenerProductosPapeleriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_regresar = new System.Windows.Forms.Button();
+            this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
+            this.obtenerProductosPapeleriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerProductosPapeleriaTableAdapter = new ProyectoTallerSoftware.Sis_InventarioDataSetTableAdapters.ObtenerProductosPapeleriaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosPapeleriaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosPapeleriaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // obtenerProductosPapeleriaBindingSource
-            // 
-            this.obtenerProductosPapeleriaBindingSource.DataMember = "ObtenerProductosPapeleria";
-            this.obtenerProductosPapeleriaBindingSource.DataSource = this.sis_InventarioDataSet;
-            // 
-            // sis_InventarioDataSet
-            // 
-            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
-            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -82,6 +72,16 @@
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
+            // sis_InventarioDataSet
+            // 
+            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
+            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // obtenerProductosPapeleriaBindingSource
+            // 
+            this.obtenerProductosPapeleriaBindingSource.DataMember = "ObtenerProductosPapeleria";
+            this.obtenerProductosPapeleriaBindingSource.DataSource = this.sis_InventarioDataSet;
+            // 
             // obtenerProductosPapeleriaTableAdapter
             // 
             this.obtenerProductosPapeleriaTableAdapter.ClearBeforeFill = true;
@@ -95,9 +95,9 @@
             this.Name = "ReportePapeleria";
             this.Size = new System.Drawing.Size(1102, 684);
             this.Load += new System.EventHandler(this.ReportePapeleria_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosPapeleriaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosPapeleriaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,10 +105,10 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource obtenerProductosPapeleriaBindingSource;
-        private Sis_InventarioDataSet sis_InventarioDataSet;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_regresar;
+        private System.Windows.Forms.BindingSource obtenerProductosPapeleriaBindingSource;
+        private Sis_InventarioDataSet sis_InventarioDataSet;
         private Sis_InventarioDataSetTableAdapters.ObtenerProductosPapeleriaTableAdapter obtenerProductosPapeleriaTableAdapter;
     }
 }

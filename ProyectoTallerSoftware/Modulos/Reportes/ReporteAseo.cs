@@ -12,6 +12,7 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
 
         private void ReporteAseo_Load(object sender, EventArgs e)
         {
+            this.obtenerProductosAseoTableAdapter.Fill(this.sis_InventarioDataSet.ObtenerProductosAseo);
             this.reportViewer1.RefreshReport();
         }
 

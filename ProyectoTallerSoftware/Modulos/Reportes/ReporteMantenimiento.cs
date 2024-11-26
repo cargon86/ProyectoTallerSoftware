@@ -20,6 +20,7 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
 
         private void ReporteMantenimiento_Load(object sender, EventArgs e)
         {
+            this.obtenerProductosMantenimientoTableAdapter.Fill(this.sis_InventarioDataSet.ObtenerProductosMantenimiento);
             this.reportViewer1.RefreshReport();
         }
     }

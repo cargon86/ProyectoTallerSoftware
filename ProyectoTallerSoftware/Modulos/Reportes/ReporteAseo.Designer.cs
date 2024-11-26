@@ -33,12 +33,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.obtenerProductosAseoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
+            this.obtenerProductosAseoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerProductosAseoTableAdapter = new ProyectoTallerSoftware.Sis_InventarioDataSetTableAdapters.ObtenerProductosAseoTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosAseoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosAseoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,15 +76,15 @@
             this.reportViewer1.Size = new System.Drawing.Size(1171, 554);
             this.reportViewer1.TabIndex = 1;
             // 
-            // obtenerProductosAseoBindingSource
-            // 
-            this.obtenerProductosAseoBindingSource.DataMember = "ObtenerProductosAseo";
-            this.obtenerProductosAseoBindingSource.DataSource = this.sis_InventarioDataSet;
-            // 
             // sis_InventarioDataSet
             // 
             this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
             this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // obtenerProductosAseoBindingSource
+            // 
+            this.obtenerProductosAseoBindingSource.DataMember = "ObtenerProductosAseo";
+            this.obtenerProductosAseoBindingSource.DataSource = this.sis_InventarioDataSet;
             // 
             // obtenerProductosAseoTableAdapter
             // 
@@ -100,8 +100,8 @@
             this.Size = new System.Drawing.Size(1171, 609);
             this.Load += new System.EventHandler(this.ReporteAseo_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosAseoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosAseoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,9 +110,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.BindingSource obtenerProductosAseoBindingSource;
         private Sis_InventarioDataSet sis_InventarioDataSet;
         private Sis_InventarioDataSetTableAdapters.ObtenerProductosAseoTableAdapter obtenerProductosAseoTableAdapter;
-        private System.Windows.Forms.Button btn_regresar;
     }
 }

@@ -20,6 +20,7 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
 
         private void ReportePapeleria_Load(object sender, EventArgs e)
         {
+            this.obtenerProductosPapeleriaTableAdapter.Fill(this.sis_InventarioDataSet.ObtenerProductosPapeleria);
             this.reportViewer1.RefreshReport();
         }
     }

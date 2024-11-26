@@ -44,5 +44,16 @@ namespace ProyectoTallerSoftware.Properties {
                 return ((string)(this["Sis_InventarioConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Sis_Inventario;Integrated Securi" +
+            "ty=True;TrustServerCertificate=True")]
+        public string Sis_InventarioConnection {
+            get {
+                return ((string)(this["Sis_InventarioConnection"]));
+            }
+        }
     }
 }

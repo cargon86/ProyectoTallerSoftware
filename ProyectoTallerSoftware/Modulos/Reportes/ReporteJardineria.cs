@@ -12,6 +12,7 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
 
         private void ReporteJardineria_Load(object sender, EventArgs e)
         {
+            this.obtenerProductosJardineriaTableAdapter.Fill(this.sis_InventarioDataSet.ObtenerProductosJardineria);
             this.reportViewer1.RefreshReport();
         }
 

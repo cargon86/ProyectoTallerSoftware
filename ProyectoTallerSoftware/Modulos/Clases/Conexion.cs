@@ -10,7 +10,7 @@ namespace ProyectoTallerSoftware.Modulos.Clases
     public class Conexion
     {
         
-        private string connectionString = @"Server=DESKTOP-8QVBGAE\SQLEXPRESS;Database=Sis_Inventario;Trusted_Connection=True;";
+        private string connectionString = @"Server=localhost\SQLEXPRESS;Database=Sis_Inventario;Trusted_Connection=True;";
 
         
         public SqlConnection GetConnection()

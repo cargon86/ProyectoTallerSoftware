@@ -30,26 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.obtenerProductosJardineriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
+            this.obtenerProductosJardineriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerProductosJardineriaTableAdapter = new ProyectoTallerSoftware.Sis_InventarioDataSetTableAdapters.ObtenerProductosJardineriaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosJardineriaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosJardineriaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // obtenerProductosJardineriaBindingSource
-            // 
-            this.obtenerProductosJardineriaBindingSource.DataMember = "ObtenerProductosJardineria";
-            this.obtenerProductosJardineriaBindingSource.DataSource = this.sis_InventarioDataSet;
-            // 
-            // sis_InventarioDataSet
-            // 
-            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
-            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_regresar
             // 
@@ -82,6 +72,16 @@
             this.panel1.Size = new System.Drawing.Size(1097, 58);
             this.panel1.TabIndex = 2;
             // 
+            // sis_InventarioDataSet
+            // 
+            this.sis_InventarioDataSet.DataSetName = "Sis_InventarioDataSet";
+            this.sis_InventarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // obtenerProductosJardineriaBindingSource
+            // 
+            this.obtenerProductosJardineriaBindingSource.DataMember = "ObtenerProductosJardineria";
+            this.obtenerProductosJardineriaBindingSource.DataSource = this.sis_InventarioDataSet;
+            // 
             // obtenerProductosJardineriaTableAdapter
             // 
             this.obtenerProductosJardineriaTableAdapter.ClearBeforeFill = true;
@@ -95,9 +95,9 @@
             this.Name = "ReporteJardineria";
             this.Size = new System.Drawing.Size(1097, 640);
             this.Load += new System.EventHandler(this.ReporteJardineria_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosJardineriaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sis_InventarioDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerProductosJardineriaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,10 +105,10 @@
         #endregion
 
         private System.Windows.Forms.Button btn_regresar;
-        private Sis_InventarioDataSet sis_InventarioDataSet;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource obtenerProductosJardineriaBindingSource;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.BindingSource obtenerProductosJardineriaBindingSource;
+        private Sis_InventarioDataSet sis_InventarioDataSet;
         private Sis_InventarioDataSetTableAdapters.ObtenerProductosJardineriaTableAdapter obtenerProductosJardineriaTableAdapter;
     }
 }

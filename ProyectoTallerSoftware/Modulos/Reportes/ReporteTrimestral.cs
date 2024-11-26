@@ -20,6 +20,7 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
 
         private void ReporteTrimestral_Load(object sender, EventArgs e)
         {
+            this.obtenerProductosUltimoTrimestreTableAdapter.Fill(this.sis_InventarioDataSet.ObtenerProductosUltimoTrimestre);
             this.reportViewer1.RefreshReport();
         }
     }
