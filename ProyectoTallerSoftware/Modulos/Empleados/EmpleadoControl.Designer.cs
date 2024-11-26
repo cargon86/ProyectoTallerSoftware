@@ -49,10 +49,10 @@
             // Rbtni
             // 
             this.Rbtni.AutoSize = true;
-            this.Rbtni.Location = new System.Drawing.Point(320, 217);
-            this.Rbtni.Margin = new System.Windows.Forms.Padding(2);
+            this.Rbtni.Location = new System.Drawing.Point(427, 267);
+            this.Rbtni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Rbtni.Name = "Rbtni";
-            this.Rbtni.Size = new System.Drawing.Size(63, 17);
+            this.Rbtni.Size = new System.Drawing.Size(74, 20);
             this.Rbtni.TabIndex = 51;
             this.Rbtni.TabStop = true;
             this.Rbtni.Text = "Inactivo";
@@ -61,10 +61,10 @@
             // Rbtna
             // 
             this.Rbtna.AutoSize = true;
-            this.Rbtna.Location = new System.Drawing.Point(203, 217);
-            this.Rbtna.Margin = new System.Windows.Forms.Padding(2);
+            this.Rbtna.Location = new System.Drawing.Point(271, 267);
+            this.Rbtna.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Rbtna.Name = "Rbtna";
-            this.Rbtna.Size = new System.Drawing.Size(55, 17);
+            this.Rbtna.Size = new System.Drawing.Size(65, 20);
             this.Rbtna.TabIndex = 50;
             this.Rbtna.TabStop = true;
             this.Rbtna.Text = "Activo";
@@ -73,9 +73,10 @@
             // Txtid
             // 
             this.Txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txtid.Location = new System.Drawing.Point(172, 15);
+            this.Txtid.Location = new System.Drawing.Point(229, 18);
+            this.Txtid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txtid.Name = "Txtid";
-            this.Txtid.Size = new System.Drawing.Size(283, 20);
+            this.Txtid.Size = new System.Drawing.Size(376, 22);
             this.Txtid.TabIndex = 49;
             // 
             // lbId
@@ -84,46 +85,52 @@
             this.lbId.AutoSize = true;
             this.lbId.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.lbId.ForeColor = System.Drawing.Color.Black;
-            this.lbId.Location = new System.Drawing.Point(61, 15);
+            this.lbId.Location = new System.Drawing.Point(81, 18);
+            this.lbId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(33, 21);
+            this.lbId.Size = new System.Drawing.Size(37, 26);
             this.lbId.TabIndex = 48;
             this.lbId.Text = "Id:";
             // 
             // Dgvempleados
             // 
             this.Dgvempleados.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Dgvempleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgvempleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgvempleados.Location = new System.Drawing.Point(42, 320);
+            this.Dgvempleados.Location = new System.Drawing.Point(56, 394);
+            this.Dgvempleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dgvempleados.Name = "Dgvempleados";
             this.Dgvempleados.RowHeadersWidth = 51;
-            this.Dgvempleados.Size = new System.Drawing.Size(909, 239);
+            this.Dgvempleados.Size = new System.Drawing.Size(1212, 294);
             this.Dgvempleados.TabIndex = 47;
-           // 
+            // 
             // Txtnom
             // 
             this.Txtnom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txtnom.Location = new System.Drawing.Point(172, 61);
+            this.Txtnom.Location = new System.Drawing.Point(229, 75);
+            this.Txtnom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txtnom.Name = "Txtnom";
-            this.Txtnom.Size = new System.Drawing.Size(283, 20);
+            this.Txtnom.Size = new System.Drawing.Size(376, 22);
             this.Txtnom.TabIndex = 46;
             // 
             // Cbxusu
             // 
             this.Cbxusu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cbxusu.FormattingEnabled = true;
-            this.Cbxusu.Location = new System.Drawing.Point(172, 165);
+            this.Cbxusu.Location = new System.Drawing.Point(229, 203);
+            this.Cbxusu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cbxusu.Name = "Cbxusu";
-            this.Cbxusu.Size = new System.Drawing.Size(283, 21);
+            this.Cbxusu.Size = new System.Drawing.Size(376, 24);
             this.Cbxusu.TabIndex = 45;
             // 
             // Cbxarea
             // 
             this.Cbxarea.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cbxarea.FormattingEnabled = true;
-            this.Cbxarea.Location = new System.Drawing.Point(172, 112);
+            this.Cbxarea.Location = new System.Drawing.Point(229, 138);
+            this.Cbxarea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cbxarea.Name = "Cbxarea";
-            this.Cbxarea.Size = new System.Drawing.Size(283, 21);
+            this.Cbxarea.Size = new System.Drawing.Size(376, 24);
             this.Cbxarea.TabIndex = 44;
             // 
             // lbEstado
@@ -132,9 +139,10 @@
             this.lbEstado.AutoSize = true;
             this.lbEstado.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.lbEstado.ForeColor = System.Drawing.Color.Black;
-            this.lbEstado.Location = new System.Drawing.Point(61, 213);
+            this.lbEstado.Location = new System.Drawing.Point(81, 262);
+            this.lbEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEstado.Name = "lbEstado";
-            this.lbEstado.Size = new System.Drawing.Size(77, 21);
+            this.lbEstado.Size = new System.Drawing.Size(91, 26);
             this.lbEstado.TabIndex = 43;
             this.lbEstado.Text = "Estado:";
             // 
@@ -144,9 +152,10 @@
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.lbUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lbUsuario.Location = new System.Drawing.Point(61, 161);
+            this.lbUsuario.Location = new System.Drawing.Point(81, 198);
+            this.lbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(84, 21);
+            this.lbUsuario.Size = new System.Drawing.Size(98, 26);
             this.lbUsuario.TabIndex = 42;
             this.lbUsuario.Text = "Usuario:";
             // 
@@ -156,9 +165,10 @@
             this.lbArea.AutoSize = true;
             this.lbArea.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.lbArea.ForeColor = System.Drawing.Color.Black;
-            this.lbArea.Location = new System.Drawing.Point(61, 110);
+            this.lbArea.Location = new System.Drawing.Point(81, 135);
+            this.lbArea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbArea.Name = "lbArea";
-            this.lbArea.Size = new System.Drawing.Size(58, 21);
+            this.lbArea.Size = new System.Drawing.Size(66, 26);
             this.lbArea.TabIndex = 41;
             this.lbArea.Text = "Area:";
             // 
@@ -168,9 +178,10 @@
             this.lbNombre.AutoSize = true;
             this.lbNombre.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold);
             this.lbNombre.ForeColor = System.Drawing.Color.Black;
-            this.lbNombre.Location = new System.Drawing.Point(61, 57);
+            this.lbNombre.Location = new System.Drawing.Point(81, 70);
+            this.lbNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(87, 21);
+            this.lbNombre.Size = new System.Drawing.Size(100, 26);
             this.lbNombre.TabIndex = 40;
             this.lbNombre.Text = "Nombre:";
             // 
@@ -179,9 +190,10 @@
             this.Btneliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(102)))), ((int)(((byte)(79)))));
             this.Btneliminar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
-            this.Btneliminar.Location = new System.Drawing.Point(804, 187);
+            this.Btneliminar.Location = new System.Drawing.Point(1072, 230);
+            this.Btneliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btneliminar.Name = "Btneliminar";
-            this.Btneliminar.Size = new System.Drawing.Size(119, 40);
+            this.Btneliminar.Size = new System.Drawing.Size(159, 49);
             this.Btneliminar.TabIndex = 39;
             this.Btneliminar.Text = "Eliminar";
             this.Btneliminar.UseVisualStyleBackColor = false;
@@ -192,9 +204,10 @@
             this.BtnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(78)))));
             this.BtnEditar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
-            this.BtnEditar.Location = new System.Drawing.Point(804, 115);
+            this.BtnEditar.Location = new System.Drawing.Point(1072, 142);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(119, 37);
+            this.BtnEditar.Size = new System.Drawing.Size(159, 46);
             this.BtnEditar.TabIndex = 38;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.UseVisualStyleBackColor = false;
@@ -205,9 +218,10 @@
             this.Btnagregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Btnagregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(98)))));
             this.Btnagregar.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
-            this.Btnagregar.Location = new System.Drawing.Point(804, 31);
+            this.Btnagregar.Location = new System.Drawing.Point(1072, 38);
+            this.Btnagregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btnagregar.Name = "Btnagregar";
-            this.Btnagregar.Size = new System.Drawing.Size(119, 39);
+            this.Btnagregar.Size = new System.Drawing.Size(159, 48);
             this.Btnagregar.TabIndex = 37;
             this.Btnagregar.Text = "Agregar";
             this.Btnagregar.UseVisualStyleBackColor = false;
@@ -215,7 +229,7 @@
             // 
             // EmpleadoControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Rbtni);
             this.Controls.Add(this.Rbtna);
@@ -232,8 +246,9 @@
             this.Controls.Add(this.Btneliminar);
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.Btnagregar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EmpleadoControl";
-            this.Size = new System.Drawing.Size(994, 661);
+            this.Size = new System.Drawing.Size(1325, 814);
             this.Load += new System.EventHandler(this.EmpleadoControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgvempleados)).EndInit();
             this.ResumeLayout(false);
