@@ -1,13 +1,7 @@
 ﻿using ProyectoTallerSoftware.Modulos.Clases;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoTallerSoftware.Modulos.Bitacora
@@ -23,15 +17,18 @@ namespace ProyectoTallerSoftware.Modulos.Bitacora
 
         private void BitacoraControl_Load(object sender, EventArgs e)
         {
-            LeerBitacora();
+            LeerBitacora();  
         }
 
-        private void LeerBitacora()
+        private void LeerBitacora(string filtroUsuario = "")
         {
             using (var conn = _conexion.GetConnection())
             {
                 SqlCommand cmd = new SqlCommand("sp_GetBitacora", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@filtroUsuario",
+                    string.IsNullOrWhiteSpace(filtroUsuario) ? DBNull.Value : (object)filtroUsuario);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
@@ -40,7 +37,7 @@ namespace ProyectoTallerSoftware.Modulos.Bitacora
                 {
                     _conexion.OpenConnection(conn);
                     adapter.Fill(dataTable);
-                    dgv_bitacora.DataSource = dataTable;
+                    dgv_bitacora.DataSource = dataTable;  
                 }
                 catch (Exception ex)
                 {
@@ -51,6 +48,26 @@ namespace ProyectoTallerSoftware.Modulos.Bitacora
                     _conexion.CloseConnection(conn);
                 }
             }
+        }
+
+
+       
+
+        private void txtFiltroUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string filtroUsuario = txtFiltroUsuario.Text.Trim();
+                LeerBitacora(filtroUsuario);
+            }
+        }
+
+      
+
+        private void txtFiltroUsuario_TextChanged_1(object sender, EventArgs e)
+        {
+            string filtroUsuario = txtFiltroUsuario.Text.Trim();
+            LeerBitacora(filtroUsuario);
         }
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoTallerSoftware", "ProyectoTallerSoftware\ProyectoTallerSoftware.csproj", "{2B6275E1-04ED-467F-A024-8385B1F126A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema Control de Inventario", "ProyectoTallerSoftware\Sistema Control de Inventario.csproj", "{2B6275E1-04ED-467F-A024-8385B1F126A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
