@@ -139,61 +139,125 @@ namespace ProyectoTallerSoftware.Modulos.Productos
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (dgvProductos.CurrentRow == null)
+           
+            try
             {
-                MessageBox.Show("Por favor, selecciona un producto para actualizar.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                if (dgvProductos.CurrentRow == null)
+                {
+                    MessageBox.Show("Por favor, selecciona un producto para actualizar.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            if (ValidateFields())
-            {
+                if (!ValidateFields())
+                {
+                    MessageBox.Show("Por favor, completa todos los campos requeridos antes de continuar.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 int selectedId = (int)dgvProductos.CurrentRow.Cells["id_prod"].Value;
 
                 using (var conn = _conexion.GetConnection())
                 {
-                    SqlCommand cmd = new SqlCommand("sp_UpdateProduct", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        SqlCommand cmd = new SqlCommand("sp_UpdateProduct", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@IdProd", selectedId);
-                    cmd.Parameters.AddWithValue("@NomProd", txtProducto.Text);
-                    cmd.Parameters.AddWithValue("@DesProd", txtDescripcion.Text);
-                    cmd.Parameters.AddWithValue("@IdMed", ((dynamic)cmbMedida.SelectedItem).Value);
 
-                    _conexion.OpenConnection(conn);
-                    cmd.ExecuteNonQuery();
-                    Clases.Bitacora bitacora = new Clases.Bitacora();
-                    bitacora.Insertar("Se actualizó un producto con nombre " + txtProducto.Text, usuario);
-                    _conexion.CloseConnection(conn);
+                        cmd.Parameters.AddWithValue("@IdProd", selectedId);
+                        cmd.Parameters.AddWithValue("@NomProd", txtProducto.Text);
+                        cmd.Parameters.AddWithValue("@DesProd", txtDescripcion.Text);
+                        cmd.Parameters.AddWithValue("@IdMed", ((dynamic)cmbMedida.SelectedItem).Value);
+
+
+                        _conexion.OpenConnection(conn);
+                        cmd.ExecuteNonQuery();
+
+
+                        Clases.Bitacora bitacora = new Clases.Bitacora();
+                        bitacora.Insertar("Se actualizó un producto con nombre " + txtProducto.Text, usuario);
+
+                        MessageBox.Show("El producto se actualizó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Hubo un error al intentar actualizar el producto. Detalle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        _conexion.CloseConnection(conn);
+                    }
                 }
-                LoadProducts(); 
-                ClearFields(); 
+
+                LoadProducts();
+                ClearFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvProductos.CurrentRow == null)
+            try
             {
-                MessageBox.Show("Por favor, selecciona un producto para eliminar.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                if (dgvProductos.CurrentRow == null)
+                {
+                    MessageBox.Show("Por favor, selecciona un producto para eliminar.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+                DialogResult result = MessageBox.Show(
+                    "¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.",
+                    "Confirmación de eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+
+                if (result != DialogResult.Yes)
+                {
+                    MessageBox.Show("Eliminación cancelada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                int selectedId = (int)dgvProductos.CurrentRow.Cells["id_prod"].Value;
+
+                using (var conn = _conexion.GetConnection())
+                {
+                    try
+                    {
+                        SqlCommand cmd = new SqlCommand("sp_DeleteProduct", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@IdProd", selectedId);
+
+                        _conexion.OpenConnection(conn);
+                        cmd.ExecuteNonQuery();
+
+                        Clases.Bitacora bitacora = new Clases.Bitacora();
+                        bitacora.Insertar("Se eliminó un producto con ID " + selectedId, usuario);
+
+                        MessageBox.Show("El producto se eliminó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Hubo un error al intentar eliminar el producto. Detalle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        _conexion.CloseConnection(conn);
+                    }
+                }
+
+                LoadProducts();
             }
-
-            int selectedId = (int)dgvProductos.CurrentRow.Cells["id_prod"].Value;
-
-            using (var conn = _conexion.GetConnection())
+            catch (Exception ex)
             {
-                SqlCommand cmd = new SqlCommand("sp_DeleteProduct", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@IdProd", selectedId);
-
-                _conexion.OpenConnection(conn);
-                cmd.ExecuteNonQuery();
-                Clases.Bitacora bitacora = new Clases.Bitacora();
-                bitacora.Insertar("Se eliminó un producto", usuario);
-                _conexion.CloseConnection(conn);
+                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            LoadProducts();
         }
 
         private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
