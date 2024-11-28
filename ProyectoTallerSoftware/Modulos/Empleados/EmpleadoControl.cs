@@ -77,7 +77,7 @@ namespace ProyectoTallerSoftware.Modulos.Empleados
             using (SqlConnection connection = conexion.GetConnection())
             {
                 conexion.OpenConnection(connection);
-                using (SqlCommand command = new SqlCommand("ObtenerEmpleados", connection))
+                using (SqlCommand command = new SqlCommand("ObtenerEmpleadosEmp", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     using (SqlDataAdapter adapter = new SqlDataAdapter(command))
