@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.btn_regresar = new System.Windows.Forms.Button();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.sis_InventarioDataSet = new ProyectoTallerSoftware.Sis_InventarioDataSet();
             this.obtenerProductosMantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerProductosMantenimientoTableAdapter = new ProyectoTallerSoftware.Sis_InventarioDataSetTableAdapters.ObtenerProductosMantenimientoTableAdapter();
@@ -49,19 +49,7 @@
             this.btn_regresar.TabIndex = 0;
             this.btn_regresar.Text = "Regresar";
             this.btn_regresar.UseVisualStyleBackColor = true;
-            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.obtenerProductosMantenimientoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoTallerSoftware.ReporteMantenimiento.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 58);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1121, 606);
-            this.reportViewer1.TabIndex = 3;
+            this.btn_regresar.Click += new System.EventHandler(this.Btn_regresar_Click);
             // 
             // panel1
             // 
@@ -71,6 +59,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 58);
             this.panel1.TabIndex = 2;
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.obtenerProductosMantenimientoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoTallerSoftware.ReporteMantenimiento.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 56);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1121, 608);
+            this.reportViewer1.TabIndex = 3;
             // 
             // sis_InventarioDataSet
             // 
@@ -105,8 +105,8 @@
         #endregion
 
         private System.Windows.Forms.Button btn_regresar;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Panel panel1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource obtenerProductosMantenimientoBindingSource;
         private Sis_InventarioDataSet sis_InventarioDataSet;
         private Sis_InventarioDataSetTableAdapters.ObtenerProductosMantenimientoTableAdapter obtenerProductosMantenimientoTableAdapter;

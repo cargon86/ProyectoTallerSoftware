@@ -10,7 +10,7 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
             InitializeComponent();
         }
 
-        private void btn_regresar_Click(object sender, EventArgs e)
+        private void Btn_regresar_Click(object sender, EventArgs e)
         {
             if (Parent != null && Parent.Parent is ReporteControl reporteControl)
             {
@@ -20,8 +20,21 @@ namespace ProyectoTallerSoftware.Modulos.Reportes
 
         private void ReporteMensual_Load(object sender, EventArgs e)
         {
-            this.obtenerProductosUltimoMesTableAdapter.Fill(this.sis_InventarioDataSet.ObtenerProductosUltimoMes);
-            this.reportViewer1.RefreshReport();
+            try {
+                this.sis_InventarioDataSet.ObtenerProductosUltimoMes?.Clear();
+                this.obtenerProductosUltimoMesTableAdapter.Fill(this.sis_InventarioDataSet.ObtenerProductosUltimoMes);
+                this.reportViewer1.RefreshReport();
+            }
+            catch (System.Data.ConstraintException ex)
+            {
+                MessageBox.Show("Error al cargar los datos del reporte: Hay registros que no cumplen con las restricciones de la base de datos.\n\n" +
+                              "Detalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos del reporte:\n\n" + ex.Message,
+                              "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -60,7 +60,7 @@
             this.btn_regresar.TabIndex = 0;
             this.btn_regresar.Text = "Regresar";
             this.btn_regresar.UseVisualStyleBackColor = true;
-            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_click);
+            this.btn_regresar.Click += new System.EventHandler(this.Btn_regresar_click);
             // 
             // reportViewer1
             // 
