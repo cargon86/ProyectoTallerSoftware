@@ -268,61 +268,59 @@ namespace ProyectoTallerSoftware.Modulos.Adquisicion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (selectedAdqId == 0 || selectedDetAdqId == 0)
+            try
             {
-                MessageBox.Show("Por favor, seleccione una adquisición para eliminar.", "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                if (selectedAdqId == 0)
+                {
+                    MessageBox.Show("Por favor, selecciona una adquisición para eliminar.", "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                var result = MessageBox.Show(
+                    "¿Estás seguro de que deseas eliminar toda la adquisición y sus detalles?\n\n" ,
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button3
+                );
 
+                if (result == DialogResult.Cancel)
+                {
+                    MessageBox.Show("Eliminación cancelada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
-            var result = MessageBox.Show("¿Desea eliminar toda la adquisición y sus detalles, o solo el detalle seleccionado?",
-                                         "Confirmar eliminación",
-                                         MessageBoxButtons.YesNoCancel,
-                                         MessageBoxIcon.Question,
-                                         MessageBoxDefaultButton.Button3);
-
-            using (var conn = _conexion.GetConnection())
-            {
-                try
+                if (result == DialogResult.No)
+                {
+                    MessageBox.Show("Proceso de eliminación cancelado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                using (var conn = _conexion.GetConnection())
                 {
                     _conexion.OpenConnection(conn);
 
-                    if (result == DialogResult.Yes)
-                    {
+                    SqlCommand cmdDeleteAdq = new SqlCommand("sp_DeleteAdquisicion", conn);
+                    cmdDeleteAdq.CommandType = CommandType.StoredProcedure;
+                    cmdDeleteAdq.Parameters.AddWithValue("@IdAdq", selectedAdqId);
 
-                        SqlCommand cmdDeleteAdq = new SqlCommand("sp_DeleteAdquisicion", conn);
-                        cmdDeleteAdq.CommandType = CommandType.StoredProcedure;
-                        cmdDeleteAdq.Parameters.AddWithValue("@IdAdq", selectedAdqId);
+                    cmdDeleteAdq.ExecuteNonQuery();
+                    MessageBox.Show("La adquisición y todos sus detalles se eliminaron exitosamente.", "Eliminación Completa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        cmdDeleteAdq.ExecuteNonQuery();
-                        MessageBox.Show("Adquisición y todos sus detalles eliminados exitosamente.", "Eliminación Completa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Clases.Bitacora bitacora = new Clases.Bitacora();
-                        bitacora.Insertar("Se eliminó una adquisición con número " + selectedAdqId, usuario);
-                    }
-                    else if (result == DialogResult.No)
-                    {
 
-                        SqlCommand cmdDeleteDetalle = new SqlCommand("sp_DeleteDetalleAdquisicion", conn);
-                        cmdDeleteDetalle.CommandType = CommandType.StoredProcedure;
-                        cmdDeleteDetalle.Parameters.AddWithValue("@id_det_adq", selectedDetAdqId);
-
-                        cmdDeleteDetalle.ExecuteNonQuery();
-                        MessageBox.Show("Detalle de adquisición eliminado exitosamente.", "Eliminación Detalle", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    Clases.Bitacora bitacora = new Clases.Bitacora();
+                    bitacora.Insertar($"Se eliminó la adquisición con ID {selectedAdqId}.", usuario);
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al eliminar la adquisición o el detalle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    _conexion.CloseConnection(conn);
-                }
+
+                LoadDetalleAdquisicion();
+                ClearFields();
             }
-
-
-            LoadDetalleAdquisicion();
-            ClearFields(); 
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Ocurrió un error al intentar eliminar: {ex.Message}", "Error SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error inesperado: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ClearFields()
