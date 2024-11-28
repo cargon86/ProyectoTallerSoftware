@@ -36,8 +36,8 @@ namespace ProyectoTallerSoftware.Modulos.Home
                     btnUsuarios.Enabled = false;
                     btnRequisiciones.Enabled = true;
                     btnProductos.Enabled = true;
-                    btnReportes.Enabled = true;
-                    btnAdquisicion.Enabled = false;
+                    btnReportes.Enabled = false;
+                    btnAdquisicion.Enabled = true;
                     btnEmpleados.Enabled = false;
                     btnInventario.Enabled = true;
                     btn_bitacora.Enabled = false;
